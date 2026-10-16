@@ -104,6 +104,8 @@
 | H12 | 菌群失调 | 排队：醋与乙酸（SCFA 路径） |
 
 > 十二根柱子，十根有抓手，两根诚实留白——等证据走到那一步，我们再说到那一步。
+>
+> 📖 延伸阅读：熊博士博客[《抗衰防病五道防线》](https://xiongjianghui.com/zh/blog/five-defense-aging-framework)——五道防线与十二柱，是同一张地图的两种画法。
 
 ---
 
@@ -383,7 +385,7 @@
 3. 证据等级从严标注：说不清就标低
 4. 欢迎对现有条目提出等级异议——证据更新时我们会修订
 5. **行文建议**：从表观感受与个人经验入手，再逐步引入机制与文献——控制阅读负担，别让读者第一屏就撞上术语墙
-6. **延伸阅读**：参考资料可酌情引用[深度甲基公众号](https://mp.weixin.qq.com/s/yG0bg0ht0oOEBFSQOtPGWA)科普文章（仅作为延伸阅读，不替代一手文献；须为已发布文章的真实链接）
+6. **延伸阅读**：参考资料可酌情引用[深度甲基公众号](https://mp.weixin.qq.com/s/yG0bg0ht0oOEBFSQOtPGWA)科普文章与[熊博士博客](https://xiongjianghui.com)长文（仅作为延伸阅读，不替代一手文献；须为已发布文章的真实链接）
 
 ## 关于熊博士
 
@@ -392,6 +394,7 @@
 
 **熊博士**（熊江辉），[DeepoMe 深度甲基](https://deepome.com)创始人，长寿医学智能方向研究者。做这个指南只有一个规矩：**证据走到哪一步，就说到哪一步**——这条规矩同样约束我们自己。
 
+- ✍️ [熊博士博客 · xiongjianghui.com](https://xiongjianghui.com)——个人官网，方法论与行业观察长文
 - 🌐 [DeepoMe 深度甲基](https://deepome.com)——把长寿科学工程化为可交付体系
 - 🧬 [DeepKang 健康平台](https://deepkang.com) / [症状探索器](https://a.deepkang.com/explore)
 - 💻 [GitHub · DeepoMe](https://github.com/DeepoMe)——论文配套代码与数据工具
