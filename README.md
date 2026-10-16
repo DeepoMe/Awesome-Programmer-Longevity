@@ -7,7 +7,7 @@
 
 我们不神化任何方法，也不否定传统经验——**证据走到哪一步，我们就说到哪一步。**
 
-**维护人**：熊博士（熊江辉）· [DeepoMe 深度甲基](https://deepome.com)创始人 · 每周三更新（[关于熊博士](#关于熊博士)）
+**维护人**：熊博士 · 每周三更新（他是谁——见文末[关于熊博士](#关于熊博士)）
 
 ## 证据分级说明
 
@@ -89,7 +89,7 @@
 **边界**：bipolar 障碍者光疗需遵医嘱；直视太阳有害，接受环境光即可。
 
 **参考文献**：
-1. Wright KP Jr, et al. Entrainment to the earth's 24-hour light-dark cycle enables biological alignment of human circadian rhythms. *Curr Biol*. 2013;23(16):1555-8. (PMID: 23910656)
+1. Wright KP Jr, et al. Entrainment of the human circadian clock to the natural light-dark cycle. *Curr Biol*. 2013;23(16):1555-8. (PMID: 23910656)
 2. Zeitzer JM, et al. Sensitivity of the human circadian pacemaker to nocturnal light: melatonin phase resetting response curves. *J Physiol*. 2000;526(Pt 3):695-702. (PMID: 10922269)
 
 > **熊博士按**：反直觉的一条——晚睡晚起的破局点不在晚上，在早晨。想早睡，先早起晒光；顺序搞反了，越努力越失眠。这是"续命的一天"系列的起点。
@@ -348,12 +348,17 @@
 
 ## 关于熊博士
 
+<details>
+<summary><b>展开：熊博士是谁</b>（姓名 · 机构 · 论文——按需查看）</summary>
+
 **熊博士**（熊江辉），[DeepoMe 深度甲基](https://deepome.com)创始人，长寿医学智能方向研究者。做这个指南只有一个规矩：**证据走到哪一步，就说到哪一步**——这条规矩同样约束我们自己。
 
 - 🌐 [DeepoMe 深度甲基](https://deepome.com)——把长寿科学工程化为可交付体系
 - 🧬 [DeepKang 健康平台](https://deepkang.com) / [症状探索器](https://a.deepkang.com/explore)
 - 💻 [GitHub · DeepoMe](https://github.com/DeepoMe)——论文配套代码与数据工具
 - 📄 代表论文：RootMap（[DOI: 10.32388/A1NTLL](https://doi.org/10.32388/A1NTLL)）
+
+</details>
 
 ## 声明
 
