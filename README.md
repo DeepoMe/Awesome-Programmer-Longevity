@@ -7,6 +7,8 @@
 
 我们不神化任何方法，也不否定传统经验——**证据走到哪一步，我们就说到哪一步。**
 
+**维护人**：熊博士（熊江辉）· [DeepoMe 深度甲基](https://deepome.com)创始人 · 每周三更新（[关于熊博士](#关于熊博士)）
+
 ## 证据分级说明
 
 | 标记 | 含义 | 支撑证据类型 |
@@ -17,20 +19,53 @@
 
 > 每条目的"参考文献"均为 PubMed 可查的真实文献（PMID/DOI）。证据等级标错比不标更糟——若您发现等级或引用有误，欢迎提 Issue 或 PR。
 
-## 目录（首批 10 条）
+## 连载说明
+
+- **首发五篇《续命的一天》**：按一天的时间动线走——早起晒光、白天起身、护住眼睛、下午断咖啡因、深夜止损。五条全部 🟢/🟡，是"投入产出比"最高的一组。
+- **每周三更新**（"续命星期三"）：从下方选题池取题，写完即入目录。
+- **公开征题**：想看哪条？开 Issue 点菜。补剂、传统经验、都市传说都收——但等级从严标注。
+
+## 目录
+
+### 🌅 续命的一天（首发五篇，按时间线）
 
 | # | 条目 | 痛点 | 等级 |
 |---|---|---|---|
-| 001 | [下颌淋巴轻按摩](#腰果-001--下颌淋巴轻按摩-brain-drain) | 大脑昏沉 | 🟡 |
+| 005 | [晨光 10 分钟](#腰果-005--晨光-10-分钟) | 昼夜颠倒 | 🟢 |
 | 002 | [30 分钟起身闹钟](#腰果-002--30-分钟起身闹钟) | 腰酸、血糖 | 🟢 |
 | 003 | [20-20-20 用眼法则](#腰果-003--20-20-20-用眼法则) | 眼干眼疲劳 | 🟡 |
 | 004 | [咖啡因下午 2 点红线](#腰果-004--咖啡因下午-2-点红线) | 睡眠差 | 🟢 |
-| 005 | [晨光 10 分钟](#腰果-005--晨光-10-分钟) | 昼夜颠倒 | 🟢 |
-| 006 | [Zone 2 快走](#腰果-006--zone-2-快走) | 体能下降 | 🟢 |
+| 011 | [熬夜与维生素 C](#腰果-011--熬夜与维生素-c止损垫不是免死金牌) | 熬夜止损 | 🟡 |
+
+### 🛏️ 睡眠与恢复
+
+| # | 条目 | 痛点 | 等级 |
+|---|---|---|---|
 | 007 | [睡眠债偿还表](#腰果-007--睡眠债偿还表) | 熬夜后遗症 | 🟢 |
-| 008 | [工位人体工学三件套](#腰果-008--工位人体工学三件套) | 腕/腰/颈 | 🟢 |
-| 009 | [番茄钟的生理学](#腰果-009--番茄钟的生理学) | 注意力涣散 | 🟡 |
 | 010 | [睡前 1 小时屏幕宵禁](#腰果-010--睡前-1-小时屏幕宵禁) | 入睡困难 | 🟢 |
+
+### 🧰 身体维护
+
+| # | 条目 | 痛点 | 等级 |
+|---|---|---|---|
+| 006 | [Zone 2 快走](#腰果-006--zone-2-快走) | 体能下降 | 🟢 |
+| 008 | [工位人体工学三件套](#腰果-008--工位人体工学三件套) | 腕/腰/颈 | 🟢 |
+| 001 | [下颌淋巴轻按摩](#腰果-001--下颌淋巴轻按摩-brain-drain) | 大脑昏沉 | 🟡 |
+| 009 | [番茄钟的生理学](#腰果-009--番茄钟的生理学) | 注意力涣散 | 🟡 |
+
+### ⏳ 选题池（排队中，每周三取一条）
+
+| 栏目 | 选题 | 一句话预告 | 预估等级 |
+|---|---|---|---|
+| 进阶长寿 | GlyNAC | 甘氨酸+NAC 的老年补剂组合，Baylor 系列 RCT | 🟡 |
+| 进阶长寿 | 亚精胺与小麦胚芽 | "延寿胺"与自噬激活，人体认知 RCT 已起步 | 🟡 |
+| 进阶长寿 | 麦角硫因与蘑菇 | "长寿维生素"——蘑菇摄入与认知的队列证据 | 🟡 |
+| 进阶长寿 | PQQ | 线粒体新生，小样本人体 RCT 群 | 🟡 |
+| 传统×科学 | NAC 与化痰 | 药典老药，黏液溶解的 Cochrane 证据 | 🟢 |
+| 传统×科学 | 醋与乙酸 | 喝醋降餐后血糖 vs 肠道发酵产酸：同一分子，两条路径 | 🟢 |
+| 传统×科学 | 甘麦大枣汤与小麦胚芽 | 1800 年前的经方与当代自噬研究在同一颗麦粒上相遇 | 🟡 |
+| 传统×科学 | 阳气与线粒体 | 概念映射不是证明——但值得认真对待 | 🔴🟡 |
+| 传统×科学 | 八段锦与筋 | 拉伸、筋膜、蛋白稳态与"肝主筋"的四层递进 | 🟢🟡🔴 |
 
 ---
 
@@ -52,6 +87,8 @@
 2. Aspelund A, et al. A dural lymphatic vascular system that drains brain interstitial fluid and macromolecules. *J Exp Med*. 2015;212(7):991-9. (PMID: 26077718)
 3. Da Mesquita S, et al. Functional aspects of meningeal lymphatics in ageing and Alzheimer's disease. *Nature*. 2018;560(7717):185-91. (PMID: 30046111)
 
+> **熊博士按**：这条是我标得最犹豫的一条——机制在动物身上是真的，"按摩下颌就能给大脑排毒"目前只能算合理推测。它留在这里有个理由：2015 年之前，教科书还写着"大脑没有淋巴管"。科学会推翻教科书，也包括我这份指南。
+
 ---
 
 ## 腰果 002 · 30 分钟起身闹钟
@@ -72,6 +109,8 @@
 1. Ekelund U, et al. Does physical activity attenuate, or even eliminate, the detrimental association of sitting time with mortality? *Lancet*. 2016;388(10051):1302-10. (PMID: 27475271)
 2. Diaz KM, et al. Patterns of sedentary behavior and mortality in U.S. middle-aged and older adults. *Ann Intern Med*. 2017;167(7):465-475. (PMID: 28892811)
 
+> **熊博士按**：全指南里技术含量最低的一条，也可能是杠杆率最高的一条。我见过太多人买了万元的升降桌，然后把它降到最低、坐着用。
+
 ---
 
 ## 腰果 003 · 20-20-20 用眼法则
@@ -90,6 +129,8 @@
 
 **参考文献**：
 1. American Academy of Ophthalmology. Computer vision syndrome / digital eye strain: prevention and treatment. [AAO 官方建议](https://www.aao.org/eye-health/tips-prevention/computer-usage)（机构指南，持续更新）
+
+> **熊博士按**：眨眼是被屏幕劫持的第一个本能——专注时代码看得越入神，眨眼频率掉得越狠，泪膜干了都没感觉。20-20-20 的本质，是给"忘记眨眼"装一个定时器。
 
 ---
 
@@ -111,6 +152,8 @@
 1. Drake C, et al. Caffeine effects on sleep taken 0, 3, or 6 hours before going to bed. *J Clin Sleep Med*. 2013;9(11):1195-200. (PMID: 24235903)
 2. Fredholm BB, et al. Actions of caffeine in the brain with special reference to factors that contribute to its widespread use. *Pharmacol Rev*. 1999;51(1):83-133. (PMID: 10049999)
 
+> **熊博士按**：实验数据在这件事上最不给面子——睡前 6 小时的咖啡照样削减深睡眠，而当事人感觉"我代谢快，没事"。主观感觉不可信，是我把它划成"红线"而不是"建议"的唯一原因。
+
 ---
 
 ## 腰果 005 · 晨光 10 分钟
@@ -125,11 +168,13 @@
 
 **程序员场景**：晚睡晚起恶性循环的破局点不是"今晚早睡"，而是"明早晒光"——先锚定早晨，晚上自然早困。
 
-**边界**： bipolar 障碍者光疗需遵医嘱；直视太阳有害，接受环境光即可。
+**边界**：bipolar 障碍者光疗需遵医嘱；直视太阳有害，接受环境光即可。
 
 **参考文献**：
 1. Wright KP Jr, et al. Entrainment to the earth's 24-hour light-dark cycle enables biological alignment of human circadian rhythms. *Curr Biol*. 2013;23(16):1555-8. (PMID: 23910656)
 2. Zeitzer JM, et al. Sensitivity of the human circadian pacemaker to nocturnal light: melatonin phase resetting response curves. *J Physiol*. 2000;526(Pt 3):695-702. (PMID: 10922269)
+
+> **熊博士按**：反直觉的一条——晚睡晚起的破局点不在晚上，在早晨。想早睡，先早起晒光；顺序搞反了，越努力越失眠。这是"续命的一天"系列的起点。
 
 ---
 
@@ -148,6 +193,8 @@
 **参考文献**：
 1. Holloszy JO. Biochemical adaptations in muscle. Effects of exercise on mitochondrial oxygen uptake and respiratory enzyme activity in skeletal muscle. *J Biol Chem*. 1967;242(9):2278-82. (PMID: 4290225)
 2. Arem H, et al. Leisure time physical activity and mortality. *JAMA Intern Med*. 2015;175(6):959-68. (PMID: 25844730)
+
+> **熊博士按**：长寿研究绕不开线粒体，Zone 2 是给线粒体上课最便宜的方式——不用办卡、不用装备，"还能说话但唱不了歌"这一句就够了。
 
 ---
 
@@ -168,6 +215,8 @@
 **参考文献**：
 1. Van Dongen HP, et al. The cumulative cost of additional wakefulness. *Sleep*. 2003;26(2):117-26. (PMID: 12683469)
 2. Belenky G, et al. Patterns of performance degradation and restoration during sleep restriction and subsequent recovery: a sleep dose-response study. *J Sleep Res*. 2003;12(1):1-12. (PMID: 12603781)
+
+> **熊博士按**：睡眠研究里最阴的发现——睡眠债越欠越多，你的困倦感却会"平台化"，让人真心觉得"我还行"。主观感觉在这件事上是失真的仪表盘，数据不会陪你演。
 
 ---
 
@@ -190,6 +239,8 @@
 1. Nachemson AL. Disc pressure measurements. *Spine*. 1981;6(1):93-7. (PMID: 7209680)
 2. Hansraj KK. Assessment of stresses in the cervical spine caused by posture and position of the head. *Surg Technol Int*. 2014;25:277-9. (PMID: 25393825)
 
+> **熊博士按**：笔记本是按"偶尔移动使用"设计的，每天八小时用它办公，它就是刑具。外接键盘加支架，一百块钱同时解决颈和腕两个问题——这是我推荐过的性价比最高的改造，没有之一。
+
 ---
 
 ## 腰果 009 · 番茄钟的生理学
@@ -209,6 +260,8 @@
 **参考文献**：
 1. Cirillo F. The Pomodoro Technique.（方法源头，非科学文献）
 2. Ariga A, Lleras A. Brief and rare mental "breaks" keep you focused: deactivation and reactivation of task goals forestall vigilance decrement. *Cognition*. 2011;118(3):439-43. (PMID: 21211793)
+
+> **熊博士按**：我喜欢这一条的诚实——"25 分钟"是一个意大利大学生的个人约定，不是生理学。方法可以工程化，但把工程约定当自然规律，是我们要在整本指南里反复拆穿的事。
 
 ---
 
@@ -230,7 +283,39 @@
 1. Chang AM, et al. Evening use of light-emitting eReaders negatively affects sleep, circadian timing, and next-morning alertness. *PNAS*. 2015;112(4):1232-7. (PMID: 25535358)
 2. Hysing M, et al. Sleep and use of electronic devices in adolescence: results from a large population-based study. *BMJ Open*. 2015;5:e006748. (PMID: 25643702)
 
+> **熊博士按**：十分钟入睡延迟听起来不痛不痒——直到你意识到它每晚都在，而且"内容唤醒"的账还没算进去。宵禁一小时，买回的是整个入睡窗口。
+
 ---
+
+## 腰果 011 · 熬夜与维生素 C（止损垫，不是免死金牌）
+
+**做法**：熬夜当晚或次日，通过蔬果（橙子、猕猴桃、彩椒）或常规剂量补充剂（100-200mg）补足维生素 C。**不推荐大剂量"对冲式"服用**——见边界。
+
+**机制**：急性睡眠剥夺使皮质醇升高、氧化应激（脂质过氧化）上升。VC 是水相主要抗氧化剂，动物实验显示补 VC 可显著抑制睡眠剥夺引起的血浆皮质醇与脂质过氧化物升高，并减轻记忆损伤。但要分清主次：VC 缓冲的只是氧化应激这一角"附带损伤"——睡眠剥夺的认知损害主体、免疫功能下降、代谢紊乱，VC 一概管不了。**睡眠债没有化学解药。**
+
+**证据等级**：🟡 机制明确 + 动物实验｜人体直接证据有限
+- 大鼠实验：VC 阻止睡眠剥夺诱导的皮质醇与脂质过氧化升高
+- 动物行为实验：VC 预处理减轻睡眠剥夺所致记忆损伤
+- 人体证据以综述与间接关联为主，缺乏针对"熬夜人群补 VC"的高质量 RCT——如实标注
+
+**程序员场景**：上线夜/发版夜的"止损三件套"之一——VC（抗氧化）+ 当晚提前入睡（见 007 偿还表）+ 次日晨光重锚节律（见 005）。三件套可以少受罪，但不能不还债。
+
+**边界**：单日 >1g 可致胃肠不适，长期大剂量与肾结石风险相关；VC 不是熬夜许可证。夜班刚需者，重点做节律管理（005/010），补剂只是配角。
+
+**参考文献**：
+1. Olayaki LA, et al. Vitamin C prevents sleep deprivation-induced elevation in cortisol and lipid peroxidation in the rat plasma. *Niger J Physiol Sci*. 2015;30(1-2):5-9. (PMID: 27507778)
+2. Mhaidat NM, et al. Exploring the effect of vitamin C on sleep deprivation induced memory impairment. *Brain Res Bull*. 2015;113:41-7. (PMID: 25724146)
+3. Otocka-Kmiecik A, et al. The role of vitamin C in two distinct physiological states: physical activity and sleep. *Nutrients*. 2020;12(12). (PMID: 33371359)
+
+> **熊博士按**：本指南第一个"救火"条目。写它不是为了给熬夜发许可证——VC 能缓冲的只有氧化应激这一角，认知欠账和睡眠债一分都免不了。止损垫不是免死金牌，这是它排在"续命的一天"最后一位的原因：前面四条做到了，才轮得到它出场。
+
+---
+
+## 续命工具箱
+
+- **30 秒症状自测**：[DeepKang 症状探索器](https://a.deepkang.com/explore)——免费、匿名、无需注册。输入一个症状（如"眼干""腰酸""睡不好"），30 秒看它的共现网络与常见原因方向，生成可以带给医生看的梳理小结。DeepoMe 出品。
+
+> 看完指南想知道"我现在的状态算哪一档"？从探索器开始，比从搜索引擎开始靠谱。
 
 ## 贡献指南
 
@@ -239,6 +324,15 @@
 2. **文献必须可查证**——伪造引用将被直接关闭
 3. 证据等级从严标注：说不清就标低
 4. 欢迎对现有条目提出等级异议——证据更新时我们会修订
+
+## 关于熊博士
+
+**熊博士**（熊江辉），[DeepoMe 深度甲基](https://deepome.com)创始人，长寿医学智能方向研究者。做这个指南只有一个规矩：**证据走到哪一步，就说到哪一步**——这条规矩同样约束我们自己。
+
+- 🌐 [DeepoMe 深度甲基](https://deepome.com)——把长寿科学工程化为可交付体系
+- 🧬 [DeepKang 健康平台](https://deepkang.com) / [症状探索器](https://a.deepkang.com/explore)
+- 💻 [GitHub · DeepoMe](https://github.com/DeepoMe)——论文配套代码与数据工具
+- 📄 代表论文：RootMap（[DOI: 10.32388/A1NTLL](https://doi.org/10.32388/A1NTLL)）
 
 ## 声明
 
