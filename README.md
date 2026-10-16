@@ -383,6 +383,7 @@
 3. 证据等级从严标注：说不清就标低
 4. 欢迎对现有条目提出等级异议——证据更新时我们会修订
 5. **行文建议**：从表观感受与个人经验入手，再逐步引入机制与文献——控制阅读负担，别让读者第一屏就撞上术语墙
+6. **延伸阅读**：参考资料可酌情引用[深度甲基公众号](https://mp.weixin.qq.com/s/yG0bg0ht0oOEBFSQOtPGWA)科普文章（仅作为延伸阅读，不替代一手文献；须为已发布文章的真实链接）
 
 ## 关于熊博士
 
@@ -395,6 +396,7 @@
 - 🧬 [DeepKang 健康平台](https://deepkang.com) / [症状探索器](https://a.deepkang.com/explore)
 - 💻 [GitHub · DeepoMe](https://github.com/DeepoMe)——论文配套代码与数据工具
 - 📄 代表论文：RootMap（[DOI: 10.32388/A1NTLL](https://doi.org/10.32388/A1NTLL)）
+- 📢 公众号科普：[衰老检测不该只是一个值——从行动仪表盘到个人长寿操作系统](https://mp.weixin.qq.com/s/yG0bg0ht0oOEBFSQOtPGWA)（更多文章陆续收录）
 
 </details>
 
