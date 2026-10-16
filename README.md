@@ -89,7 +89,7 @@
 **边界**：bipolar 障碍者光疗需遵医嘱；直视太阳有害，接受环境光即可。
 
 **参考文献**：
-1. Wright KP Jr, et al. Entrainment of the human circadian clock to the natural light-dark cycle. *Curr Biol*. 2013;23(16):1555-8. (PMID: 23910656)
+1. Wright KP Jr, et al. Entrainment of the human circadian clock to the natural light-dark cycle. *Curr Biol*. 2013;23(16):1554-8. (PMID: 23910656)
 2. Zeitzer JM, et al. Sensitivity of the human circadian pacemaker to nocturnal light: melatonin phase resetting response curves. *J Physiol*. 2000;526(Pt 3):695-702. (PMID: 10922269)
 
 > **熊博士按**：反直觉的一条——晚睡晚起的破局点不在晚上，在早晨。想早睡，先早起晒光；顺序搞反了，越努力越失眠。这是"续命的一天"系列的起点。
@@ -124,7 +124,7 @@
 
 **做法**：每 20 分钟，看 20 英尺（约 6 米）外的东西 20 秒。
 
-**机制**：持续近距离对焦使睫状肌持续紧张、眨眼频率下降一半以上（从每分钟 15-20 次降到 5-7 次）——眼干与视疲劳的主因。远眺让睫状肌放松，主动眨眼恢复泪膜。
+**机制**：持续近距离对焦使睫状肌持续紧张、眨眼频率下降一半以上（TFOS 国际专家组综述：数字环境显著影响眼表）——眼干与视疲劳的主因。远眺让睫状肌放松，主动眨眼恢复泪膜。
 
 **证据等级**：🟡 广为专业机构推荐（美国眼科学会等），但高质量 RCT 有限｜数字本身（20/20/20）是经验性设定
 - 计算机视觉综合征（CVS）与屏幕使用时间的关联证据充分
@@ -135,7 +135,8 @@
 **边界**：视疲劳持续不缓解、视力骤降、复视——去看眼科，不是屏幕问题那么简单。
 
 **参考文献**：
-1. American Academy of Ophthalmology. Computer vision syndrome / digital eye strain: prevention and treatment. [AAO 官方建议](https://www.aao.org/eye-health/tips-prevention/computer-usage)（机构指南，持续更新）
+1. Wolffsohn JS, et al. TFOS Lifestyle: impact of the digital environment on the ocular surface. *Ocul Surf*. 2023;28:213-252. (PMID: 37062428)
+2. American Academy of Ophthalmology. Computer vision syndrome / digital eye strain: prevention and treatment. [AAO 官方建议](https://www.aao.org/eye-health/tips-prevention/computer-usage)（机构指南，持续更新）
 
 > **熊博士按**：眨眼是被屏幕劫持的第一个本能——专注时代码看得越入神，眨眼频率掉得越狠，泪膜干了都没感觉。20-20-20 的本质，是给"忘记眨眼"装一个定时器。
 
@@ -196,7 +197,7 @@
 
 **做法**：熬夜后按此偿还：当晚提前 30-60 分钟入睡（不是狂睡到中午）+ 次日 20 分钟以内午睡 + 连续 3 晚正常作息。**不要**周末报复性睡 12 小时。
 
-**机制**：睡眠剥夺的损害是累积且非线性的：连续两周每晚 6 小时，认知表现降到与通宵一晚相当——而本人完全意识不到（主观困倦感平台化，客观能力持续下滑）。补觉能部分偿还，但时间错位的超长补觉会打乱节律，得不偿失。
+**机制**：睡眠剥夺的损害是累积且非线性的：连续两周每晚 6 小时，认知缺损最高相当于连续通宵两晚（Van Dongen 2003：equivalent to up to 2 nights of total sleep deprivation）——而本人完全意识不到（主观困倦感平台化，客观能力持续下滑）。补觉能部分偿还，但时间错位的超长补觉会打乱节律，得不偿失。
 
 **证据等级**：🟢 人群实证
 - 美军/宾大睡眠债剂量研究：连续限制睡眠的进行性认知损伤
@@ -254,7 +255,7 @@
 
 **参考文献**：
 1. Holloszy JO. Biochemical adaptations in muscle. Effects of exercise on mitochondrial oxygen uptake and respiratory enzyme activity in skeletal muscle. *J Biol Chem*. 1967;242(9):2278-82. (PMID: 4290225)
-2. Arem H, et al. Leisure time physical activity and mortality. *JAMA Intern Med*. 2015;175(6):959-68. (PMID: 25844730)
+2. Arem H, et al. Leisure time physical activity and mortality. *JAMA Intern Med*. 2015;175(6):959-67. (PMID: 25844730)
 
 > **熊博士按**：长寿研究绕不开线粒体，Zone 2 是给线粒体上课最便宜的方式——不用办卡、不用装备，"还能说话但唱不了歌"这一句就够了。
 
@@ -268,7 +269,7 @@
 2. **肘角 90°-100°**、腕部中立位（键盘垫腕或降低键盘后缘）——正中神经减压
 3. **腰椎支撑**：腰后垫枕或用椅背腰托，坐深把臀部坐到椅子最里
 
-**机制**：坐姿前倾时腰椎间盘压力比站立高约 40%（Nachemson 经典测量）；腕部背伸增加腕管内压力——正中神经受压是腕管综合征的直接机制。
+**机制**：腰椎间盘压力随坐姿恶化阶梯上升：端坐时已比站立高约四成，身体前倾时进一步接近站立的两倍（Nachemson 经典测量；后续在体复测证实坐姿升压方向一致、量级略低——如实说明）；腕部背伸增加腕管内压力——正中神经受压是腕管综合征的直接机制。
 
 **证据等级**：🟢 生物力学实证｜对"预防腕管综合征"的效果证据中等（工效学干预的 RCT 结论混合——如实说明）
 
