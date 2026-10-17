@@ -14,7 +14,7 @@ ax.set_xlim(0, 12.8); ax.set_ylim(0, 6.4)
 ax.axis('off')
 
 # 左侧文字区
-ax.text(0.9, 5.35, '程序员续命指南', fontsize=54, fontweight='bold', color=AMBER,
+ax.text(0.9, 5.35, '程序员长寿指南', fontsize=54, fontweight='bold', color=AMBER,
         fontfamily='Microsoft YaHei')
 ax.text(0.95, 4.62, 'Awesome Programmer Longevity · Extend your runtime',
         fontsize=17, color=TEAL)

@@ -14,7 +14,7 @@ pages = []  # (title, html)
 # 封面
 pages.append(("封面", """
 <div class="cover">
-<h1>程序员续命与长寿指南</h1>
+<h1>程序员长寿指南</h1>
 <p class="tag">命是可以科学地续的</p>
 <p>11 章 · 双尺子证据分级 · 105 篇验证文献</p>
 <p class="dim">熊博士 · DeepoMe 深度甲基 · 2026-10 · v2.0</p>
@@ -69,7 +69,7 @@ for i, (t, h) in enumerate(pages):
 
 HTML = """<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-<title>程序员续命与长寿指南 · 网页版</title>
+<title>程序员长寿指南 · 网页版</title>
 <style>
 :root{--fs:17px;--bg:#FDFBF7;--ink:#2D2A26;--amber:#D97E36;--teal:#2C6E63;--dim:#6B655C;--card:#fff;--bd:#e5ddd0}
 .night{--bg:#1E1B18;--ink:#E8E2D8;--amber:#E8A25E;--teal:#7BB8AC;--dim:#9B948A;--card:#292521;--bd:#3d3831}
@@ -135,7 +135,7 @@ footer button{padding:10px 16px}
 @media (max-width: 768px){.clickzone{top:48px;bottom:52px}}
 </style></head><body>
 <div id="book">
-<header><span class="t" id="ht">程序员续命与长寿指南</span>
+<header><span class="t" id="ht">程序员长寿指南</span>
 <span><button onclick="fs(-1)">A-</button><button onclick="fs(1)">A+</button>
 <button onclick="night()">🌙</button></span></header>
 <div id="stage">
@@ -150,7 +150,7 @@ __SECTIONS__
 let cur=0,N=__N__;
 function show(){document.querySelectorAll('.page').forEach((p,i)=>p.classList.toggle('on',i===cur));
 document.getElementById('pg').textContent=(cur+1)+' / '+N;
-document.getElementById('ht').textContent=document.querySelectorAll('.page')[cur].dataset.t||'程序员续命与长寿指南';}
+document.getElementById('ht').textContent=document.querySelectorAll('.page')[cur].dataset.t||'程序员长寿指南';}
 function flip(d){cur=Math.max(0,Math.min(N-1,cur+d));show();}
 function go(i){cur=i;show();toc();}
 function toc(){document.getElementById('toc').classList.toggle('on');document.getElementById('mask').classList.toggle('on');}

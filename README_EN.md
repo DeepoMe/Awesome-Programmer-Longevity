@@ -1,4 +1,4 @@
-# Awesome Programmer Longevity · 程序员续命指南
+# Awesome Programmer Longevity · 程序员长寿指南
 
 > **Extend your runtime.**
 > A curated, evidence-graded collection of longevity science for programmers. Every claim is graded, every reference is on PubMed.

@@ -1,4 +1,4 @@
-# 程序员续命指南 · Awesome Programmer Longevity
+# 程序员长寿指南 · Awesome Programmer Longevity
 
 > **从续命到长寿：聚合优质科研进展，每一条都有证据分级和真实文献。**
 > A curated, evidence-graded collection of longevity science for programmers. Extend your runtime.
