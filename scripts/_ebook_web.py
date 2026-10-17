@@ -4,7 +4,12 @@
 import re, pathlib, markdown
 
 root = pathlib.Path(__file__).resolve().parent.parent
-md = (root / "README_ZH.md").read_text(encoding="utf-8")
+LANG = __import__('sys').argv[1] if len(__import__('sys').argv) > 1 else 'zh'
+if LANG == 'en':
+    SRC_NAME, OUT_NAME, LANG_LINK = 'README.md', 'ebook.html', 'ebook-zh.html'
+else:
+    SRC_NAME, OUT_NAME, LANG_LINK = 'README_ZH.md', 'ebook-zh.html', 'ebook.html'
+md = (root / SRC_NAME).read_text(encoding="utf-8")
 
 def render(md_txt):
     return markdown.markdown(md_txt, extensions=["tables"])
@@ -18,7 +23,7 @@ pages.append(("封面", """
 <p class="tag">命是可以科学地续的</p>
 <p>11 章 · 双尺子证据分级 · 105 篇验证文献</p>
 <p class="dim">熊博士 · DeepoMe 深度甲基 · 2026-10 · v2.0</p>
-<p class="tip">👉 点击屏幕左右侧翻页｜滑动也可以｜每节参考文献在节末折叠条里，点击展开</p>
+<p class="tip">👉 点击左右侧翻页｜滑动也可以｜顶部 A/文 切换语言｜参考文献在节末折叠条</p>
 </div>"""))
 
 APPENDIX = ('术语表', '编程比喻对照表', '配图规范', '续命工具箱', '关注与更新', '贡献指南', '关于熊博士', '声明', 'License', '利益冲突')
@@ -137,7 +142,8 @@ footer button{padding:10px 16px}
 <div id="book">
 <header><span class="t" id="ht">程序员长寿指南</span>
 <span><button onclick="fs(-1)">A-</button><button onclick="fs(1)">A+</button>
-<button onclick="night()">🌙</button></span></header>
+<button onclick="night()">🌙</button>
+<button onclick="location.href='__LANG__'">A/文</button></span></header>
 <div id="stage">
 __SECTIONS__
 <div id="navL" class="" onclick="flip(-1)"></div><div id="navM" onclick="toc()"></div><div id="navR" onclick="flip(1)"></div>
@@ -179,7 +185,7 @@ for i, s in enumerate(sections):
     t = pages[i][0]
     secs.append(s.replace("<section ", f"<section data-t='{t}' ", 1))
 
-html = HTML.replace("__SECTIONS__", "\n".join(secs)).replace("__TOC__", toc).replace("__N__", str(len(pages)))
-out = root / "ebook.html"
+html = HTML.replace("__LANG__", LANG_LINK).replace("__SECTIONS__", "\n".join(secs)).replace("__TOC__", toc).replace("__N__", str(len(pages)))
+out = root / OUT_NAME
 out.write_text(html, encoding="utf-8")
 print(f"OK {out.name}: {len(pages)} 页, {out.stat().st_size//1024}KB")
