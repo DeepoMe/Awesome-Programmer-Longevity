@@ -23,8 +23,8 @@ os.makedirs(OUT, exist_ok=True)
 
 # ── 图 1：续命十二柱全景 ──
 def fig_pillars():
-    fig, ax = plt.subplots(figsize=(12, 5.2))
-    ax.set_xlim(0, 12); ax.set_ylim(0, 6.2); ax.axis("off")
+    fig, ax = plt.subplots(figsize=(12, 5.6))
+    ax.set_xlim(0, 12); ax.set_ylim(0, 6.9); ax.axis("off")
     pillars = [
         ("H1", "基因组不稳定", True), ("H2", "端粒损耗", True), ("H3", "表观遗传改变", True),
         ("H4", "蛋白稳态丧失", True), ("H5", "自噬失能", True), ("H6", "营养感知失调", True),
@@ -51,8 +51,8 @@ def fig_pillars():
                 fontsize=17, fontweight="bold", color=INK if has else SUB)
         ax.text(x + 0.675, 1.12 + row * 3.0, name, ha="center", va="center",
                 fontsize=8.6, color=INK if has else SUB)
-    ax.text(0.35, 5.86, "续命十二柱", fontsize=21, fontweight="bold", color=INK)
-    ax.text(11.65, 5.90, "衰老标志全景", fontsize=10.5, color=SUB, ha="right", va="center")
+    ax.text(0.35, 6.52, "续命十二柱", fontsize=21, fontweight="bold", color=INK)
+    ax.text(2.62, 6.52, "衰老标志全景", fontsize=11, color=SUB, va="center")
     # 状态图例（一行，仅两种 key）
     ax.plot([0.38], [0.185], marker="o", ms=7.5, color=AMBER)
     ax.text(0.55, 0.185, "有抓手", fontsize=9.5, color=SUB, va="center")
