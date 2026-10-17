@@ -207,7 +207,7 @@
 
 全书收官：衰老的十二种机制，以及全书每一节对应哪根柱子。
 
-附录：术语表 · 编程比喻对照表 · 配图规范 · 续命工具箱 · 关注与更新 · 贡献指南 · 关于熊博士 · 声明 · License
+附录：术语表 · 编程比喻对照表 · 续命工具箱 · 关注与更新 · 关于熊博士 · 声明 · License（贡献指南与配图规范见 CONTRIBUTING.md）
 
 ---
 
@@ -2205,32 +2205,6 @@ DHA 是大脑里含量最高的 Omega-3 脂肪酸。一项 PET 研究用带标�
 | 十二大衰老标志 | 系统架构图上的十二个模块 | 十二柱 |
 | 血压 / 血脂 / 血糖 | 生产环境的核心监控指标 | 「知道自己的血压」「看懂体检里的血脂和血糖」 |
 
-## 配图规范
-
-**目标**：像生物学经典教科书的插图那样，让人看一眼就想读下去；同时一眼能看懂，经得起专家挑错。
-
-**三类图**
-
-| 类型 | 用途 | 风格 | 工具 |
-|---|---|---|---|
-| 场景图 | 痛点 / 做法（程序员在工位、在床上、在楼下） | 统一的吉祥物角色，扁平插画 | AI 生成底图 + 人工修 |
-| 机制图 | 一张图讲一个机制（光→生物钟、久坐→血糖） | 参考 David Goodsell 式分子水彩：柔和、准确、有尺度感 | AI 底图 + 专家审核 + 矢量标注 |
-| 证据图 | 剂量-反应曲线、风险对比 | 干净的数据图 | 脚本生成，可复现（matplotlib） |
-
-**规则**
-1. **图里只放必要的英文关键词**：每张 1–4 个，越短越好（一两个词）。AI 出图本身不带字，关键词由脚本 `figures/label_figs.py` 叠加（原图在 `figures/_raw/`），保证拼写准确、风格统一。
-2. **一图一点**：每张图只讲一个能验证的科学点；出处写在正文参考文献里。
-3. **统一视觉**：固定的主色、吉祥物、线宽；十二柱每根柱子一个固定颜色，全书沿用。
-4. **科学审核**：机制图逐张检查结构是否正确（线粒体嵴、DNA 右手螺旋、细胞比例、器官位置），审核记录写在配图清单里。
-5. **许可证**：确认所用 AI 工具的生成内容条款，与 CC BY-NC-SA 4.0 兼容，并在仓库注明“AI 辅助生成 + 人工审核”。
-
-**提示词模板（机制图）**
-```
-Scientific textbook illustration, David Goodsell-inspired soft watercolor style,
-[主题：例如 morning light entering the eye, signal traveling to the brain's master clock],
-clean composition, one focal point, accurate anatomy, muted palette with [柱子主色] accent,
-white background, no text, no labels, no letters
-```
 ## 续命工具箱
 
 - **30 秒症状自测**：[DeepKang 症状探索器](https://a.deepkang.com/explore)。免费、匿名、无需注册。输入一个症状（如“眼干”“腰酸”“睡不好”），30 秒看到它常和哪些症状一起出现、常见原因方向，并生成一份可以带给医生看的梳理小结。
@@ -2244,17 +2218,9 @@ white background, no text, no labels, no letters
 
 ![公众号二维码](images/qrcode_gzh.png)
 
-## 贡献指南
+## 如何参与
 
-欢迎 PR 投稿新条目，格式要求：
-1. **一节一事，不编号**：每个小节是独立模块，引用其他小节写「小节名」。
-2. **按模板 v2**：一句话 / 你可能也这样 / 做法 / 为什么（先比喻，再机制）/ 深一层（折叠）/ 证据有多硬 / 程序员场景 / 边界 / 参考文献（折叠）。范例见「晨光 10 分钟」。
-3. **文献必须可查证**：只收真实的 PMID 或 DOI，CI 会自动核对，伪造引用直接关闭。
-4. **双尺子从严标注**：证据强度 A–D + 行动建议 ✅🧪📖💸；说不清就往低标。
-5. 欢迎对现有条目提出等级异议，证据更新时我们会修订。
-6. **行文**：从感受和场景入手，再逐步引入机制；第一屏不出现专业术语，术语链接到术语表。
-7. **延伸阅读**：可以引用[深度甲基公众号](https://mp.weixin.qq.com/s/yG0bg0ht0oOEBFSQOtPGWA)科普文章和[熊博士博客](https://xiongjianghui.com)长文，仅作延伸阅读，不替代一手文献，必须是已发布文章的真实链接。
-8. **配图**：遵循[配图规范](#配图规范)：场景图、机制图可以用 AI 辅助，但图内只放必要的英文关键词、机制图必须过科学审核；数据类的证据图一律用脚本生成，保证可复现。
+投稿与配图要求见 [CONTRIBUTING.md](CONTRIBUTING.md)（贡献指南 · 配图规范）。
 
 ## 关于熊博士
 
@@ -2286,7 +2252,7 @@ white background, no text, no labels, no letters
 
 ## License
 
-文字与配图：[CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)（署名-非商业-禁止演绎），全文见 [LICENSE](LICENSE)。配图为 AI 辅助生成 + 人工审核，许可同上（待确认生成工具条款，见配图规范第 5 条）。
+文字与配图：[CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)（署名-非商业-禁止演绎），全文见 [LICENSE](LICENSE)。配图为 AI 辅助生成 + 人工审核，许可同上（待确认生成工具条款，见 [CONTRIBUTING.md](CONTRIBUTING.md) 配图规范第 5 条）。
 
 
 

@@ -470,7 +470,7 @@ footer button{padding:10px 16px}
 <p>辟谣章：要花钱买的产品，证据撑不起价格。NMN/NR、大剂量抗氧化剂、大剂量维生素 C、防蓝光眼镜、护眼鱼油与护脑 DHA、亚精胺补剂、40Hz 设备、脑训练 App、“频率疗愈”、反复测生物年龄。</p>
 <h3>第十一章 · 续命十二柱</h3>
 <p>全书收官：衰老的十二种机制，以及全书每一节对应哪根柱子。</p>
-<p>附录：术语表 · 编程比喻对照表 · 配图规范 · 续命工具箱 · 关注与更新 · 贡献指南 · 关于熊博士 · 声明 · License</p>
+<p>附录：术语表 · 编程比喻对照表 · 续命工具箱 · 关注与更新 · 关于熊博士 · 声明 · License（贡献指南与配图规范见 CONTRIBUTING.md）</p>
 <hr /><h2>第一章 · 大脑的隐秘运维</h2>
 <p><img alt="大脑的隐秘运维" src="figures/banner-ch1-brain.jpg" /></p>
 <blockquote>
@@ -2325,72 +2325,20 @@ NAC 进入身体后能变成半胱氨酸，这是合成谷胱甘肽的原料之�
 </tr>
 </tbody>
 </table></div></section>
-<section data-t='配图规范' class='page' id='p20'><div class='pagebody'><h2>配图规范</h2>
-<p><strong>目标</strong>：像生物学经典教科书的插图那样，让人看一眼就想读下去；同时一眼能看懂，经得起专家挑错。</p>
-<p><strong>三类图</strong></p>
-<table>
-<thead>
-<tr>
-<th>类型</th>
-<th>用途</th>
-<th>风格</th>
-<th>工具</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>场景图</td>
-<td>痛点 / 做法（程序员在工位、在床上、在楼下）</td>
-<td>统一的吉祥物角色，扁平插画</td>
-<td>AI 生成底图 + 人工修</td>
-</tr>
-<tr>
-<td>机制图</td>
-<td>一张图讲一个机制（光→生物钟、久坐→血糖）</td>
-<td>参考 David Goodsell 式分子水彩：柔和、准确、有尺度感</td>
-<td>AI 底图 + 专家审核 + 矢量标注</td>
-</tr>
-<tr>
-<td>证据图</td>
-<td>剂量-反应曲线、风险对比</td>
-<td>干净的数据图</td>
-<td>脚本生成，可复现（matplotlib）</td>
-</tr>
-</tbody>
-</table>
-<p><strong>规则</strong>
-1. <strong>图里只放必要的英文关键词</strong>：每张 1–4 个，越短越好（一两个词）。AI 出图本身不带字，关键词由脚本 <code>figures/label_figs.py</code> 叠加（原图在 <code>figures/_raw/</code>），保证拼写准确、风格统一。
-2. <strong>一图一点</strong>：每张图只讲一个能验证的科学点；出处写在正文参考文献里。
-3. <strong>统一视觉</strong>：固定的主色、吉祥物、线宽；十二柱每根柱子一个固定颜色，全书沿用。
-4. <strong>科学审核</strong>：机制图逐张检查结构是否正确（线粒体嵴、DNA 右手螺旋、细胞比例、器官位置），审核记录写在配图清单里。
-5. <strong>许可证</strong>：确认所用 AI 工具的生成内容条款，与 CC BY-NC-SA 4.0 兼容，并在仓库注明“AI 辅助生成 + 人工审核”。</p>
-<p><strong>提示词模板（机制图）</strong>
-<code>Scientific textbook illustration, David Goodsell-inspired soft watercolor style,
-[主题：例如 morning light entering the eye, signal traveling to the brain's master clock],
-clean composition, one focal point, accurate anatomy, muted palette with [柱子主色] accent,
-white background, no text, no labels, no letters</code></p></div></section>
-<section data-t='续命工具箱' class='page' id='p21'><div class='pagebody'><h2>续命工具箱</h2>
+<section data-t='续命工具箱' class='page' id='p20'><div class='pagebody'><h2>续命工具箱</h2>
 <ul>
 <li><strong>30 秒症状自测</strong>：<a href="https://a.deepkang.com/explore">DeepKang 症状探索器</a>。免费、匿名、无需注册。输入一个症状（如“眼干”“腰酸”“睡不好”），30 秒看到它常和哪些症状一起出现、常见原因方向，并生成一份可以带给医生看的梳理小结。<blockquote>
 <p>⚠️ 利益相关：DeepKang 是维护方 DeepoMe 的产品。</p>
 </blockquote>
 </li>
 </ul></div></section>
-<section data-t='关注与更新' class='page' id='p22'><div class='pagebody'><h2>关注与更新</h2>
+<section data-t='关注与更新' class='page' id='p21'><div class='pagebody'><h2>关注与更新</h2>
 <p><strong>GitHub 是本指南的家</strong>：star/watch 获取每次更新，Issue 征题与纠错。</p>
 <p>新条目在公众号首发，GitHub 同步归档。扫码关注：</p>
 <p><img alt="公众号二维码" src="images/qrcode_gzh.png" /></p></div></section>
-<section data-t='贡献指南' class='page' id='p23'><div class='pagebody'><h2>贡献指南</h2>
-<p>欢迎 PR 投稿新条目，格式要求：
-1. <strong>一节一事，不编号</strong>：每个小节是独立模块，引用其他小节写「小节名」。
-2. <strong>按模板 v2</strong>：一句话 / 你可能也这样 / 做法 / 为什么（先比喻，再机制）/ 深一层（折叠）/ 证据有多硬 / 程序员场景 / 边界 / 参考文献（折叠）。范例见「晨光 10 分钟」。
-3. <strong>文献必须可查证</strong>：只收真实的 PMID 或 DOI，CI 会自动核对，伪造引用直接关闭。
-4. <strong>双尺子从严标注</strong>：证据强度 A–D + 行动建议 ✅🧪📖💸；说不清就往低标。
-5. 欢迎对现有条目提出等级异议，证据更新时我们会修订。
-6. <strong>行文</strong>：从感受和场景入手，再逐步引入机制；第一屏不出现专业术语，术语链接到术语表。
-7. <strong>延伸阅读</strong>：可以引用<a href="https://mp.weixin.qq.com/s/yG0bg0ht0oOEBFSQOtPGWA">深度甲基公众号</a>科普文章和<a href="https://xiongjianghui.com">熊博士博客</a>长文，仅作延伸阅读，不替代一手文献，必须是已发布文章的真实链接。
-8. <strong>配图</strong>：遵循<a href="#配图规范">配图规范</a>：场景图、机制图可以用 AI 辅助，但图内只放必要的英文关键词、机制图必须过科学审核；数据类的证据图一律用脚本生成，保证可复现。</p></div></section>
-<section data-t='关于熊博士' class='page' id='p24'><div class='pagebody'><h2>关于熊博士</h2>
+<section data-t='如何参与' class='page' id='p22'><div class='pagebody'><h2>如何参与</h2>
+<p>投稿与配图要求见 <a href="CONTRIBUTING.md">CONTRIBUTING.md</a>（贡献指南 · 配图规范）。</p></div></section>
+<section data-t='关于熊博士' class='page' id='p23'><div class='pagebody'><h2>关于熊博士</h2>
 <details><summary>熊博士是谁（姓名 · 机构 · 论文）</summary>
 
 **熊博士**（熊江辉），[DeepoMe 深度甲基](https://deepome.com)创始人，长寿医学智能方向研究者。做这个指南只有一个规矩：**证据走到哪一步，就说到哪一步**，这条规矩同样约束我们自己。
@@ -2403,7 +2351,7 @@ white background, no text, no labels, no letters</code></p></div></section>
 - 📢 公众号科普：[衰老检测不该只是一个值：从行动仪表盘到个人长寿操作系统](https://mp.weixin.qq.com/s/yG0bg0ht0oOEBFSQOtPGWA)
 
 </details></div></section>
-<section data-t='声明' class='page' id='p25'><div class='pagebody'><h2>声明</h2>
+<section data-t='声明' class='page' id='p24'><div class='pagebody'><h2>声明</h2>
 <p><strong>本指南是健康教育与科普内容，不是医疗服务，不构成医疗建议、诊断或治疗方案。</strong></p>
 <ol>
 <li>本指南不进行疾病诊断、不提供治疗方案、不开具处方；涉及的检查指标解读请以主治医师意见为准。</li>
@@ -2414,17 +2362,17 @@ white background, no text, no labels, no letters</code></p></div></section>
 <li>基因相关信息（如 APOE4）仅为科学介绍，本指南不建议任何人为用药目的自行做基因检测。</li>
 </ol>
 <p>维护方为 <a href="https://deepome.com">DeepoMe 深度甲基</a>，利益关系见<a href="#利益冲突声明">利益冲突声明</a>。</p></div></section>
-<section data-t='License' class='page' id='p26'><div class='pagebody'><h2>License</h2>
-<p>文字与配图：<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>（署名-非商业-禁止演绎），全文见 <a href="LICENSE">LICENSE</a>。配图为 AI 辅助生成 + 人工审核，许可同上（待确认生成工具条款，见配图规范第 5 条）。</p>
+<section data-t='License' class='page' id='p25'><div class='pagebody'><h2>License</h2>
+<p>文字与配图：<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>（署名-非商业-禁止演绎），全文见 <a href="LICENSE">LICENSE</a>。配图为 AI 辅助生成 + 人工审核，许可同上（待确认生成工具条款，见 <a href="CONTRIBUTING.md">CONTRIBUTING.md</a> 配图规范第 5 条）。</p>
 <hr /></div></section>
 <div id="navL" class="" onclick="flip(-1)"></div><div id="navM" onclick="toc()"></div><div id="navR" onclick="flip(1)"></div>
 <div id="mask" onclick="toc()"></div>
-<div id="toc"><h2>目录</h2><div class='tocitem' onclick='go(0)'>1. 封面</div><div class='tocitem' onclick='go(1)'>2. 前言 · 为什么写这份指南</div><div class='tocitem' onclick='go(2)'>3. 怎么读这份指南</div><div class='tocitem' onclick='go(3)'>4. 🔭 本指南独有：在别的长寿书里看不到</div><div class='tocitem' onclick='go(4)'>5. 证据分级说明（v2：两把尺子）</div><div class='tocitem' onclick='go(5)'>6. 利益冲突声明</div><div class='tocitem' onclick='go(6)'>7. 连载说明</div><div class='tocitem' onclick='go(7)'>8. 第一章 · 大脑的隐秘运维</div><div class='tocitem' onclick='go(8)'>9. 第二章 · 阳气与线粒体</div><div class='tocitem' onclick='go(9)'>10. 第三章 · 年龄不是一个数</div><div class='tocitem' onclick='go(10)'>11. 第四章 · 古方新解</div><div class='tocitem' onclick='go(11)'>12. 第五章 · 续命十块大石头</div><div class='tocitem' onclick='go(12)'>13. 第六章 · 续命的一天</div><div class='tocitem' onclick='go(13)'>14. 第七章 · 修复与维护</div><div class='tocitem' onclick='go(14)'>15. 第八章 · 专注力工程</div><div class='tocitem' onclick='go(15)'>16. 第九章 · 餐桌与补剂</div><div class='tocitem' onclick='go(16)'>17. 第十章 · 别花冤枉钱</div><div class='tocitem' onclick='go(17)'>18. 第十一章 · 续命十二柱</div><div class='tocitem' onclick='go(18)'>19. 术语表</div><div class='tocitem' onclick='go(19)'>20. 编程比喻对照表</div><div class='tocitem' onclick='go(20)'>21. 配图规范</div><div class='tocitem' onclick='go(21)'>22. 续命工具箱</div><div class='tocitem' onclick='go(22)'>23. 关注与更新</div><div class='tocitem' onclick='go(23)'>24. 贡献指南</div><div class='tocitem' onclick='go(24)'>25. 关于熊博士</div><div class='tocitem' onclick='go(25)'>26. 声明</div><div class='tocitem' onclick='go(26)'>27. License</div></div>
+<div id="toc"><h2>目录</h2><div class='tocitem' onclick='go(0)'>1. 封面</div><div class='tocitem' onclick='go(1)'>2. 前言 · 为什么写这份指南</div><div class='tocitem' onclick='go(2)'>3. 怎么读这份指南</div><div class='tocitem' onclick='go(3)'>4. 🔭 本指南独有：在别的长寿书里看不到</div><div class='tocitem' onclick='go(4)'>5. 证据分级说明（v2：两把尺子）</div><div class='tocitem' onclick='go(5)'>6. 利益冲突声明</div><div class='tocitem' onclick='go(6)'>7. 连载说明</div><div class='tocitem' onclick='go(7)'>8. 第一章 · 大脑的隐秘运维</div><div class='tocitem' onclick='go(8)'>9. 第二章 · 阳气与线粒体</div><div class='tocitem' onclick='go(9)'>10. 第三章 · 年龄不是一个数</div><div class='tocitem' onclick='go(10)'>11. 第四章 · 古方新解</div><div class='tocitem' onclick='go(11)'>12. 第五章 · 续命十块大石头</div><div class='tocitem' onclick='go(12)'>13. 第六章 · 续命的一天</div><div class='tocitem' onclick='go(13)'>14. 第七章 · 修复与维护</div><div class='tocitem' onclick='go(14)'>15. 第八章 · 专注力工程</div><div class='tocitem' onclick='go(15)'>16. 第九章 · 餐桌与补剂</div><div class='tocitem' onclick='go(16)'>17. 第十章 · 别花冤枉钱</div><div class='tocitem' onclick='go(17)'>18. 第十一章 · 续命十二柱</div><div class='tocitem' onclick='go(18)'>19. 术语表</div><div class='tocitem' onclick='go(19)'>20. 编程比喻对照表</div><div class='tocitem' onclick='go(20)'>21. 续命工具箱</div><div class='tocitem' onclick='go(21)'>22. 关注与更新</div><div class='tocitem' onclick='go(22)'>23. 如何参与</div><div class='tocitem' onclick='go(23)'>24. 关于熊博士</div><div class='tocitem' onclick='go(24)'>25. 声明</div><div class='tocitem' onclick='go(25)'>26. License</div></div>
 </div>
 <footer><span onclick="flip(-1)">‹ 上一页</span><b id="pg">1 / N</b><span onclick="flip(1)">下一页 ›</span><div class="clickzone cz-l" onclick="flip(-1)"></div><div class="clickzone cz-r" onclick="flip(1)"></div></footer>
 </div>
 <script>
-let cur=0,N=27;
+let cur=0,N=26;
 function show(){document.querySelectorAll('.page').forEach((p,i)=>p.classList.toggle('on',i===cur));
 document.getElementById('pg').textContent=(cur+1)+' / '+N;
 document.getElementById('ht').textContent=document.querySelectorAll('.page')[cur].dataset.t||'程序员长寿指南';}
