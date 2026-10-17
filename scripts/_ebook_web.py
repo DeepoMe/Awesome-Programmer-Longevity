@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-"""网页版电子书：README.md -> ebook.html（手机友好：左右点击翻页/字号可调/目录跳转/夜间模式）
+"""网页版电子书：README_ZH.md -> ebook.html（手机友好：左右点击翻页/字号可调/目录跳转/夜间模式）
 图片相对路径（repo 内/GitHub Pages 均可用）"""
 import re, pathlib, markdown
 
 root = pathlib.Path(__file__).resolve().parent.parent
-md = (root / "README.md").read_text(encoding="utf-8")
+md = (root / "README_ZH.md").read_text(encoding="utf-8")
 
 def render(md_txt):
     return markdown.markdown(md_txt, extensions=["tables"])
