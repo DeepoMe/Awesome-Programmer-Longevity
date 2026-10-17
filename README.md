@@ -72,36 +72,49 @@
 | 001 | 下颌淋巴轻按摩 | 大脑昏沉 | 🟡 |
 | 009 | 番茄钟的生理学 | 注意力涣散 | 🟡 |
 
-### 🧘 心与情绪（新栏目，首条排队中）
+### 🧘 心与情绪
 
-> 程序员最大的未覆盖痛点：deadline 压力、焦虑、burnout。首条《冥想十分钟》（🟢）已在选题池第 1 位。
+| # | 条目 | 痛点 | 等级 |
+|---|---|---|---|
+| 012 | 冥想十分钟 | 压力、焦虑 | 🟢 |
+| 013 | 意想与免疫 | 身心交互 | 🟡 |
+| 014 | 甘麦大枣汤与小麦胚芽 | 情绪不稳 | 🟡 |
 
-### ⏳ 选题池（按预计更新顺序排队，每周三取一条）
+### 🧠 脑力工程
 
-| # | 栏目 | 选题 | 一句话预告 | 衰老标志锚 | 预估等级 |
-|---|---|---|---|---|---|
-| 1 | 🧘 心与情绪 | 冥想十分钟 | JAMA Intern Med meta + 职场正念 RCT 群：压力轴最硬干预 | H1（端粒酶↑） | 🟢 |
-| 2 | 🧘 心与情绪 | 意想与免疫：注意力投向患处 | Nature Human Behaviour 2026（PMID 42608466）：主动注意可改变急性皮肤炎症走向——神经-免疫对话的人体证据 | H10 细胞间通讯 | 🟡 |
-| 3 | 进阶长寿 | 情绪与基因组稳定 | Epel 2004 里程碑：生活压力→端粒加速缩短 | H1/H2 基因组·端粒 | 🟢 |
-| 4 | 进阶长寿 | 记忆与基因组的断裂重连 | 大脑为写新记忆主动折断 DNA 再修复（Cell 2015 → Nature 2024 顶刊链）；AD 脑中这种适应性断裂丢失 | H1 基因组 | 🟡 |
-| 5 | 🧠 脑力工程 | 写代码与心流 | 程序员最易入流的职业之一——中断成本与心流保护（证据多在 CS 文献库，用 DOI） | 认知（跨界） | 🟡 |
-| 6 | 🧠 脑力工程 | 脑内内存管理 | 认知卸载有系统综述；"练脑"软件基本无效（meta 打脸） | 工作记忆（跨界） | 🟡 |
-| 7 | 进阶长寿 | 40Hz 声光节拍 | MIT gamma 刺激：从阿尔茨海默到健康大脑的外推 | 神经节律（跨界） | 🟡 |
-| 8 | 传统×科学 | 醋与乙酸 | 喝醋降餐后血糖 vs 肠道发酵产酸：同一分子，两条路径 | H12 菌群 | 🟢 |
-| 9 | 传统×科学 | 八段锦与筋 | 拉伸、筋膜、蛋白稳态与"肝主筋"的四层递进 | H4 蛋白稳态 | 🟢🟡🔴 |
-| 10 | 🧘 心与情绪 | 甘麦大枣汤与小麦胚芽 | 1800 年前的经方与当代自噬研究在同一颗麦粒上相遇 | H11/H5 | 🟡 |
-| 11 | 传统×科学 | NAC 与化痰 | 药典老药，黏液溶解的 Cochrane 证据（秋冬正当时） | H11 炎症 | 🟢 |
-| 12 | 进阶长寿 | 麦角硫因与蘑菇 | "长寿维生素"——蘑菇摄入与认知的队列证据 | H7/H11 | 🟡 |
-| 13 | 进阶长寿 | Omega-3 与干眼 | 程序员护眼补剂：meta 存在但结论分裂（大 RCT 阴性）——可试，别期待奇迹 | H11/眼表 | 🟡 |
-| 14 | 进阶长寿 | 坚果一把（腰果在列） | 队列+meta：坚果频率与全因死亡率负相关——"腰果"编号的自我救赎 | H6 营养感知 | 🟢 |
-| 15 | 进阶长寿 | APOE4 与长链脂肪酸 | AD 最常见遗传风险基因，同时拖累 DHA 进脑（PET 证据）——"鱼油护脑"因基因而异的精准营养 | H1×H7（基因交互） | 🟡 |
-| 16 | 进阶长寿 | 亚精胺与小麦胚芽 | "延寿胺"与自噬激活，人体认知 RCT 已起步 | H5 自噬 | 🟡 |
-| 17 | 进阶长寿 | PQQ | 线粒体新生，小样本人体 RCT 群 | H7 线粒体 | 🟡 |
-| 18 | 进阶长寿 | GlyNAC | 甘氨酸+NAC 的老年补剂组合，Baylor 系列 RCT | H5/H7 | 🟡 |
-| 19 | 传统×科学 | 颂钵 | 声音的松弛反应：初步证据，疗效宣称从严 | 松弛反应 | 🟡偏🔴 |
-| 20 | 传统×科学 | 面相与生物年龄 | 北大 ThermoFace（Cell Metab 2024，2811 名汉族人面部热像→"热年龄"，PMID 38959862）+ 韩敬东组 AURORA（Cell Metab 2026，面部图像→多组学，PMID 42019500）——"相面"拿到定量证据 | 表型时钟（跨界） | 🟡 |
-| 21 | 传统×科学 | 阳气与线粒体 | 概念映射不是证明——但值得认真对待 | H7 线粒体 | 🔴🟡 |
-| 22 | 进阶长寿 | 甲基化时钟 | 你的身体年龄谁说了算——表观遗传时钟科普（与面相时钟对照读） | H3 表观遗传 | 🟢 |
+| # | 条目 | 痛点 | 等级 |
+|---|---|---|---|
+| 015 | 写代码与心流 | 中断、切换成本 | 🟡 |
+| 016 | 脑内内存管理 | 认知超载 | 🟡 |
+
+### 📈 进阶长寿
+
+| # | 条目 | 痛点/主题 | 等级 |
+|---|---|---|---|
+| 017 | 情绪与基因组稳定 | 慢性压力的分子账单 | 🟢 |
+| 018 | 记忆与基因组的断裂重连 | 学新东西时大脑在干嘛 | 🟡 |
+| 019 | 40Hz 声光节拍 | 健脑外推 | 🟡 |
+| 020 | 麦角硫因与蘑菇 | 长寿维生素 | 🟡 |
+| 021 | Omega-3 与干眼 | 护眼补剂 | 🟡 |
+| 022 | 坚果一把 | 每日零食 | 🟢 |
+| 023 | APOE4 与长链脂肪酸 | 基因×营养 | 🟡 |
+| 024 | 亚精胺与小麦胚芽 | 自噬激活 | 🟡 |
+| 025 | PQQ | 线粒体新生 | 🟡 |
+| 026 | GlyNAC | 老年补剂组合 | 🟡 |
+| 027 | 甲基化时钟 | 生物年龄 | 🟢 |
+
+### 🌿 传统×科学
+
+| # | 条目 | 主题 | 等级 |
+|---|---|---|---|
+| 028 | 醋与乙酸 | 餐后血糖×菌群 | 🟢 |
+| 029 | 八段锦与筋 | 拉伸×蛋白稳态 | 🟢🟡🔴 |
+| 030 | NAC 与化痰 | 药典老药 | 🟢 |
+| 031 | 颂钵 | 声音松弛 | 🟡偏🔴 |
+| 032 | 面相与生物年龄 | 表型时钟 | 🟡 |
+| 033 | 阳气与线粒体 | 概念映射 | 🔴🟡 |
+
+> **选题池已全部转正**（原 22 条预告 → 正文 012-033）。新选题走 [Issue 征题](https://github.com/DeepoMe/awesome-programmer-longevity/issues)，每周三评审入池。
 
 ### 🏛️ 续命十二柱（衰老标志全景）
 
@@ -113,18 +126,18 @@
 
 | 柱 | 衰老标志 | 本指南对应 |
 |---|---|---|
-| H1 | 基因组不稳定 | 排队：情绪与基因组稳定 |
-| H2 | 端粒损耗 | 排队：冥想×端粒酶、情绪与基因组稳定 |
-| H3 | 表观遗传改变 | 排队：甲基化时钟 |
-| H4 | 蛋白稳态丧失 | 排队：八段锦与筋 |
-| H5 | 自噬失能 | 排队：亚精胺、GlyNAC |
-| H6 | 营养感知失调 | 排队：醋与乙酸 |
-| H7 | 线粒体功能障碍 | 已发：006 Zone 2｜排队：阳气线粒体、PQQ、麦角硫因 |
-| H8 | 细胞衰老 | 排队：情绪与基因组稳定（慢性压力→p16 衰老细胞） |
+| H1 | 基因组不稳定 | 017 情绪与基因组稳定、023 APOE4、018 记忆断裂重连 |
+| H2 | 端粒损耗 | 012 冥想（端粒酶）、017 |
+| H3 | 表观遗传改变 | 027 甲基化时钟、012 冥想（表观调节信号） |
+| H4 | 蛋白稳态丧失 | 029 八段锦与筋 |
+| H5 | 自噬失能 | 024 亚精胺、026 GlyNAC、014 小麦胚芽 |
+| H6 | 营养感知失调 | 022 坚果、028 醋与乙酸 |
+| H7 | 线粒体功能障碍 | 已发 006 Zone 2｜025 PQQ、020 麦角硫因、033 阳气线粒体 |
+| H8 | 细胞衰老 | 017（慢性压力→p16 衰老细胞） |
 | H9 | 干细胞耗竭 | ——暂无生活方式级证据抓手，诚实留白 |
-| H10 | 细胞间通讯改变 | 排队：意想与免疫（神经-免疫对话，Nat Hum Behav 2026） |
-| H11 | 慢性炎症 | 排队：麦角硫因、NAC、甘麦大枣汤 |
-| H12 | 菌群失调 | 排队：醋与乙酸（SCFA 路径） |
+| H10 | 细胞间通讯改变 | 013 意想与免疫（神经-免疫对话） |
+| H11 | 慢性炎症 | 020 麦角硫因、030 NAC、014 甘麦大枣汤、012 冥想（炎症基因） |
+| H12 | 菌群失调 | 028 醋与乙酸（SCFA 路径） |
 
 > 十二根柱子，十一根有抓手，一根诚实留白——等证据走到那一步，我们再说到那一步。
 >
@@ -411,6 +424,527 @@
 2. Ariga A, Lleras A. Brief and rare mental "breaks" keep you focused: deactivation and reactivation of task goals forestall vigilance decrement. *Cognition*. 2011;118(3):439-43. (PMID: 21211793)
 
 > **熊博士按**：我喜欢这一条的诚实——"25 分钟"是一个意大利大学生的个人约定，不是生理学。方法可以工程化，但把工程约定当自然规律，是我们要在整本指南里反复拆穿的事。
+
+</details>
+
+---
+
+## 🧘 心与情绪 · 正文
+
+<details>
+<summary><b>腰果 012 · 冥想十分钟</b> ｜ 🟢 ｜ 压力、焦虑</summary>
+
+![冥想十分钟](images/heads/head_012.png)
+
+**做法**：每天 10 分钟，坐直，注意力放在呼吸上（吸气数 1，呼气数 2，数到 10 重来）。走神了？正常——**把注意力拉回来这个动作，就是训练本身**。
+
+**机制**：注意力投放是可训练的技能。压力轴：冥想程序对焦虑/压力的改善有 meta 级证据（Goyal 2014）；职场正念 RCT 群（J Occup Health Psychol 2019 meta）。分子层：冥想与端粒酶活性升高相关（meta，Psychoneuroendocrinology 2014）；炎症层有促炎基因表达下调的信号，但临床炎症标志物效应量小（2023 meta："Only Small Effects"）——分层如实。
+
+**证据等级**：🟢 压力/焦虑轴（meta+RCT 群）｜🟡 分子层信号（端粒酶/基因表达，机制级）
+
+**程序员场景**：编译等待、会议间隙、睡前——十分钟不比一集短视频长。
+
+**边界**：不替代精神科治疗；确诊抑郁/焦虑障碍者以专业治疗为主，冥想是辅助。
+
+**参考文献**：
+1. Goyal M, et al. Meditation programs for psychological stress and well-being: a systematic review and meta-analysis. *JAMA Intern Med*. 2014;174(3):357-68. (PMID: 24395196)
+2. Bartlett L, et al. A systematic review and meta-analysis of workplace mindfulness training randomized controlled trials. *J Occup Health Psychol*. 2019;24(1):108-126. (PMID: 30714811)
+3. Schutte NS, Malouff JM. A meta-analytic review of the effects of mindfulness meditation on telomerase activity. *Psychoneuroendocrinology*. 2014;42:45-8. (PMID: 24636500)
+
+> **熊博士按**：这一条是"一招三柱"——压力轴（H11 炎症基因）、端粒酶（H1/H2）、表观遗传调节信号（H3）。十分钟换三根柱子的正向干预，全指南性价比前二。
+
+</details>
+
+<details>
+<summary><b>腰果 013 · 意想与免疫：注意力投向患处</b> ｜ 🟡 ｜ 身心交互</summary>
+
+![意想与免疫](images/heads/head_013.png)
+
+**做法**：身体某处急性不适（蚊虫叮咬、局部刺激）时，把注意力温和地投向那个部位 2-3 分钟——只是观察感受，不用力想象"治愈"。
+
+**机制**：2026 年 *Nature Human Behaviour* 的人体实验：主动的内部注意（意想身体某处）可以改变急性皮肤炎症的发展轨迹，并给出认知-生理通路线索。这是"神经-免疫对话"（十二柱 H10）在人体上的直接证据雏形。
+
+**证据等级**：🟡 单篇初步人体证据，待复制；适应证仅急性皮肤炎症模型
+
+**程序员场景**：被蚊子咬了别急着挠——先试试"看它一眼"。顺便说，冥想（012）里的身体扫描，练的就是这种注意力投放。
+
+**边界**：**不替代任何治疗**；慢性炎症、自身免疫病请遵医嘱。效应量与适用范围待更多研究。
+
+**参考文献**：
+1. Mizrachi N, et al. Voluntary attention regulates acute immune responses in humans. *Nat Hum Behav*. 2026. (PMID: 42608466)
+
+> **熊博士按**："意念治病"是养生号重灾区——但 2026 年这篇论文告诉你：注意力与免疫的对话是真的，只是它说的是"改变走向"，不是"治愈"。我们把这条标 🟡 收进来，就是示范怎么区分"有初步证据的神奇"和"纯神奇"。
+
+</details>
+
+<details>
+<summary><b>腰果 014 · 甘麦大枣汤与小麦胚芽</b> ｜ 🟡 ｜ 情绪不稳</summary>
+
+![甘麦大枣汤与小麦胚芽](images/heads/head_014.png)
+
+**做法**：本条是科普而非处方——甘麦大枣汤是《金匮要略》（约公元 200 年）经典方，需中医师辨证使用。程序员可及的平民版：把小麦胚芽纳入主食（麦片、胚芽粉）。
+
+**机制**：经方端：甘麦大枣汤主治"脏躁"（情绪不稳、悲伤欲哭），有 meta 分析（2014）与 2025 动物研究（CUMS 抑郁模型）支持。现代端：小麦胚芽是膳食亚精胺的头部来源——亚精胺是自噬激活剂（见 024）。**1800 年前的经方与当代自噬研究，在同一颗麦粒上相遇。**
+
+**证据等级**：🟡 中药 meta（中文 RCT 质量参差，如实说）+ 动物机制；亚精胺人体 RCT 另条目（024）
+
+**程序员场景**：情绪低谷期的饮食仪式感：一碗胚芽燕麦，成本低，叙事好。
+
+**边界**：经方使用请找中医师；甘麦大枣汤不与精神科药物互相替代。
+
+**参考文献**：
+1. A meta-analysis of the efficacy and safety of traditional Chinese medicine formula Ganmai Dazao decoction for depression. 2014. (PMID: 24632021)
+2. Gan-Mai-Da-Zao decoction ameliorates depressive-like behaviors in CUMS mice. 2025. (PMID: 40580692)
+
+> **熊博士按**：这条的故事密度全指南第一：一张经方，君药是小麦；两千年后，小麦胚芽里的亚精胺成了自噬研究的明星分子。我不说"古人早知道"——我说的是：**好食材经受得住两种完全不同的知识体系反复检验。**
+
+</details>
+
+## 🧠 脑力工程 · 正文
+
+<details>
+<summary><b>腰果 015 · 写代码与心流</b> ｜ 🟡 ｜ 中断、切换成本</summary>
+
+![写代码与心流](images/heads/head_015.png)
+
+**做法**：两条工程习惯保护心流：①免打扰时段（日历占位+状态标记）；②**恢复注释**——被打断前，用一行注释写下"接下来要做什么"，给未来的自己留断点。
+
+**机制**：程序员是最容易进入心流的职业之一，但中断的代价沉重：对 85 名程序员上万次编程会话的分析（Parnin & Rugaber 2011）显示，开发者以 15-30 分钟短会话为主，且**每次恢复被中断的任务，都要花可观时间重建工作上下文**。恢复注释本质是"断点续传"——把上下文外化，降低重建成本。
+
+**证据等级**：🟡 软件工程实证（CS 文献库）+ 认知科学的微休息证据
+
+**程序员场景**：产品经理走过来之前，Cmd+S 代码，再写下那行注释。心流被打断的切换成本是真实的（与 009 番茄钟的分工：平庸任务用节律，深度任务护心流）。
+
+**边界**：心流不是所有任务的最优态（代码评审、debug 需要发散）；别把"护心流"变成"谁都不能找我"。
+
+**参考文献**：
+1. Parnin C, Rugaber S. Resumption strategies for interrupted programming tasks. *Software Quality Journal*. 2011;19(1):5-34. (DOI: 10.1007/s11219-010-9104-9)
+2. Ariga A, Lleras A. Brief and rare mental "breaks" keep you focused. *Cognition*. 2011;118(3):439-43. (PMID: 21211793)
+
+> **熊博士按**：中断后"我在干嘛来着"的那十秒钟茫然，就是上下文重建的成本在计费。恢复注释是全指南最便宜的工程习惯——一行注释，买回一次快速续传。
+
+</details>
+
+<details>
+<summary><b>腰果 016 · 脑内内存管理</b> ｜ 🟡 ｜ 认知超载</summary>
+
+![脑内内存管理](images/heads/head_016.png)
+
+**做法**：把"在脑内持有"改为"在外部持有"：伪代码先行、任务清单、恢复注释（015）、一张草稿纸。写下来不是偷懒，是**扩容**。
+
+**机制**：认知科学称之"认知卸载"（cognitive offloading）：把信息外化到工具，释放工作记忆——该领域已有系统综述（意图卸载，Psychon Bull Rev 2023）。反面证据同样重要：**"练脑"软件基本无效**——工作记忆训练的 meta 分析显示训练收益不迁移到一般认知能力（Perspect Psychol Sci 2016）。
+
+**证据等级**：🟡 卸载有综述支持；训练迁移被 meta 否定
+
+**程序员场景**：你早就在这么干了——注释、TODO、白板。本条只是告诉你：这个直觉有认知科学背书，而且比买脑训练 App 靠谱。
+
+**边界**：卸载≠不动脑——深度理解仍需要工作记忆参与；外化的是"持有"，不是"思考"。
+
+**参考文献**：
+1. Boldt A, Gilbert SJ. Outsourcing memory to external tools: A review of 'intention offloading'. *Psychon Bull Rev*. 2023;30(3):920-937. (PMID: 35789477)
+2. Melby-Lervåg M, Hulme C. There is no convincing evidence that working memory training is effective. *Perspect Psychol Sci*. 2016;11(2):270-277. (PMID: 27474138)
+
+> **熊博士按**："写下来就是扩容"——工程师对外置存储的理解，比谁都深。倒是那些卖脑训练 App 的，该读读那篇 meta：训练收益不迁移。省下订阅费，买张好草稿纸。
+
+</details>
+
+## 📈 进阶长寿 · 正文
+
+<details>
+<summary><b>腰果 017 · 情绪与基因组稳定</b> ｜ 🟢 ｜ 慢性压力的分子账单</summary>
+
+![情绪与基因组稳定](images/heads/head_017.png)
+
+**做法**：把慢性压力当作有分子后果的事来管理：冥想（012）、Zone 2（006）、睡眠（007）、可倾诉的关系。重大压力事件后，给身体安排恢复期。
+
+**机制**：2004 年 PNAS 里程碑（Epel/Blackburn）：**生活压力越大，端粒越短、端粒酶越低**——照护慢性病孩子的高压人群，细胞层面"更老"。后续：抑郁与端粒缩短有 meta 级关联；2025 年 *Nat Aging*：慢性社会压力驱动 p16 介导的衰老细胞积累（小鼠）。
+
+**证据等级**：🟢 端粒关联（多项 meta，人群证据）｜因果方向与干预逆转证据仍在积累
+
+**程序员场景**：连续高压冲刺不是"扛过去就没事"——它在你染色体末端记账。
+
+**边界**：关联≠因果；抑郁症是疾病，治疗优先，端粒不是 KPI。
+
+**参考文献**：
+1. Epel ES, et al. Accelerated telomere shortening in response to life stress. *PNAS*. 2004;101(49):17312-5. (PMID: 15574496)
+2. Schutte NS, et al. Depression and telomere length: a meta-analysis. *J Affect Disord*. 2016;191:247-52. (PMID: 26688493)
+3. Chronic social stress induces p16-mediated senescent cell accumulation in mice. *Nat Aging*. 2025. (PMID: 39528642)
+
+> **熊博士按**：情绪是有分子后果的——这不是鸡汤，是 Epel 2004 以后端粒研究的主流结论之一。管理情绪不是矫情，是基因组维护工作的一部分。
+
+</details>
+
+<details>
+<summary><b>腰果 018 · 记忆与基因组的断裂重连</b> ｜ 🟡 ｜ 学新东西时大脑在干嘛</summary>
+
+![记忆与基因组的断裂重连](images/heads/head_018.png)
+
+**做法**：学新框架/新语言的那几天，保证睡眠（修复机制多在睡眠中运转）与恢复期；把学习强度控制在"有点难但不至于宕机"。
+
+**机制**：顶刊证据链——*Cell* 2015：神经元激活时拓扑异构酶 IIβ 主动剪断 DNA 启动即刻早基因表达；*Nature* 2023：NPAS4-NuA4 复合体把突触活动与 DNA 修复耦合；*Nature* 2024：记忆组装经 DNA 感知 TLR9 通路；2024：**阿尔茨海默脑中这种"适应性断裂"丢失**——折断后接不回，才是病。
+
+**证据等级**：🟡 机制+动物，顶刊级；人体直接证据在积累
+
+**程序员场景**：啃新东西时大脑在物理层面"重构代码"——给它留出编译时间。
+
+**边界**：适应性断裂≠"多学多断多好"；机制理解中，勿过度演绎。
+
+**参考文献**：
+1. Madabhushi R, et al. Activity-induced DNA breaks govern the expression of neuronal early-response genes. *Cell*. 2015;161(7):1592-605. (PMID: 26052046)
+2. Kim J, et al. A NPAS4-NuA4 complex couples synaptic activity to DNA repair. *Nature*. 2023;614(7949):754-762. (PMID: 36792830)
+3. Pollina EA, et al. Formation of memory assemblies through the DNA-sensing TLR9 pathway. *Nature*. 2024. (PMID: 38538785)
+
+> **熊博士按**：大脑为写一条新记忆，主动折断自己的 DNA 再接回去——而阿尔茨海默的悲剧是接不回去。这是全指南我最想把动画做出来的一条。
+
+</details>
+
+<details>
+<summary><b>腰果 019 · 40Hz 声光节拍</b> ｜ 🟡 ｜ 健脑外推</summary>
+
+![40Hz 声光节拍](images/heads/head_019.png)
+
+**做法**：本条暂不推荐任何设备——**先让子弹飞**。了解这条线即可；伽马节律的日常自然来源（运动、社交、新异刺激）比设备便宜。
+
+**机制**：MIT 团队的 gamma 感觉刺激（40Hz 光+声）：*Cell* 2019 多感官 gamma 刺激改善 AD 模型小鼠病理与认知；轻症 AD 患者的人体试验（2022）与开放标签延伸（2025）显示可行性与部分信号；2024 年 *J Intern Med* 综述梳理了"从神经退行到健康大脑"的外推路径。
+
+**证据等级**：🟡 AD 人群早期证据；健康年轻人"健脑"属外推，无 RCT
+
+**程序员场景**：对"40Hz 助眠灯/专注音"类产品保持清醒——卖得最热的场景恰恰证据最薄。
+
+**边界**：勿为健康健脑购买高价设备；癫痫/光敏者禁忌闪烁光刺激。
+
+**参考文献**：
+1. Adaikkan C, et al. Multi-sensory gamma stimulation ameliorates Alzheimer's-associated pathology and improves cognition. *Cell*. 2019;177(2):256-271. (PMID: 30879788)
+2. Chan D, et al. Gamma frequency sensory stimulation in mild probable Alzheimer's dementia patients. *PLoS One*. 2022;17(1):e0261279. (PMID: 36454969)
+3. Audiovisual gamma stimulation for the treatment of neurodegeneration. *J Intern Med*. 2024. (PMID: 38115692)
+
+> **熊博士按**：40Hz 是"未来感最强"的一条——出自 MIT，故事性感。但健康人健脑目前是外推，等人体证据，别为预告片买票。
+
+</details>
+
+<details>
+<summary><b>腰果 020 · 麦角硫因与蘑菇</b> ｜ 🟡 ｜ 长寿维生素</summary>
+
+![麦角硫因与蘑菇](images/heads/head_020.png)
+
+**做法**：蘑菇入菜——香菇、平菇、杏鲍菇、口蘑，每周 2-3 次，换着来。食补优先，暂不推荐补剂。
+
+**机制**：麦角硫因被称"长寿维生素"：人体有专属转运体（说明它在被认真对待），蘑菇是头号膳食来源。人群证据：日本队列——血清麦角硫因越高，痴呆风险越低（2025）；低血浆麦角硫因预测老年人认知与功能下降（2022）；新加坡队列——蘑菇摄入与轻度认知障碍风险降低相关（2019）。
+
+**证据等级**：🟡 观察性队列（相关性），食补风险为零——性价比叙事成立
+
+**程序员场景**：外卖点蘑菇类的菜，是最不费劲的"长寿投资"。
+
+**边界**：观察性证据≠因果；勿囤高价麦角硫因补剂（人体干预证据未定）。
+
+**参考文献**：
+1. Serum ergothioneine and risk of dementia in a general older Japanese population. 2025. (PMID: 40908798)
+2. Low plasma ergothioneine predicts cognitive and functional decline in an elderly cohort. 2022. (PMID: 36139790)
+3. The association between mushroom consumption and mild cognitive impairment. 2019. (PMID: 30775990)
+
+> **熊博士按**：相关性不是因果——但当暴露物是"炒个蘑菇"这种零风险行为时，观察性证据也够下单了。这叫贝叶斯式点菜。
+
+</details>
+
+<details>
+<summary><b>腰果 021 · Omega-3 与干眼</b> ｜ 🟡 ｜ 护眼补剂</summary>
+
+![Omega-3 与干眼](images/heads/head_021.png)
+
+**做法**：干眼困扰者：深海鱼每周 2 次（食补优先）；补剂可试 3 个月，无效就停——别加码。
+
+**机制**：Omega-3（EPA/DHA）抗炎通路对干眼病理合理；meta 存在（2023, J Clin Med）但**结论分裂**——阳性小 RCT 与大 RCT 阴性并存；针对计算机视觉综合征的干预综述（*Ophthalmology* 2022）证据同样有限。先做零成本项（003 眨眼+20-20-20），再谈鱼油。
+
+**证据等级**：🟡 证据分裂，如实标注——"可试，别期待奇迹"
+
+**程序员场景**：眼药水→鱼油→眨眼提醒，顺序应该反过来。
+
+**边界**：高剂量鱼油与抗凝药相互作用；手术前告知医生。
+
+**参考文献**：
+1. Efficacy of omega-3 intake in managing dry eye disease: a systematic review and meta-analysis. *J Clin Med*. 2023. (PMID: 38002640)
+2. Interventions for the management of computer vision syndrome: a systematic review. *Ophthalmology*. 2022. (PMID: 35597519)
+
+> **熊博士按**：这是全指南"证据最分裂"的一条，我故意留着它——分裂的证据怎么诚实地呈现，本身就是这套分级体系的卖点。
+
+</details>
+
+<details>
+<summary><b>腰果 022 · 坚果一把</b> ｜ 🟢 ｜ 每日零食</summary>
+
+![坚果一把](images/heads/head_022.png)
+
+**做法**：每天一小把（约 28g），混合坚果，**无糖无盐**非油炸。腰果在列。
+
+**机制**：坚果摄入频率与全因死亡率负相关：前瞻队列+meta（*Food Funct* 2017）——坚果摄入者的心血管与全因死亡风险更低。机制拼图：不饱和脂肪酸、膳食纤维、麦角硫因（核桃/某些菌坚果）多通路。
+
+**证据等级**：🟢 队列+meta（观察性，但方向一致性与剂量反应关系扎实）
+
+**程序员场景**：把工位抽屉里的辣条换成混合坚果——同名 IP 的自我救赎。
+
+**边界**：坚果热量高，一把为准；过敏者严格回避。
+
+**参考文献**：
+1. Nut consumption in relation to all-cause and cause-specific mortality: a meta-analysis of prospective studies. *Food Funct*. 2017;8(11):3893-3905. (PMID: 28875220)
+
+> **熊博士按**：指南的条目编号叫了这么久"腰果"，今天腰果终于凭本事入列——每天一把，混着吃，无盐。IP 的自我救赎，证据等级 🟢。
+
+</details>
+
+<details>
+<summary><b>腰果 023 · APOE4 与长链脂肪酸</b> ｜ 🟡 ｜ 基因×营养</summary>
+
+![APOE4 与长链脂肪酸](images/heads/head_023.png)
+
+**做法**：无需基因检测焦虑——APOE4 携带者（约 15-25% 人群）更该认真执行本指南的 H7 条目（Zone 2、睡眠），膳食 DHA（深海鱼）规律摄入；检测与解读请找专业机构。
+
+**机制**：APOE4 是阿尔茨海默最常见的遗传风险因子（*Science* 1993 经典）；它同时拖累长链脂肪酸：**PET 研究直接显示 APOE4 携带者脑 DHA 摄取更低**（2017）；2026 年高剂量 DHA 补充的脑靶点研究在推进。同一个"鱼油护脑"，基因型不同，效率不同——精准营养的预告片。
+
+**证据等级**：🟡 机制清晰（PET 直接证据）+人群关联；干预获益的基因分层证据在积累
+
+**程序员场景**：不用急着测基因——把"鱼油是否有用因人而异"这个概念装进脑子，就已经跑赢补剂营销话术。
+
+**边界**：基因≠命运（外显率不高、可干预因素多）；APOE 检测有心理与保险 implications，咨询后再做。
+
+**参考文献**：
+1. Corder EH, et al. Gene dose of apolipoprotein E type 4 allele and the risk of Alzheimer's disease in late onset families. *Science*. 1993;261(5123):921-3. (PMID: 8346443)
+2. Yassine HN, et al. DHA brain uptake and APOE4 status: a PET study with [1-(11)C]-DHA. *Alzheimers Res Ther*. 2017;9(1):51. (PMID: 28335828)
+3. CNS target engagement of high-dose DHA supplementation in older adults at risk for dementia. *EBioMedicine*. 2026. (PMID: 42315445)
+
+> **熊博士按**：营养补剂的下一代叙事不是"吃不吃"，是"谁吃有用"。APOE4×DHA 是这条赛道最早成形的例子——记下这个框架，能免疫大部分补剂广告。
+
+</details>
+
+<details>
+<summary><b>腰果 024 · 亚精胺与小麦胚芽</b> ｜ 🟡 ｜ 自噬激活</summary>
+
+![亚精胺与小麦胚芽](images/heads/head_024.png)
+
+**做法**：食补优先：小麦胚芽（胚芽麦片/粉）、纳豆、陈年奶酪、蘑菇。补剂证据起步中，不神化。
+
+**机制**：亚精胺是自噬（十二柱 H5）的天然激活剂；动物延寿证据充分（酵母-果蝇-小鼠）。人体：小麦胚芽提取物的认知 RCT（2022）有信号；**2024 年 40mg/天补充的 RCT 显示循环多胺变化最小**——阴性/弱结果如实收编。
+
+**证据等级**：🟡 机制+动物强，人体认知 RCT 起步、结果混合
+
+**程序员场景**：早餐加两勺小麦胚芽粉——与 014 甘麦大枣汤同源，一颗麦粒两种叙事。
+
+**边界**：补剂剂量与长期安全性未定；孕哺期咨询医生。
+
+**参考文献**：
+1. Wirth J, et al. Effects of spermidine supplementation on cognition and biomarkers in older adults at risk for dementia. *J Cogn Enhanc*. 2022. (PMID: 35616942)
+2. Supplementation of spermidine at 40 mg/day has minimal effects on circulating polyamines. 2024. (PMID: 39405978)
+
+> **熊博士按**："延寿胺"的人体证据还在爬坡——阳性的认知信号与阴性的血指标并存。食补路径（胚芽/纳豆）零风险先走，补剂等更大的 RCT。
+
+</details>
+
+<details>
+<summary><b>腰果 025 · PQQ</b> ｜ 🟡 ｜ 线粒体新生</summary>
+
+![PQQ](images/heads/head_025.png)
+
+**做法**：本条重点是"知道"而非"服用"：PQQ 广泛存在于食物（纳豆、绿茶、青椒，含量微）。补剂证据小样本，观察即可。
+
+**机制**：吡咯喹啉醌（PQQ）在线粒体新生（biogenesis，H7）方向有动物与细胞证据；人体小 RCT：健康成人认知（2022）、年轻与老年脑功能（2023）、6 周补充的线粒体功能指标（2024）——样本都小。
+
+**证据等级**：🟡 小样本人体 RCT 群；效应量与长期安全性待验证
+
+**程序员场景**：看到"PQQ 太岁精华"类产品——太岁无 PubMed 文献，PQQ 证据小样本，两者都不足以下单。
+
+**边界**：孕妇儿童数据缺乏；别与"太岁"传说捆绑消费。
+
+**参考文献**：
+1. Effect of dietary pyrroloquinoline quinone disodium salt on cognitive function in healthy adults. 2022. (PMID: 34415830)
+2. Pyrroloquinoline quinone disodium salt improves brain function in both younger and older adults. 2023. (PMID: 36807425)
+3. Six-week PQQ supplementation and mitochondrial function. 2024. (PMID: 38908296)
+
+> **熊博士按**：PQQ 的故事性感（线粒体新生），人体数据还在幼儿园阶段。民间的"太岁"传说连文献都没有——传说归传说，钱包归钱包。
+
+</details>
+
+<details>
+<summary><b>腰果 026 · GlyNAC</b> ｜ 🟡 ｜ 老年补剂组合</summary>
+
+![GlyNAC](images/heads/head_026.png)
+
+**做法**：这条主要写给**你的父母**：老年人群的甘氨酸+NAC 组合有系列 RCT 支持方向；年轻人不急。
+
+**机制**：GlyNAC（甘氨酸+N-乙酰半胱氨酸）为细胞补充谷胱甘肽前体：Baylor 团队系列 RCT（2020-2022）在老年人中改善谷胱甘肽、氧化应激、线粒体功能、身体功能与认知多个指标；2026 年新团队跟进研究出现。
+
+**证据等级**：🟡 单中心系列 RCT（Baylor），样本小、需独立复制
+
+**程序员场景**：给爸妈的补剂清单里，GlyNAC 的证据等级排在大多数"抗衰网红"前面——但记得先问医生。
+
+**边界**：老年人群证据；与药物相互作用（NAC 影响某些药物）需药师审核。
+
+**参考文献**：
+1. Sekhar RV, et al. GlyNAC supplementation in older adults. 2020-2022 系列. (PMID: 33007928 / 33783984 / 35975308)
+
+> **熊博士按**：老龄化叙事里最踏实的一条——不为码农自己，为爸妈。Baylor 的系列 RCT 方向一致，等独立复制，但"先问医生再试"的门槛不高。
+
+</details>
+
+<details>
+<summary><b>腰果 027 · 甲基化时钟</b> ｜ 🟢 ｜ 生物年龄</summary>
+
+![甲基化时钟](images/heads/head_027.png)
+
+**做法**：本条是概念科普：了解"表观遗传时钟"是什么、能回答什么、不能回答什么。检测属商业行为，本文不构成推荐。
+
+**机制**：DNA 甲基化模式随年龄系统性漂移——Horvath 2013（*Genome Biol*）用全基因组甲基化构建"时钟"，误差显著小于历法年龄；此后时钟家族迭代（不同组织、不同速度）。它是 H3（表观遗传改变）柱的核心测量工具，也是"器官年龄不同步"研究的底座。
+
+**证据等级**：🟢 时钟的测量学证据（数千篇文献）；"干预逆转时钟=逆转衰老"仍是开放问题——如实区分
+
+**程序员场景**：看到"测出生物年龄比实际小 8 岁"的营销——先问：哪个时钟？训练人群还是泛人群？干预前后变化还是单点读数？
+
+**边界**：时钟≠命运；不同时钟给出的读数可能不一致；单次检测的决策价值有限。
+
+**参考文献**：
+1. Horvath S. DNA methylation age of human tissues and cell types. *Genome Biol*. 2013;14(10):R115. (PMID: 24138928)
+2. López-Otín C, et al. Hallmarks of aging: an expanding universe. *Cell*. 2023. (PMID: 36599349)
+
+> **熊博士按**：与 032（面相时钟）对照读——一个从唾液读，一个从照片读，都指向同一件事：年龄不是一个数。至于哪个更能指导干预，是整个行业正在解的题。
+
+</details>
+
+## 🌿 传统×科学 · 正文
+
+<details>
+<summary><b>腰果 028 · 醋与乙酸</b> ｜ 🟢 ｜ 餐后血糖×菌群</summary>
+
+![醋与乙酸](images/heads/head_028.png)
+
+**做法**：凉拌、蘸食加醋（1-2 汤匙）；同时把益生元（燕麦、豆类、蔬果）吃够——养好产短链脂肪酸的菌群。两条路径分开理解。
+
+**机制**：**外源路径**：随餐醋酸延缓胃排空、改善餐后血糖与胰岛素反应——系统综述与多个小 RCT（2017 综述：醋可削弱餐后血糖/胰岛素峰）。**内源路径**：膳食纤维经肠道菌群发酵生成短链脂肪酸（含乙酸）——SCFA 是 H12 菌群轴的健康介质（*Cell Host Microbe* 2016 经典综述）。同一分子（乙酸），两条路径，**别混为一谈**：喝醋的受益证据在血糖曲线，不在"补 SCFA"。
+
+**证据等级**：🟢 餐后血糖端（SR+RCT 群）/菌群端机制充分
+
+**程序员场景**：外卖重碳水的那餐，加碟醋——成本最低的餐后血糖管理。
+
+**边界**：胃食管反流/溃疡者慎；醋不是"排毒神药"，它只对餐后曲线做了点实事。
+
+**参考文献**：
+1. Petersson J, et al. Vinegar consumption can attenuate postprandial glucose and insulin responses; a systematic review and meta-analysis. 2017. (PMID: 28292654)
+2. Koh A, et al. From dietary fiber to host physiology: short-chain fatty acids as key bacterial metabolites. *Cell Host Microbe*. 2016;20(6):765-74. (PMID: 27259147)
+
+> **熊博士按**：这条示范了"扯得妙"与"扯得错"的分界：益生元发酵的乙酸与食醋的醋酸是同一分子——但两条证据链各自独立，交汇处留给读者自己惊叹。
+
+</details>
+
+<details>
+<summary><b>腰果 029 · 八段锦与筋</b> ｜ 🟢🟡🔴 ｜ 拉伸×蛋白稳态</summary>
+
+![八段锦与筋](images/heads/head_029.png)
+
+**做法**：跟练视频每天 15-20 分钟（B 站官方跟练即可）。核心要义：**拉、伸、旋拧**——练的是筋与筋膜链。
+
+**机制**：四层递进（证据强度递减，示范本指南方法论）：①**动作层 🟢**：八段锦 RCT 296 篇命中——2025 年 24 周 RCT 改善老年人肌少症；②**组织层 🟡**：2025 年筋膜重定义综述——力学传导枢纽+干细胞储备；③**分子层 🟡**：筋的细胞外基质是全身最大胶原蛋白库之一，蛋白稳态（H4）是 2023 十二柱之一——**这是"筋=蛋白结构"的科学锚点**；④**概念层 🔴**："肝主筋"在英文文献库检索零命中——概念映射是空白区，如实留白。
+
+**证据等级**：分层标注如上——每一层证据走到哪，说到哪
+
+**程序员场景**：工位久坐的逆向操作；睡前 15 分钟替代刷手机。
+
+**边界**：慢病者循序渐进；膝关节不适者调整幅度。
+
+**参考文献**：
+1. Efficacy of Baduanjin exercise for sarcopenia in older adults: a 24-week randomized controlled trial. 2025. (PMID: 41371252)
+2. Redefining fascia: a mechanobiological hub and stem cell reservoir in regeneration. 2025. (PMID: 41155456)
+3. López-Otín C, et al. Hallmarks of aging: an expanding universe. *Cell*. 2023. (PMID: 36599349)
+
+> **熊博士按**：这条是全指南方法论的自证：四层证据，逐层递减，最后一层诚实留白。传统功法值不值得练？动作层 🟢 已经足够回答"值得"。
+
+</details>
+
+<details>
+<summary><b>腰果 030 · NAC 与化痰</b> ｜ 🟢 ｜ 药典老药</summary>
+
+![NAC 与化痰](images/heads/head_030.png)
+
+**做法**：这是**药品**条目：痰液黏稠难咯时，N-乙酰半胱氨酸（NAC）是药典收录的黏液溶解剂——**按说明书/遵医嘱使用**，不做日常保健品。
+
+**机制**：NAC 的二硫键断裂作用直接降低痰液黏度——Cochrane 系统综述（2019，慢阻肺急性加重预防）与 2000 年经典 meta 支持其黏液溶解与急性加重减少作用。它同时也是谷胱甘肽前体（与 026 GlyNAC 共享半个分子）。
+
+**证据等级**：🟢 化痰/慢阻肺急性加重（Cochrane+meta）｜抗衰外延（GlyNAC）另条目
+
+**程序员场景**：秋冬感冒后痰黏难咯的夜里，药盒里值得有的老药（遵医嘱）。
+
+**边界**：药品属性：哮喘者慎用（可能诱发支气管痉挛）；不作为日常补充剂长期自行服用。
+
+**参考文献**：
+1. Poole P, et al. Continuous or intermittent NAC for COPD. *Cochrane*. 2019. (PMID: 31107966)
+2. Stey C, et al. NAC in chronic bronchitis: a quantitative systematic review. 2000. (PMID: 10968500)
+
+> **熊博士按**：老药、便宜、证据清楚——NAC 是"传统×科学"栏目里最不玄的一条。化痰是它的本职，抗衰是它的兼职（见 GlyNAC），别搞反了。
+
+</details>
+
+<details>
+<summary><b>腰果 031 · 颂钵</b> ｜ 🟡偏🔴 ｜ 声音松弛</summary>
+
+![颂钵](images/heads/head_031.png)
+
+**做法**：作为睡前仪式的**声音放松**（颂钵音疗/白噪音/低频音乐），不作为治疗手段。
+
+**机制**：系统综述（2020, *Complement Ther Med*；2025 更新）显示颂钵相关干预与急性放松反应、紧张感下降相关；RCT（2023）证实藏钵声音诱导急性放松。**但**：研究样本小、对照组弱、适应证多为"主观感受"层面——疗效宣称从严。
+
+**证据等级**：🟡偏🔴 松弛反应有初步证据；"疗愈"宣称不成立
+
+**程序员场景**：屏幕宵禁（010）后的 15 分钟声音仪式——它能帮你从信息流切换到睡前态，仅此而已，已足够。
+
+**边界**：不替代失眠规范治疗；声音敏感/耳鸣者自选音量。
+
+**参考文献**：
+1. The human health effects of singing bowls: a systematic review. *Complement Ther Med*. 2020. (PMID: 32507429)
+2. Acute relaxation response induced by Tibetan singing bowl sounds: a randomized controlled trial. 2023. (PMID: 36826208)
+
+> **熊博士按**：松弛反应是真的，神话不是。把颂钵当"声音形态的屏幕宵禁"用，物尽其用；当"频率疗愈"买，智商税。
+
+</details>
+
+<details>
+<summary><b>腰果 032 · 面相与生物年龄</b> ｜ 🟡 ｜ 表型时钟</summary>
+
+![面相与生物年龄](images/heads/head_032.png)
+
+**做法**：概念科普+晨间照镜子的仪式感。商业"AI 面相测衰老"产品谨慎看待（模型不透明、误差未知）。
+
+**机制**：中国团队把"看面相"做成了定量科学：北大 ThermoFace（*Cell Metab* 2024）——2811 名 20-90 岁汉族人面部红外热像训练"热年龄"模型（误差约 5 年）并预测代谢疾病；韩敬东组 AURORA（*Cell Metab* 2026）——面部图像或常规体检数据跨模态生成多组学，建模衰老与代谢健康。
+
+**证据等级**：🟡 大样本模型证据（群体层面成立）；个体误差约 5 年、非因果
+
+**程序员场景**：每天早上镜子里的气色，是免费的多模态传感器的低配版——认真看一眼。
+
+**边界**：误差显著；相学话术（"夫妻宫""财帛宫"）与这些研究无关，勿混用。
+
+**参考文献**：
+1. Yu Z, et al. Thermal facial image analyses reveal quantitative hallmarks of aging and metabolic diseases. *Cell Metab*. 2024;36(7):1482-1493. (PMID: 38959862)
+2. Chen J, et al. A generative AI framework unifies human multi-omics to model aging. *Cell Metab*. 2026;38(6):1229-1244. (PMID: 42019500)
+
+> **熊博士按**：奶奶说的"印堂发黑要休息"，机器学习版是"面部热分布偏移提示代谢年龄偏高"。隔着一百年的两套语言，说的是同一张脸。
+
+</details>
+
+<details>
+<summary><b>腰果 033 · 阳气与线粒体</b> ｜ 🔴🟡 ｜ 概念映射</summary>
+
+![阳气与线粒体](images/heads/head_033.png)
+
+**做法**：怕冷、乏力、精力下降的"阳虚感"人群：可执行的落点是本指南已有条目——Zone 2（006，线粒体训练）、睡眠（007/010）、冬季温热食养（姜、羊肉，传统经验）。中医辨证请就医。
+
+**机制**：这是全指南最"深水"的一条，严格标注：**概念映射，不是证明**。支持材料：中文团队学术假说《线粒体作为人体阳气之本》（2022）——直接提出线粒体能量代谢是"阳"的现代对应物；2024 年《从古代智慧到现代科学：肠道菌群照亮药性理论》——温热药性×能量代谢×菌群的研究方向。⚠️ 这些是假说探索文献，不是验证结论。
+
+**证据等级**：🔴 概念映射（假说级）｜🟡 温阳方向的代谢研究在积累
+
+**程序员场景**：把"补阳气"翻译成"练线粒体"（Zone 2）+规律睡眠——传统直觉的现代执行路径。
+
+**边界**：阳虚是中医辨证概念，需要专业判断；本条不构成任何"温阳药食"自用建议。
+
+**参考文献**：
+1. Mitochondria as the essence of Yang Qi in the human body. 2022. (PMID: 36939762)
+2. From ancient wisdom to modern science: gut microbiota sheds light on property theory of Chinese medicine. 2024. (PMID: 38937158)
+
+> **熊博士按**：收官条目留给最深的水区：阳气与线粒体——映射得再美，也只是假说。这条的等级标志 🔴🟡 摆在那里，就是整个指南的态度：**证据走到哪一步，我们就说到哪一步。**
 
 </details>
 
