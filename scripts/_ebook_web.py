@@ -70,7 +70,7 @@ HTML = """<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8">
 .night{--bg:#1E1B18;--ink:#E8E2D8;--amber:#E8A25E;--teal:#7BB8AC;--dim:#9B948A;--card:#292521;--bd:#3d3831}
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 body{background:var(--bg);color:var(--ink);font-family:"Microsoft YaHei",system-ui,sans-serif;
-     font-size:var(--fs);line-height:1.8;height:100vh;overflow:hidden}
+     font-size:var(--fs);line-height:1.9;height:100vh;overflow:hidden}
 #book{height:100%;display:flex;flex-direction:column}
 header{display:flex;justify-content:space-between;align-items:center;padding:8px 14px;
        border-bottom:1px solid var(--bd);flex-shrink:0}
@@ -108,6 +108,19 @@ footer b{color:var(--amber)}
 .tocitem:active{background:rgba(217,126,54,.15)}
 #mask{position:absolute;inset:0;background:rgba(0,0,0,.35);z-index:15;display:none}
 #mask.on{display:block}
+
+@media (max-width: 768px){
+  :root{--fs:20px}
+  .page{padding:14px 15px}
+  table{font-size:.86em}
+  th,td{padding:7px 9px}
+  blockquote{font-size:.96em;padding:10px 12px}
+  header button{padding:8px 14px;font-size:17px;margin-left:8px}
+  header .t{font-size:.95em}
+  footer{font-size:.88em;padding-bottom:calc(10px + env(safe-area-inset-bottom))}
+  .tocitem{font-size:1em;padding:13px 12px}
+  img{border-radius:8px}
+}
 </style></head><body>
 <div id="book">
 <header><span class="t" id="ht">程序员续命与长寿指南</span>
@@ -129,9 +142,9 @@ document.getElementById('ht').textContent=document.querySelectorAll('.page')[cur
 function flip(d){cur=Math.max(0,Math.min(N-1,cur+d));show();}
 function go(i){cur=i;show();toc();}
 function toc(){document.getElementById('toc').classList.toggle('on');document.getElementById('mask').classList.toggle('on');}
-function fs(d){let v=parseInt(localStorage.xm_fs||17)+d*2;v=Math.max(13,Math.min(26,v));
-localStorage.xm_fs=v;document.documentElement.style.setProperty('--fs',v+'px');}
-if(localStorage.xm_fs)document.documentElement.style.setProperty('--fs',localStorage.xm_fs+'px');
+function fs(d){let v=parseInt(localStorage.xm_fs3||17)+d*2;v=Math.max(13,Math.min(26,v));
+localStorage.xm_fs3=v;document.documentElement.style.setProperty('--fs',v+'px');}
+if(localStorage.xm_fs3)document.documentElement.style.setProperty('--fs',localStorage.xm_fs3+'px');
 if(localStorage.xm_night==='1')document.body.classList.add('night');
 function night(){document.body.classList.toggle('night');
 localStorage.xm_night=document.body.classList.contains('night')?'1':'0';}

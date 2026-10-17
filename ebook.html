@@ -6,7 +6,7 @@
 .night{--bg:#1E1B18;--ink:#E8E2D8;--amber:#E8A25E;--teal:#7BB8AC;--dim:#9B948A;--card:#292521;--bd:#3d3831}
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 body{background:var(--bg);color:var(--ink);font-family:"Microsoft YaHei",system-ui,sans-serif;
-     font-size:var(--fs);line-height:1.8;height:100vh;overflow:hidden}
+     font-size:var(--fs);line-height:1.9;height:100vh;overflow:hidden}
 #book{height:100%;display:flex;flex-direction:column}
 header{display:flex;justify-content:space-between;align-items:center;padding:8px 14px;
        border-bottom:1px solid var(--bd);flex-shrink:0}
@@ -44,6 +44,19 @@ footer b{color:var(--amber)}
 .tocitem:active{background:rgba(217,126,54,.15)}
 #mask{position:absolute;inset:0;background:rgba(0,0,0,.35);z-index:15;display:none}
 #mask.on{display:block}
+
+@media (max-width: 768px){
+  :root{--fs:20px}
+  .page{padding:14px 15px}
+  table{font-size:.86em}
+  th,td{padding:7px 9px}
+  blockquote{font-size:.96em;padding:10px 12px}
+  header button{padding:8px 14px;font-size:17px;margin-left:8px}
+  header .t{font-size:.95em}
+  footer{font-size:.88em;padding-bottom:calc(10px + env(safe-area-inset-bottom))}
+  .tocitem{font-size:1em;padding:13px 12px}
+  img{border-radius:8px}
+}
 </style></head><body>
 <div id="book">
 <header><span class="t" id="ht">程序员续命与长寿指南</span>
@@ -60,991 +73,514 @@ footer b{color:var(--amber)}
 </div></div></section>
 <section data-t='前言' class='page' id='p1'><div class='pagebody'><h2>前言 · 为什么写这份指南</h2>
 <p><strong>写这份指南，是因为一个认知差。</strong></p>
-<p>过去几十年，睡眠医学、营养流行病学、神经科学攒下了大量"怎么活得更久更好"的证据——它们躺在 PubMed 里，躺在论文标题里，等着被翻译。而大多数人的健康知识，还停在转发的养生帖和口头叮嘱之间。</p>
-<p><strong>科研进展不必等医生都了解之后再告诉你——你可以直接理解它。</strong> PubMed 是公开的，文献是可查的。这份指南里的每一条都附了 PMID：不信我，可以自己查。</p>
-<p>我也不想让领域之间的墙继续立着。睡眠医学的结论、营养学的队列、细胞生物学的机制、中医药的现代研究——这本该是一张拼图，不是几个互不理睬的学科。这份指南做的事，就是把不同领域拉齐到同一张桌面上，按同一套证据分级说话。</p>
-<p>最后，<strong>日常经验和中医传统不该被无视——其中有一部分是真的。</strong> 按摩下颌、八段锦、甘麦大枣汤，它们要么已拿到部分科学证据，要么正在被验证。我们不神化，也不否定。</p>
+<p>过去几十年，睡眠医学、营养流行病学、神经科学攒下了大量“怎么活得更久更好”的证据。它们躺在 PubMed 里、躺在论文标题里，等着被翻译。而大多数人的健康知识，还停在转发的养生帖和口头叮嘱之间。</p>
+<p><strong>科研进展不必等医生都了解之后再告诉你，你可以直接理解它。</strong> PubMed 是公开的，文献是可查的。这份指南每一条都附了 PMID：不信我，可以自己查。</p>
+<p>我也不想让领域之间的墙继续立着。睡眠医学的结论、营养学的队列、细胞生物学的机制、中医药的现代研究，本该拼成一张图，而不是几个互不理睬的学科。这份指南做的事，就是把不同领域拉到同一张桌面上，按同一套证据分级说话。</p>
+<p>最后，<strong>日常经验和中医传统不该被无视，其中有一部分是真的。</strong> 按摩面颈、八段锦、甘麦大枣汤，有的已经拿到部分科学证据，有的正在被验证。我们不神化，也不否定。</p>
 <p>命是可以科学地续的。翻开吧。</p>
 <p>——熊博士</p>
-<p><strong>维护人</strong>：熊博士 · 每周三更新（他是谁——见文末<a href="#关于熊博士">关于熊博士</a>）</p></div></section>
-<section data-t='证据分级' class='page' id='p2'><div class='pagebody'><h2>证据分级说明</h2>
+<p><strong>维护人</strong>：熊博士（他是谁，见文末「关于熊博士」）</p>
+<details>
+<summary><b>📋 阅读指南 · 本指南独有 · 利益冲突 · 连载说明</b>（点击展开）</summary>
+
+## 怎么读这份指南
+
+全书由一个个**独立的小节**组成，每节讲一件事，几分钟读完，可以从任何一节开始。小节按主题组成章。
+
+| 你有多少时间 | 从哪里开始 |
+|---|---|
+| 2 分钟 | 上面的「连载看点」，挑一个最想知道的 |
+| 5 分钟 | 「续命十块大石头」：对寿命影响最大的十件事 |
+| 一个周末 | 按目录挑你的痛点：睡眠、颈腰、眼睛、焦虑、脑力 |
+| 想看清全貌 | 「续命十二柱」：衰老的十二种机制，每一节都对应得上 |
+
+看不懂的词，查附录「术语表」；喜欢用代码理解世界的，看「编程比喻对照表」。
+
+## 🔭 本指南独有：在别的长寿书里看不到的
+
+市面上的长寿、健康、营养书，大多讲同一套：运动、睡眠、饮食、补剂。这些我们也讲（见「续命十块大石头」），但下面四件事，你在别处很难找到：
+
+1. **东西方同桌**：传统经验和分子机制，用同一把尺子打分。不神化，也不一笑了之，而是把传统经验翻译成可以检验的科学问题。代表：⭐「阳气与线粒体」（附新温阳食单和可证伪的预测）、⭐「面颈部淋巴按摩」、⭐「古方新解」一章。
+2. **一手前沿**：2023–2026 年 *Nature*、*Cell*、*Nat Hum Behav*、*Cell Metab* 的最新发现，第一时间翻成人话。代表：⭐「大脑的隐秘运维」「年龄不是一个数」两章。
+3. **程序员的语言**：生物钟是 NTP 校时，睡眠是垃圾回收，慢性炎症是内存泄漏。
+4. **诚实到底**：双尺子分级、每节写明“为什么不是 A”、十二柱里一根诚实留白、「别花冤枉钱」一章、利益冲突声明。
+
+> 标 ⭐ 的小节是本指南的独家内容。</div></section>
+<section data-t='证据分级' class='page' id='p2'><div class='pagebody'><h2>证据分级说明（v2：两把尺子）</h2>
+<p>每条建议标两个东西：<strong>证据有多硬</strong>，和<strong>你该怎么对待它</strong>。</p>
+<p><strong>尺子一：证据强度</strong></p>
+<table>
+<thead>
+<tr>
+<th>等级</th>
+<th>含义</th>
+<th>典型证据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A</strong></td>
+<td>人群硬证据</td>
+<td>随机对照试验（RCT）或大型队列/荟萃分析，结局是死亡、疾病这类“硬终点”</td>
+</tr>
+<tr>
+<td><strong>B</strong></td>
+<td>人群证据</td>
+<td>有人体研究支持，但结局是替代指标（血糖、褪黑素节律、症状评分），或者只是关联</td>
+</tr>
+<tr>
+<td><strong>C</strong></td>
+<td>机制 + 初步</td>
+<td>机制研究、动物实验、小样本或单项人体研究</td>
+</tr>
+<tr>
+<td><strong>D</strong></td>
+<td>经验待证</td>
+<td>传统经验或流行说法，暂时没有直接的科学证据</td>
+</tr>
+</tbody>
+</table>
+<p><strong>尺子二：行动建议</strong></p>
 <table>
 <thead>
 <tr>
 <th>标记</th>
 <th>含义</th>
-<th>支撑证据类型</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>🟢</td>
-<td>人群实证</td>
-<td>大型队列研究 / 随机对照试验（RCT）支持</td>
+<td>✅ 去做</td>
+<td>证据够，成本和风险都低</td>
 </tr>
 <tr>
-<td>🟡</td>
-<td>机制+动物</td>
-<td>生物学机制明确，动物或小样本人体证据</td>
+<td>🧪 可以试</td>
+<td>证据有限，但便宜、安全；试一阵，自己观察</td>
 </tr>
 <tr>
-<td>🔴</td>
+<td>📖 了解即可</td>
+<td>知识型条目，或者不建议自己操作</td>
+</tr>
+<tr>
+<td>💸 别花钱</td>
+<td>要花钱买的产品，证据还撑不起价格</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>证据强度评的是<strong>这条建议本身</strong>，不是相关机制有多热门。比如“甲基化时钟”作为测量工具很成熟，但“去测一次”对你的决策帮助有限，所以是 📖。</p>
+<p>等级标错比不标更糟。发现等级或引用有误，欢迎提 Issue 或 PR。</p>
+</blockquote>
+<h2>利益冲突声明</h2>
+<p>本指南由熊博士维护。他是 <a href="https://deepome.com">DeepoMe 深度甲基</a> 的创始人，公司业务包括 DNA 甲基化检测和 <a href="https://deepkang.com">DeepKang</a> 健康平台。与公司业务直接相关的条目（「甲基化时钟」「一张脸能读出你的生物年龄」两节，以及附录「续命工具箱」）都已标注；这些条目一律只做概念科普，不推荐任何检测产品，包括我们自己的。</p>
+<p>“证据走到哪一步，就说到哪一步”，这条规矩同样约束我们自己。</p></div></section>
+<section data-t='📋 阅读指南 · 本指南独有 · 利益冲突 · 连载说明（点击展开）' class='page' id='p3'><div class='pagebody'><div class='card'><h2>📋 阅读指南 · 本指南独有 · 利益冲突 · 连载说明（点击展开）</h2><h2>怎么读这份指南</h2>
+<p>全书由一个个<strong>独立的小节</strong>组成，每节讲一件事，几分钟读完，可以从任何一节开始。小节按主题组成章。</p>
+<table>
+<thead>
+<tr>
+<th>你有多少时间</th>
+<th>从哪里开始</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2 分钟</td>
+<td>上面的「连载看点」，挑一个最想知道的</td>
+</tr>
+<tr>
+<td>5 分钟</td>
+<td>「续命十块大石头」：对寿命影响最大的十件事</td>
+</tr>
+<tr>
+<td>一个周末</td>
+<td>按目录挑你的痛点：睡眠、颈腰、眼睛、焦虑、脑力</td>
+</tr>
+<tr>
+<td>想看清全貌</td>
+<td>「续命十二柱」：衰老的十二种机制，每一节都对应得上</td>
+</tr>
+</tbody>
+</table>
+<p>看不懂的词，查附录「术语表」；喜欢用代码理解世界的，看「编程比喻对照表」。</p>
+<h2>🔭 本指南独有：在别的长寿书里看不到的</h2>
+<p>市面上的长寿、健康、营养书，大多讲同一套：运动、睡眠、饮食、补剂。这些我们也讲（见「续命十块大石头」），但下面四件事，你在别处很难找到：</p>
+<ol>
+<li><strong>东西方同桌</strong>：传统经验和分子机制，用同一把尺子打分。不神化，也不一笑了之，而是把传统经验翻译成可以检验的科学问题。代表：⭐「阳气与线粒体」（附新温阳食单和可证伪的预测）、⭐「面颈部淋巴按摩」、⭐「古方新解」一章。</li>
+<li><strong>一手前沿</strong>：2023–2026 年 <em>Nature</em>、<em>Cell</em>、<em>Nat Hum Behav</em>、<em>Cell Metab</em> 的最新发现，第一时间翻成人话。代表：⭐「大脑的隐秘运维」「年龄不是一个数」两章。</li>
+<li><strong>程序员的语言</strong>：生物钟是 NTP 校时，睡眠是垃圾回收，慢性炎症是内存泄漏。</li>
+<li><strong>诚实到底</strong>：双尺子分级、每节写明“为什么不是 A”、十二柱里一根诚实留白、「别花冤枉钱」一章、利益冲突声明。</li>
+</ol>
+<blockquote>
+<p>标 ⭐ 的小节是本指南的独家内容。</p>
+</blockquote>
+<h2>证据分级说明（v2：两把尺子）</h2>
+<p>每条建议标两个东西：<strong>证据有多硬</strong>，和<strong>你该怎么对待它</strong>。</p>
+<p><strong>尺子一：证据强度</strong></p>
+<table>
+<thead>
+<tr>
+<th>等级</th>
+<th>含义</th>
+<th>典型证据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A</strong></td>
+<td>人群硬证据</td>
+<td>随机对照试验（RCT）或大型队列/荟萃分析，结局是死亡、疾病这类“硬终点”</td>
+</tr>
+<tr>
+<td><strong>B</strong></td>
+<td>人群证据</td>
+<td>有人体研究支持，但结局是替代指标（血糖、褪黑素节律、症状评分），或者只是关联</td>
+</tr>
+<tr>
+<td><strong>C</strong></td>
+<td>机制 + 初步</td>
+<td>机制研究、动物实验、小样本或单项人体研究</td>
+</tr>
+<tr>
+<td><strong>D</strong></td>
 <td>经验待证</td>
-<td>传统经验或流行说法，尚无直接科学证据</td>
+<td>传统经验或流行说法，暂时没有直接的科学证据</td>
+</tr>
+</tbody>
+</table>
+<p><strong>尺子二：行动建议</strong></p>
+<table>
+<thead>
+<tr>
+<th>标记</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>✅ 去做</td>
+<td>证据够，成本和风险都低</td>
+</tr>
+<tr>
+<td>🧪 可以试</td>
+<td>证据有限，但便宜、安全；试一阵，自己观察</td>
+</tr>
+<tr>
+<td>📖 了解即可</td>
+<td>知识型条目，或者不建议自己操作</td>
+</tr>
+<tr>
+<td>💸 别花钱</td>
+<td>要花钱买的产品，证据还撑不起价格</td>
 </tr>
 </tbody>
 </table>
 <blockquote>
-<p>每条目的"参考文献"均为 PubMed 可查的真实文献（PMID/DOI）。证据等级标错比不标更糟——若您发现等级或引用有误，欢迎提 Issue 或 PR。</p>
-</blockquote></div></section>
-<section data-t='目录' class='page' id='p3'><div class='pagebody'><h2>目录</h2>
-<p><strong>👇 点击条目卡片标题，展开全文（做法/机制/证据/文献/边界/熊博士按）</strong></p>
-<h3>🌅 续命的一天（首发五篇，按时间线）</h3>
-<table>
-<thead>
-<tr>
-<th>#</th>
-<th>条目</th>
-<th>痛点</th>
-<th>等级</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>005</td>
-<td>晨光 10 分钟</td>
-<td>昼夜颠倒</td>
-<td>🟢</td>
-</tr>
-<tr>
-<td>002</td>
-<td>30 分钟起身闹钟</td>
-<td>腰酸、血糖</td>
-<td>🟢</td>
-</tr>
-<tr>
-<td>003</td>
-<td>20-20-20 用眼法则</td>
-<td>眼干眼疲劳</td>
-<td>🟡</td>
-</tr>
-<tr>
-<td>004</td>
-<td>咖啡因下午 2 点红线</td>
-<td>睡眠差</td>
-<td>🟢</td>
-</tr>
-<tr>
-<td>011</td>
-<td>熬夜与维生素 C</td>
-<td>熬夜止损</td>
-<td>🟡</td>
-</tr>
-</tbody>
-</table>
-<h3>🛏️ 睡眠与恢复</h3>
-<table>
-<thead>
-<tr>
-<th>#</th>
-<th>条目</th>
-<th>痛点</th>
-<th>等级</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>007</td>
-<td>睡眠债偿还表</td>
-<td>熬夜后遗症</td>
-<td>🟢</td>
-</tr>
-<tr>
-<td>010</td>
-<td>睡前 1 小时屏幕宵禁</td>
-<td>入睡困难</td>
-<td>🟢</td>
-</tr>
-</tbody>
-</table>
-<h3>🧰 身体维护</h3>
-<table>
-<thead>
-<tr>
-<th>#</th>
-<th>条目</th>
-<th>痛点</th>
-<th>等级</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>006</td>
-<td>Zone 2 快走</td>
-<td>体能下降</td>
-<td>🟢</td>
-</tr>
-<tr>
-<td>008</td>
-<td>工位人体工学三件套</td>
-<td>腕/腰/颈</td>
-<td>🟢</td>
-</tr>
-<tr>
-<td>001</td>
-<td>下颌淋巴轻按摩</td>
-<td>大脑昏沉</td>
-<td>🟡</td>
-</tr>
-<tr>
-<td>009</td>
-<td>番茄钟的生理学</td>
-<td>注意力涣散</td>
-<td>🟡</td>
-</tr>
-</tbody>
-</table>
-<h3>🧘 心与情绪</h3>
-<table>
-<thead>
-<tr>
-<th>#</th>
-<th>条目</th>
-<th>痛点</th>
-<th>等级</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>012</td>
-<td>冥想十分钟</td>
-<td>压力、焦虑</td>
-<td>🟢</td>
-</tr>
-<tr>
-<td>013</td>
-<td>意想与免疫</td>
-<td>身心交互</td>
-<td>🟡</td>
-</tr>
-<tr>
-<td>014</td>
-<td>甘麦大枣汤与小麦胚芽</td>
-<td>情绪不稳</td>
-<td>🟡</td>
-</tr>
-</tbody>
-</table>
-<h3>🧠 脑力工程</h3>
-<table>
-<thead>
-<tr>
-<th>#</th>
-<th>条目</th>
-<th>痛点</th>
-<th>等级</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>015</td>
-<td>写代码与心流</td>
-<td>中断、切换成本</td>
-<td>🟡</td>
-</tr>
-<tr>
-<td>016</td>
-<td>脑内内存管理</td>
-<td>认知超载</td>
-<td>🟡</td>
-</tr>
-</tbody>
-</table>
-<h3>📈 进阶长寿</h3>
-<table>
-<thead>
-<tr>
-<th>#</th>
-<th>条目</th>
-<th>痛点/主题</th>
-<th>等级</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>017</td>
-<td>情绪与基因组稳定</td>
-<td>慢性压力的分子账单</td>
-<td>🟢</td>
-</tr>
-<tr>
-<td>018</td>
-<td>记忆与基因组的断裂重连</td>
-<td>学新东西时大脑在干嘛</td>
-<td>🟡</td>
-</tr>
-<tr>
-<td>019</td>
-<td>40Hz 声光节拍</td>
-<td>健脑外推</td>
-<td>🟡</td>
-</tr>
-<tr>
-<td>020</td>
-<td>麦角硫因与蘑菇</td>
-<td>长寿维生素</td>
-<td>🟡</td>
-</tr>
-<tr>
-<td>021</td>
-<td>Omega-3 与干眼</td>
-<td>护眼补剂</td>
-<td>🟡</td>
-</tr>
-<tr>
-<td>022</td>
-<td>坚果一把</td>
-<td>每日零食</td>
-<td>🟢</td>
-</tr>
-<tr>
-<td>023</td>
-<td>APOE4 与长链脂肪酸</td>
-<td>基因×营养</td>
-<td>🟡</td>
-</tr>
-<tr>
-<td>024</td>
-<td>亚精胺与小麦胚芽</td>
-<td>自噬激活</td>
-<td>🟡</td>
-</tr>
-<tr>
-<td>025</td>
-<td>PQQ</td>
-<td>线粒体新生</td>
-<td>🟡</td>
-</tr>
-<tr>
-<td>026</td>
-<td>GlyNAC</td>
-<td>老年补剂组合</td>
-<td>🟡</td>
-</tr>
-<tr>
-<td>027</td>
-<td>甲基化时钟</td>
-<td>生物年龄</td>
-<td>🟢</td>
-</tr>
-</tbody>
-</table>
-<h3>🌿 传统×科学</h3>
-<table>
-<thead>
-<tr>
-<th>#</th>
-<th>条目</th>
-<th>主题</th>
-<th>等级</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>028</td>
-<td>醋与乙酸</td>
-<td>餐后血糖×菌群</td>
-<td>🟢</td>
-</tr>
-<tr>
-<td>029</td>
-<td>八段锦与筋</td>
-<td>拉伸×蛋白稳态</td>
-<td>🟢🟡🔴</td>
-</tr>
-<tr>
-<td>030</td>
-<td>NAC 与化痰</td>
-<td>药典老药</td>
-<td>🟢</td>
-</tr>
-<tr>
-<td>031</td>
-<td>颂钵</td>
-<td>声音松弛</td>
-<td>🟡偏🔴</td>
-</tr>
-<tr>
-<td>032</td>
-<td>面相与生物年龄</td>
-<td>表型时钟</td>
-<td>🟡</td>
-</tr>
-<tr>
-<td>033</td>
-<td>阳气与线粒体</td>
-<td>概念映射</td>
-<td>🔴🟡</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p><strong>选题池已全部转正</strong>（原 22 条预告 → 正文 012-033）。新选题走 <a href="https://github.com/DeepoMe/awesome-programmer-longevity/issues">Issue 征题</a>，每周三评审入池。</p>
+<p>证据强度评的是<strong>这条建议本身</strong>，不是相关机制有多热门。比如“甲基化时钟”作为测量工具很成熟，但“去测一次”对你的决策帮助有限，所以是 📖。</p>
+<p>等级标错比不标更糟。发现等级或引用有误，欢迎提 Issue 或 PR。</p>
 </blockquote>
-<h3>🏛️ 续命十二柱（衰老标志全景）</h3>
-<p>本指南的科学骨架：2023 年 <em>Cell</em>《Hallmarks of Aging》提出的十二大衰老标志——每条续命方法，最终都挂得到某一根柱子上。</p>
-<blockquote>
-<p>López-Otín C, Blasco MA, Partridge L, et al. Hallmarks of aging: An expanding universe. <em>Cell</em>. 2023;186(2):243-278. (PMID: 36599349)</p>
-</blockquote>
-<p><img alt="续命十二柱" src="images/pillars12.png" /></p>
-<table>
-<thead>
-<tr>
-<th>柱</th>
-<th>衰老标志</th>
-<th>本指南对应</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>H1</td>
-<td>基因组不稳定</td>
-<td>017 情绪与基因组稳定、023 APOE4、018 记忆断裂重连</td>
-</tr>
-<tr>
-<td>H2</td>
-<td>端粒损耗</td>
-<td>012 冥想（端粒酶）、017</td>
-</tr>
-<tr>
-<td>H3</td>
-<td>表观遗传改变</td>
-<td>027 甲基化时钟、012 冥想（表观调节信号）</td>
-</tr>
-<tr>
-<td>H4</td>
-<td>蛋白稳态丧失</td>
-<td>029 八段锦与筋</td>
-</tr>
-<tr>
-<td>H5</td>
-<td>自噬失能</td>
-<td>024 亚精胺、026 GlyNAC、014 小麦胚芽</td>
-</tr>
-<tr>
-<td>H6</td>
-<td>营养感知失调</td>
-<td>022 坚果、028 醋与乙酸</td>
-</tr>
-<tr>
-<td>H7</td>
-<td>线粒体功能障碍</td>
-<td>已发 006 Zone 2｜025 PQQ、020 麦角硫因、033 阳气线粒体</td>
-</tr>
-<tr>
-<td>H8</td>
-<td>细胞衰老</td>
-<td>017（慢性压力→p16 衰老细胞）</td>
-</tr>
-<tr>
-<td>H9</td>
-<td>干细胞耗竭</td>
-<td>——暂无生活方式级证据抓手，诚实留白</td>
-</tr>
-<tr>
-<td>H10</td>
-<td>细胞间通讯改变</td>
-<td>013 意想与免疫（神经-免疫对话）</td>
-</tr>
-<tr>
-<td>H11</td>
-<td>慢性炎症</td>
-<td>020 麦角硫因、030 NAC、014 甘麦大枣汤、012 冥想（炎症基因）</td>
-</tr>
-<tr>
-<td>H12</td>
-<td>菌群失调</td>
-<td>028 醋与乙酸（SCFA 路径）</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>十二根柱子，十一根有抓手，一根诚实留白——等证据走到那一步，我们再说到那一步。</p>
-<p>📖 延伸阅读：熊博士博客<a href="https://xiongjianghui.com/zh/blog/five-defense-aging-framework">《抗衰防病五道防线》</a>——五道防线与十二柱，是同一张地图的两种画法。</p>
-</blockquote>
-<hr /></div></section>
-<section data-t='十二柱' class='page' id='p4'><div class='pagebody'><h3>🏛️ 续命十二柱（衰老标志全景）</h3>
-<p>本指南的科学骨架：2023 年 <em>Cell</em>《Hallmarks of Aging》提出的十二大衰老标志——每条续命方法，最终都挂得到某一根柱子上。</p>
-<blockquote>
-<p>López-Otín C, Blasco MA, Partridge L, et al. Hallmarks of aging: An expanding universe. <em>Cell</em>. 2023;186(2):243-278. (PMID: 36599349)</p>
-</blockquote>
-<p><img alt="续命十二柱" src="images/pillars12.png" /></p>
-<table>
-<thead>
-<tr>
-<th>柱</th>
-<th>衰老标志</th>
-<th>本指南对应</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>H1</td>
-<td>基因组不稳定</td>
-<td>017 情绪与基因组稳定、023 APOE4、018 记忆断裂重连</td>
-</tr>
-<tr>
-<td>H2</td>
-<td>端粒损耗</td>
-<td>012 冥想（端粒酶）、017</td>
-</tr>
-<tr>
-<td>H3</td>
-<td>表观遗传改变</td>
-<td>027 甲基化时钟、012 冥想（表观调节信号）</td>
-</tr>
-<tr>
-<td>H4</td>
-<td>蛋白稳态丧失</td>
-<td>029 八段锦与筋</td>
-</tr>
-<tr>
-<td>H5</td>
-<td>自噬失能</td>
-<td>024 亚精胺、026 GlyNAC、014 小麦胚芽</td>
-</tr>
-<tr>
-<td>H6</td>
-<td>营养感知失调</td>
-<td>022 坚果、028 醋与乙酸</td>
-</tr>
-<tr>
-<td>H7</td>
-<td>线粒体功能障碍</td>
-<td>已发 006 Zone 2｜025 PQQ、020 麦角硫因、033 阳气线粒体</td>
-</tr>
-<tr>
-<td>H8</td>
-<td>细胞衰老</td>
-<td>017（慢性压力→p16 衰老细胞）</td>
-</tr>
-<tr>
-<td>H9</td>
-<td>干细胞耗竭</td>
-<td>——暂无生活方式级证据抓手，诚实留白</td>
-</tr>
-<tr>
-<td>H10</td>
-<td>细胞间通讯改变</td>
-<td>013 意想与免疫（神经-免疫对话）</td>
-</tr>
-<tr>
-<td>H11</td>
-<td>慢性炎症</td>
-<td>020 麦角硫因、030 NAC、014 甘麦大枣汤、012 冥想（炎症基因）</td>
-</tr>
-<tr>
-<td>H12</td>
-<td>菌群失调</td>
-<td>028 醋与乙酸（SCFA 路径）</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>十二根柱子，十一根有抓手，一根诚实留白——等证据走到那一步，我们再说到那一步。</p>
-<p>📖 延伸阅读：熊博士博客<a href="https://xiongjianghui.com/zh/blog/five-defense-aging-framework">《抗衰防病五道防线》</a>——五道防线与十二柱，是同一张地图的两种画法。</p>
-</blockquote>
-<hr /></div></section>
-<section data-t='腰果 005 · 晨光 10 分钟' class='page' id='p5'><div class='pagebody'><div class='card'><h2>腰果 005 · 晨光 10 分钟 ｜ 🟢 ｜ 昼夜颠倒</h2><p><strong>做法</strong>：起床后 1 小时内，到户外（或窗边）接受自然光 10-30 分钟；阴天也有效，只是需要更久。</p>
-<p><strong>机制</strong>：视网膜内在光敏神经节细胞（ipRGC）对蓝光敏感，晨光抑制褪黑素分泌、锚定视交叉上核（生物钟主钟）——白天更清醒，晚上褪黑素按时升起。室内照明（通常 &lt;500 lux）远弱于户外晨光（数千至十万 lux）。</p>
-<p><img alt="困意信号：被早晨拉住，还是被夜晚拖走" src="images/morning_light.png" /></p>
-<p><strong>证据等级</strong>：🟢 人群实证
-- 对照研究：户外强光暴露显著提前并巩固昼夜节律；脱离人工光的露营可使褪黑素节律明显回归自然光周期
-- 晨光疗法是临床认可的非药物昼夜节律干预（用于延迟睡眠时相障碍）</p>
-<p><strong>程序员场景</strong>：晚睡晚起恶性循环的破局点不是"今晚早睡"，而是"明早晒光"——先锚定早晨，晚上自然早困。</p>
-<p><strong>边界</strong>：bipolar 障碍者光疗需遵医嘱；直视太阳有害，接受环境光即可。</p>
-<p><strong>参考文献</strong>：
-1. Wright KP Jr, et al. Entrainment of the human circadian clock to the natural light-dark cycle. <em>Curr Biol</em>. 2013;23(16):1554-8. (PMID: 23910656)
-2. Zeitzer JM, et al. Sensitivity of the human circadian pacemaker to nocturnal light: melatonin phase resetting response curves. <em>J Physiol</em>. 2000;526(Pt 3):695-702. (PMID: 10922269)</p>
-<blockquote>
-<p><strong>熊博士按</strong>：反直觉的一条——晚睡晚起的破局点不在晚上，在早晨。想早睡，先早起晒光；顺序搞反了，越努力越失眠。这是"续命的一天"系列的起点。</p>
-</blockquote></div></div></section>
-<section data-t='腰果 002 · 30 分钟起身闹钟' class='page' id='p6'><div class='pagebody'><div class='card'><h2>腰果 002 · 30 分钟起身闹钟 ｜ 🟢 ｜ 腰酸、血糖</h2><p><strong>做法</strong>：设一个 30 分钟循环的静音闹钟（或用坐垫传感器），响了一次就站起来 2-3 分钟——接杯水、深蹲 5 个、看窗外都行。</p>
-<p><strong>机制</strong>：久坐时骨骼肌的脂蛋白脂肪酶（LPL）活性显著下降，血脂清除变慢（该机制主要来自动物模型）；起身活动可在分钟级恢复肌肉葡萄糖摄取。久坐的伤害是"过程性"的——久坐的总时长与单次持续时长都独立关联健康结局。</p>
-<p><img alt="久坐是过程性伤害，起身是分钟级恢复" src="images/sit_break.png" /></p>
-<p><strong>证据等级</strong>：🟢 人群实证
-- 百万人级汇总分析：久坐时间与全因死亡率、心血管疾病正相关，且高体力活动只能部分抵消
-- 客观测量研究：打断久坐的频率独立于总久坐时间与代谢指标相关</p>
-<p><strong>程序员场景</strong>：编译/构建/跑测试的间隙是天然起身点——把等待时间变成站立时间。</p>
-<p><strong>边界</strong>：起身动作温和即可，无需剧烈；有体位性低血压者缓慢起身。</p>
-<p><strong>参考文献</strong>：
-1. Ekelund U, et al. Does physical activity attenuate, or even eliminate, the detrimental association of sitting time with mortality? <em>Lancet</em>. 2016;388(10051):1302-10. (PMID: 27475271)
-2. Diaz KM, et al. Patterns of sedentary behavior and mortality in U.S. middle-aged and older adults. <em>Ann Intern Med</em>. 2017;167(7):465-475. (PMID: 28892811)</p>
-<blockquote>
-<p><strong>熊博士按</strong>：全指南里技术含量最低的一条，也可能是杠杆率最高的一条。我见过太多人买了万元的升降桌，然后把它降到最低、坐着用。</p>
-</blockquote></div></div></section>
-<section data-t='腰果 003 · 20-20-20 用眼法则' class='page' id='p7'><div class='pagebody'><div class='card'><h2>腰果 003 · 20-20-20 用眼法则 ｜ 🟡 ｜ 眼干眼疲劳</h2><p><strong>做法</strong>：每 20 分钟，看 20 英尺（约 6 米）外的东西 20 秒。</p>
-<p><strong>机制</strong>：持续近距离对焦使睫状肌持续紧张、眨眼频率下降一半以上（TFOS 国际专家组综述：数字环境显著影响眼表）——眼干与视疲劳的主因。远眺让睫状肌放松，主动眨眼恢复泪膜。</p>
-<p><img alt="泪膜的定时器，被屏幕按了暂停" src="images/blink.png" /></p>
-<p><strong>证据等级</strong>：🟡 广为专业机构推荐（美国眼科学会等），但高质量 RCT 有限｜数字本身（20/20/20）是经验性设定
-- 计算机视觉综合征（CVS）与屏幕使用时间的关联证据充分
-- "20-20-20"这个具体数字的严格验证有限——机制正确，数字从简</p>
-<p><strong>程序员场景</strong>：与 30 分钟起身闹钟合并执行——起身+远眺+眨眼一套动作。</p>
-<p><strong>边界</strong>：视疲劳持续不缓解、视力骤降、复视——去看眼科，不是屏幕问题那么简单。</p>
-<p><strong>参考文献</strong>：
-1. Wolffsohn JS, et al. TFOS Lifestyle: impact of the digital environment on the ocular surface. <em>Ocul Surf</em>. 2023;28:213-252. (PMID: 37062428)
-2. American Academy of Ophthalmology. Computer vision syndrome / digital eye strain: prevention and treatment. <a href="https://www.aao.org/eye-health/tips-prevention/computer-usage">AAO 官方建议</a>（机构指南，持续更新）</p>
-<blockquote>
-<p><strong>熊博士按</strong>：眨眼是被屏幕劫持的第一个本能——专注时代码看得越入神，眨眼频率掉得越狠，泪膜干了都没感觉。20-20-20 的本质，是给"忘记眨眼"装一个定时器。</p>
-</blockquote></div></div></section>
-<section data-t='腰果 004 · 咖啡因下午 2 点红线' class='page' id='p8'><div class='pagebody'><div class='card'><h2>腰果 004 · 咖啡因下午 2 点红线 ｜ 🟢 ｜ 睡眠差</h2><p><strong>做法</strong>：下午 2 点（14:00）后不再摄入咖啡因——咖啡、浓茶、可乐、能量饮料、某些止痛药都算。</p>
-<p><strong>机制</strong>：咖啡因半衰期约 5 小时（个体差异 3-7 小时），下午 2 点的一杯咖啡到晚上 7 点血液里仍剩约一半，慢代谢者（半衰期 7 小时）到深夜仍过半。咖啡因是腺苷受体拮抗剂——它不消除困意，只是屏蔽困意信号，且会破坏后半夜的深睡眠结构（哪怕你"能睡着"）。</p>
-<p><img alt="下午2点那杯咖啡的下半场" src="images/caffeine.png" /></p>
-<p><strong>证据等级</strong>：🟢 人群实证 + 药代动力学
-- 随机对照试验：睡前 6 小时的咖啡因仍显著减少客观总睡眠时间——即使本人主观感觉"睡着了也没事"
-- 咖啡因对慢波睡眠（深睡眠）结构的削弱与药理学机制有系统综述支持</p>
-<p><strong>程序员场景</strong>：想靠晚咖啡赶 deadline，实际是拿第二天的状态换今晚的清醒——睡眠债是复利。</p>
-<p><strong>边界</strong>：CYP1A2 快代谢型（"咖啡因不敏感"者）也不能豁免对深睡眠结构的影响；孕妇半衰期可延长至 15 小时以上。</p>
-<p><strong>参考文献</strong>：
-1. Drake C, et al. Caffeine effects on sleep taken 0, 3, or 6 hours before going to bed. <em>J Clin Sleep Med</em>. 2013;9(11):1195-200. (PMID: 24235903)
-2. Fredholm BB, et al. Actions of caffeine in the brain with special reference to factors that contribute to its widespread use. <em>Pharmacol Rev</em>. 1999;51(1):83-133. (PMID: 10049999)</p>
-<blockquote>
-<p><strong>熊博士按</strong>：实验数据在这件事上最不给面子——睡前 6 小时的咖啡照样削减深睡眠，而当事人感觉"我代谢快，没事"。主观感觉不可信，是我把它划成"红线"而不是"建议"的唯一原因。</p>
-</blockquote></div></div></section>
-<section data-t='腰果 011 · 熬夜与维生素 C（止损垫，不是免死金牌）' class='page' id='p9'><div class='pagebody'><div class='card'><h2>腰果 011 · 熬夜与维生素 C（止损垫，不是免死金牌） ｜ 🟡 ｜ 熬夜止损</h2><p><strong>做法</strong>：熬夜当晚或次日，通过蔬果（橙子、猕猴桃、彩椒）或常规剂量补充剂（100-200mg）补足维生素 C。<strong>不推荐大剂量"对冲式"服用</strong>——见边界。</p>
-<p><strong>机制</strong>：急性睡眠剥夺使皮质醇升高、氧化应激（脂质过氧化）上升。VC 是水相主要抗氧化剂，动物实验显示补 VC 可显著抑制睡眠剥夺引起的血浆皮质醇与脂质过氧化物升高，并减轻记忆损伤。但要分清主次：VC 缓冲的只是氧化应激这一角"附带损伤"——睡眠剥夺的认知损害主体、免疫功能下降、代谢紊乱，VC 一概管不了。<strong>睡眠债没有化学解药。</strong></p>
-<p><img alt="VC 是止损垫，不是免死金牌" src="images/vc_rescue.png" /></p>
-<p><strong>证据等级</strong>：🟡 机制明确 + 动物实验｜人体直接证据有限
-- 大鼠实验：VC 阻止睡眠剥夺诱导的皮质醇与脂质过氧化升高
-- 动物行为实验：VC 预处理减轻睡眠剥夺所致记忆损伤
-- 人体证据以综述与间接关联为主，缺乏针对"熬夜人群补 VC"的高质量 RCT——如实标注</p>
-<p><strong>程序员场景</strong>：上线夜/发版夜的"止损三件套"之一——VC（抗氧化）+ 当晚提前入睡（见 007 偿还表）+ 次日晨光重锚节律（见 005）。三件套可以少受罪，但不能不还债。</p>
-<p><strong>边界</strong>：单日 &gt;1g 可致胃肠不适，长期大剂量与肾结石风险相关；VC 不是熬夜许可证。夜班刚需者，重点做节律管理（005/010），补剂只是配角。</p>
-<p><strong>参考文献</strong>：
-1. Olayaki LA, et al. Vitamin C prevents sleep deprivation-induced elevation in cortisol and lipid peroxidation in the rat plasma. <em>Niger J Physiol Sci</em>. 2015;30(1-2):5-9. (PMID: 27507778)
-2. Mhaidat NM, et al. Exploring the effect of vitamin C on sleep deprivation induced memory impairment. <em>Brain Res Bull</em>. 2015;113:41-7. (PMID: 25724146)
-3. Otocka-Kmiecik A, et al. The role of vitamin C in two distinct physiological states: physical activity and sleep. <em>Nutrients</em>. 2020;12(12). (PMID: 33371359)</p>
-<blockquote>
-<p><strong>熊博士按</strong>：本指南第一个"救火"条目。写它不是为了给熬夜发许可证——VC 能缓冲的只有氧化应激这一角，认知欠账和睡眠债一分都免不了。止损垫不是免死金牌，这是它排在"续命的一天"最后一位的原因：前面四条做到了，才轮得到它出场。</p>
-</blockquote></div></div></section>
-<section data-t='腰果 007 · 睡眠债偿还表' class='page' id='p10'><div class='pagebody'><div class='card'><h2>腰果 007 · 睡眠债偿还表 ｜ 🟢 ｜ 熬夜后遗症</h2><p><strong>做法</strong>：熬夜后按此偿还：当晚提前 30-60 分钟入睡（不是狂睡到中午）+ 次日 20 分钟以内午睡 + 连续 3 晚正常作息。<strong>不要</strong>周末报复性睡 12 小时。</p>
-<p><strong>机制</strong>：睡眠剥夺的损害是累积且非线性的：连续两周每晚 6 小时，认知缺损最高相当于连续通宵两晚（Van Dongen 2003：equivalent to up to 2 nights of total sleep deprivation）——而本人完全意识不到（主观困倦感平台化，客观能力持续下滑）。补觉能部分偿还，但时间错位的超长补觉会打乱节律，得不偿失。</p>
-<p><img alt="睡眠债：越欠越多，感觉越平" src="images/sleep_debt.png" />（曲线为趋势示意，数据方向：Van Dongen 2003）</p>
-<p><strong>证据等级</strong>：🟢 人群实证
-- 美军/宾大睡眠债剂量研究：连续限制睡眠的进行性认知损伤
-- 偿还策略（提前入睡+短午睡）来自睡眠医学界的临床共识与节律研究</p>
-<p><strong>程序员场景</strong>：上线夜之后最错误的选择是"周末睡到下午"——那是在睡眠债上再加一笔节律债。</p>
-<p><strong>边界</strong>：慢性失眠（躺下 30 分钟睡不着、每周 3 晚以上、持续 3 个月）是病，去睡眠门诊，不是自律问题。</p>
-<p><strong>参考文献</strong>：
-1. Van Dongen HP, et al. The cumulative cost of additional wakefulness. <em>Sleep</em>. 2003;26(2):117-26. (PMID: 12683469)
-2. Belenky G, et al. Patterns of performance degradation and restoration during sleep restriction and subsequent recovery: a sleep dose-response study. <em>J Sleep Res</em>. 2003;12(1):1-12. (PMID: 12603781)</p>
-<blockquote>
-<p><strong>熊博士按</strong>：睡眠研究里最阴的发现——睡眠债越欠越多，你的困倦感却会"平台化"，让人真心觉得"我还行"。主观感觉在这件事上是失真的仪表盘，数据不会陪你演。</p>
-</blockquote></div></div></section>
-<section data-t='腰果 010 · 睡前 1 小时屏幕宵禁' class='page' id='p11'><div class='pagebody'><div class='card'><h2>腰果 010 · 睡前 1 小时屏幕宵禁 ｜ 🟢 ｜ 入睡困难</h2><p><strong>做法</strong>：睡前 1 小时停用手机/平板（至少切夜间模式+调暗）；用纸质书、播客、拉伸替代。</p>
-<p><strong>机制</strong>：屏幕光（尤其蓝光波段）抑制褪黑素分泌、延迟节律；且屏幕内容（信息流、消息、短视频）带来认知唤醒，双重延迟入睡。</p>
-<p><img alt="最后那小时屏幕，偷走的不止一小时" src="images/screen_curfew.png" /></p>
-<p><strong>证据等级</strong>：🟢 人群实证 + 对照实验
-- RCT：睡前用发光阅读器 vs 纸质书，前者褪黑素抑制、入睡延迟约 10 分钟、次日困倦感上升——效应存在但量级温和
-- 大样本研究（青少年人群，n≈万级）：就寝前屏幕使用与睡眠时长缩短、入睡困难相关——成人的对应证据以对照实验（第 1 篇）为主</p>
-<p><strong>程序员场景</strong>："躺床上刷会儿手机"是晚睡循环的最后一块拼图——宵禁一小时，是性价比最高的睡眠干预。</p>
-<p><strong>边界</strong>：夜班/跨时区工作者需个性化节律策略；重度失眠者屏幕不是唯一原因。</p>
-<p><strong>参考文献</strong>：
-1. Chang AM, et al. Evening use of light-emitting eReaders negatively affects sleep, circadian timing, and next-morning alertness. <em>PNAS</em>. 2015;112(4):1232-7. (PMID: 25535358)
-2. Hysing M, et al. Sleep and use of electronic devices in adolescence: results from a large population-based study. <em>BMJ Open</em>. 2015;5:e006748. (PMID: 25643702)</p>
-<blockquote>
-<p><strong>熊博士按</strong>：十分钟入睡延迟听起来不痛不痒——直到你意识到它每晚都在，而且"内容唤醒"的账还没算进去。宵禁一小时，买回的是整个入睡窗口。</p>
-</blockquote></div></div></section>
-<section data-t='腰果 006 · Zone 2 快走' class='page' id='p12'><div class='pagebody'><div class='card'><h2>腰果 006 · Zone 2 快走 ｜ 🟢 ｜ 体能下降</h2><p><strong>做法</strong>：每周 3-5 次、每次 30-45 分钟的"还能完整说话但唱不了歌"强度的快走/慢跑/骑车（约最大心率 60-70%）。</p>
-<p><strong>机制</strong>：Zone 2 强度主要靠线粒体氧化代谢供能——是提高线粒体密度和效率的有效刺激区间。线粒体功能衰退是衰老的核心标志之一（hallmarks of aging）；耐力运动的线粒体适应性自 1967 年 Holloszy 的经典工作起被反复验证。</p>
-<p><img alt="线粒体的训练课，在最便宜的那一档" src="images/zone2.png" /></p>
-<p><strong>证据等级</strong>：🟢 人群实证（运动量-死亡率量效关系为流行病学最稳健的发现之一）</p>
-<p><strong>程序员场景</strong>：通勤最后一公里快走、代码评审前绕楼一圈——Zone 2 不需要换衣服不需要健身房，门槛最低。</p>
-<p><strong>边界</strong>：有心血管疾病史者先咨询医生；心率用"说话测试"即可，不必买设备。</p>
-<p><strong>参考文献</strong>：
-1. Holloszy JO. Biochemical adaptations in muscle. Effects of exercise on mitochondrial oxygen uptake and respiratory enzyme activity in skeletal muscle. <em>J Biol Chem</em>. 1967;242(9):2278-82. (PMID: 4290225)
-2. Arem H, et al. Leisure time physical activity and mortality. <em>JAMA Intern Med</em>. 2015;175(6):959-67. (PMID: 25844730)</p>
-<blockquote>
-<p><strong>熊博士按</strong>：长寿研究绕不开线粒体，Zone 2 是给线粒体上课最便宜的方式——不用办卡、不用装备，"还能说话但唱不了歌"这一句就够了。</p>
-</blockquote></div></div></section>
-<section data-t='腰果 008 · 工位人体工学三件套' class='page' id='p13'><div class='pagebody'><div class='card'><h2>腰果 008 · 工位人体工学三件套 ｜ 🟢 ｜ 腕/腰/颈</h2><p><strong>做法</strong>：
-1. <strong>屏幕上缘与视线平齐</strong>、距离一臂（50-70cm）——头前倾 15° 时颈椎负荷约为直立姿态的 2-3 倍（力学模型估算）
-2. <strong>肘角 90°-100°</strong>、腕部中立位（键盘垫腕或降低键盘后缘）——正中神经减压
-3. <strong>腰椎支撑</strong>：腰后垫枕或用椅背腰托，坐深把臀部坐到椅子最里</p>
-<p><strong>机制</strong>：腰椎间盘压力随坐姿恶化阶梯上升：端坐时已比站立高约四成，身体前倾时进一步接近站立的两倍（Nachemson 经典测量；后续在体复测证实坐姿升压方向一致、量级略低——如实说明）；腕部背伸增加腕管内压力——正中神经受压是腕管综合征的直接机制。</p>
-<p><img alt="头每低一寸，脖子多扛几斤" src="images/neck_load.png" /></p>
-<p><strong>证据等级</strong>：🟢 生物力学实证｜对"预防腕管综合征"的效果证据中等（工效学干预的 RCT 结论混合——如实说明）</p>
-<p><strong>程序员场景</strong>：笔记本的"屏幕低+键盘高"先天违背人体工学——外接键盘抬屏幕是性价比最高的工位改造。</p>
-<p><strong>边界</strong>：已出现持续手麻（尤其夜间麻醒）、握力下降——就医做神经电生理检查，工位改造救不了已损伤的神经。</p>
-<p><strong>参考文献</strong>：
-1. Nachemson AL. Disc pressure measurements. <em>Spine</em>. 1981;6(1):93-7. (PMID: 7209680)
-2. Hansraj KK. Assessment of stresses in the cervical spine caused by posture and position of the head. <em>Surg Technol Int</em>. 2014;25:277-9. (PMID: 25393825)</p>
-<blockquote>
-<p><strong>熊博士按</strong>：笔记本是按"偶尔移动使用"设计的，每天八小时用它办公，它就是刑具。外接键盘加支架，一百块钱同时解决颈和腕两个问题——这是我推荐过的性价比最高的改造，没有之一。</p>
-</blockquote></div></div></section>
-<section data-t='腰果 001 · 下颌淋巴轻按摩（Brain Drain）' class='page' id='p14'><div class='pagebody'><div class='card'><h2>腰果 001 · 下颌淋巴轻按摩（Brain Drain） ｜ 🟡 ｜ 大脑昏沉</h2><p><strong>做法</strong>：每天 1-2 分钟，用指腹沿下颌骨下缘轻柔按压滑动（从下巴中央到耳垂下），力度以"舒服"为准，不追求痛感。</p>
-<p><strong>机制</strong>：大脑代谢废物（如β-淀粉样蛋白）经类淋巴系统（glymphatic system）清除，经硬脑膜淋巴管引流至颈部淋巴结链（以颈深淋巴结为主）。下颌下淋巴结是头颈部浅表引流网络的一部分；面部与下颌区的轻柔按摩可促进局部淋巴回流——<strong>对大脑废物清除的影响属于间接推演</strong>，直接证据尚在积累，如实标注。</p>
-<p><img alt="方向对，力度轻" src="images/lymph_drain.png" /></p>
-<p><strong>证据等级</strong>：🟡 机制明确 + 部分动物证据｜"按摩下颌直接加速大脑排毒"是合理推测而非已证结论
-- 脑膜淋巴管的存在与功能：2015 年 Nature 两篇里程碑论文确认（此前教科书认为脑没有淋巴管）</p>
-<p><strong>程序员场景</strong>：debug 卡壳时做一轮，替代刷手机；顺带活动眼睛和颈部。</p>
-<p><strong>边界</strong>：颈部有肿块、甲状腺疾病、急性感染发烧者不做；不要用力按压血管搏动处。</p>
-<p><strong>参考文献</strong>：
-1. Louveau A, et al. Structural and functional features of central nervous system lymphatic vessels. <em>Nature</em>. 2015;523(7560):337-41. (PMID: 26030524)
-2. Aspelund A, et al. A dural lymphatic vascular system that drains brain interstitial fluid and macromolecules. <em>J Exp Med</em>. 2015;212(7):991-9. (PMID: 26077718)
-3. Da Mesquita S, et al. Functional aspects of meningeal lymphatics in ageing and Alzheimer's disease. <em>Nature</em>. 2018;560(7717):185-91. (PMID: 30046111)</p>
-<blockquote>
-<p><strong>熊博士按</strong>：这条是我标得最犹豫的一条——机制在动物身上是真的，"按摩下颌就能给大脑排毒"目前只能算合理推测。它留在这里有个理由：2015 年之前，教科书还写着"大脑没有淋巴管"。科学会推翻教科书，也包括我这份指南。</p>
-</blockquote></div></div></section>
-<section data-t='腰果 009 · 番茄钟的生理学' class='page' id='p15'><div class='pagebody'><div class='card'><h2>腰果 009 · 番茄钟的生理学 ｜ 🟡 ｜ 注意力涣散</h2><p><strong>做法</strong>：25 分钟专注 + 5 分钟休息为一个周期；这是工程化的近似——不必迷信数字，核心是<strong>有节律的专注-恢复循环</strong>。</p>
-<p><strong>机制</strong>：注意力与觉醒度存在约 90 分钟的超日节律（BRAC，基础休息-活动周期）假说；持续专注伴随前额叶资源消耗，周期性休息可恢复。但"25 分钟"这个数字本身来自 Francesco Cirillo 1980 年代的个人方法，不是生理学推导。</p>
-<p><img alt="强制暂停协议：节律本身就是价值" src="images/pomodoro.png" /></p>
-<p><strong>证据等级</strong>：🟡 专注-恢复循环有生理学支持｜"25 分钟最优"无直接验证——🔴 数字是工程约定
-- 微休息（micro-break）研究支持短暂休息对持续注意力有益
-- 超日节律在睡眠周期中证据充分，清醒期 90 分钟周期证据较弱</p>
-<p><strong>程序员场景</strong>：把番茄钟当"强制暂停协议"用——25 分钟到点必须抬头眨眼（联动 003）起身（联动 002），价值在节律本身。</p>
-<p><strong>边界</strong>：心流状态被打断有切换成本——深度编码时可放宽到 50+10，不必教条。</p>
-<p><strong>参考文献</strong>：
-1. Cirillo F. The Pomodoro Technique.（方法源头，非科学文献）
-2. Ariga A, Lleras A. Brief and rare mental "breaks" keep you focused: deactivation and reactivation of task goals forestall vigilance decrement. <em>Cognition</em>. 2011;118(3):439-43. (PMID: 21211793)</p>
-<blockquote>
-<p><strong>熊博士按</strong>：我喜欢这一条的诚实——"25 分钟"是一个意大利大学生的个人约定，不是生理学。方法可以工程化，但把工程约定当自然规律，是我们要在整本指南里反复拆穿的事。</p>
-</blockquote></div></div></section>
-<section data-t='腰果 012 · 冥想十分钟' class='page' id='p16'><div class='pagebody'><div class='card'><h2>腰果 012 · 冥想十分钟 ｜ 🟢 ｜ 压力、焦虑</h2><p><img alt="冥想十分钟" src="images/heads/head_012.png" /></p>
-<p><strong>做法</strong>：每天 10 分钟，坐直，注意力放在呼吸上（吸气数 1，呼气数 2，数到 10 重来）。走神了？正常——<strong>把注意力拉回来这个动作，就是训练本身</strong>。</p>
-<p><strong>机制</strong>：注意力投放是可训练的技能。压力轴：冥想程序对焦虑/压力的改善有 meta 级证据（Goyal 2014）；职场正念 RCT 群（J Occup Health Psychol 2019 meta）。分子层：冥想与端粒酶活性升高相关（meta，Psychoneuroendocrinology 2014）；炎症层有促炎基因表达下调的信号，但临床炎症标志物效应量小（2023 meta："Only Small Effects"）——分层如实。</p>
-<p><strong>证据等级</strong>：🟢 压力/焦虑轴（meta+RCT 群）｜🟡 分子层信号（端粒酶/基因表达，机制级）</p>
-<p><strong>程序员场景</strong>：编译等待、会议间隙、睡前——十分钟不比一集短视频长。</p>
-<p><strong>边界</strong>：不替代精神科治疗；确诊抑郁/焦虑障碍者以专业治疗为主，冥想是辅助。</p>
-<p><strong>参考文献</strong>：
-1. Goyal M, et al. Meditation programs for psychological stress and well-being: a systematic review and meta-analysis. <em>JAMA Intern Med</em>. 2014;174(3):357-68. (PMID: 24395196)
-2. Bartlett L, et al. A systematic review and meta-analysis of workplace mindfulness training randomized controlled trials. <em>J Occup Health Psychol</em>. 2019;24(1):108-126. (PMID: 30714811)
-3. Schutte NS, Malouff JM. A meta-analytic review of the effects of mindfulness meditation on telomerase activity. <em>Psychoneuroendocrinology</em>. 2014;42:45-8. (PMID: 24636500)</p>
-<blockquote>
-<p><strong>熊博士按</strong>：这一条是"一招三柱"——压力轴（H11 炎症基因）、端粒酶（H1/H2）、表观遗传调节信号（H3）。十分钟换三根柱子的正向干预，全指南性价比前二。</p>
-</blockquote></div></div></section>
-<section data-t='腰果 013 · 意想与免疫：注意力投向患处' class='page' id='p17'><div class='pagebody'><div class='card'><h2>腰果 013 · 意想与免疫：注意力投向患处 ｜ 🟡 ｜ 身心交互</h2><p><img alt="意想与免疫" src="images/heads/head_013.png" /></p>
-<p><strong>做法</strong>：身体某处急性不适（蚊虫叮咬、局部刺激）时，把注意力温和地投向那个部位 2-3 分钟——只是观察感受，不用力想象"治愈"。</p>
-<p><strong>机制</strong>：2026 年 <em>Nature Human Behaviour</em> 的人体实验：主动的内部注意（意想身体某处）可以改变急性皮肤炎症的发展轨迹，并给出认知-生理通路线索。这是"神经-免疫对话"（十二柱 H10）在人体上的直接证据雏形。</p>
-<p><strong>证据等级</strong>：🟡 单篇初步人体证据，待复制；适应证仅急性皮肤炎症模型</p>
-<p><strong>程序员场景</strong>：被蚊子咬了别急着挠——先试试"看它一眼"。顺便说，冥想（012）里的身体扫描，练的就是这种注意力投放。</p>
-<p><strong>边界</strong>：<strong>不替代任何治疗</strong>；慢性炎症、自身免疫病请遵医嘱。效应量与适用范围待更多研究。</p>
-<p><strong>参考文献</strong>：
-1. Mizrachi N, et al. Voluntary attention regulates acute immune responses in humans. <em>Nat Hum Behav</em>. 2026. (PMID: 42608466)</p>
-<blockquote>
-<p><strong>熊博士按</strong>："意念治病"是养生号重灾区——但 2026 年这篇论文告诉你：注意力与免疫的对话是真的，只是它说的是"改变走向"，不是"治愈"。我们把这条标 🟡 收进来，就是示范怎么区分"有初步证据的神奇"和"纯神奇"。</p>
-</blockquote></div></div></section>
-<section data-t='腰果 014 · 甘麦大枣汤与小麦胚芽' class='page' id='p18'><div class='pagebody'><div class='card'><h2>腰果 014 · 甘麦大枣汤与小麦胚芽 ｜ 🟡 ｜ 情绪不稳</h2><p><img alt="甘麦大枣汤与小麦胚芽" src="images/heads/head_014.png" /></p>
-<p><strong>做法</strong>：本条是科普而非处方——甘麦大枣汤是《金匮要略》（约公元 200 年）经典方，需中医师辨证使用。程序员可及的平民版：把小麦胚芽纳入主食（麦片、胚芽粉）。</p>
-<p><strong>机制</strong>：经方端：甘麦大枣汤主治"脏躁"（情绪不稳、悲伤欲哭），有 meta 分析（2014）与 2025 动物研究（CUMS 抑郁模型）支持。现代端：小麦胚芽是膳食亚精胺的头部来源——亚精胺是自噬激活剂（见 024）。<strong>1800 年前的经方与当代自噬研究，在同一颗麦粒上相遇。</strong></p>
-<p><strong>证据等级</strong>：🟡 中药 meta（中文 RCT 质量参差，如实说）+ 动物机制；亚精胺人体 RCT 另条目（024）</p>
-<p><strong>程序员场景</strong>：情绪低谷期的饮食仪式感：一碗胚芽燕麦，成本低，叙事好。</p>
-<p><strong>边界</strong>：经方使用请找中医师；甘麦大枣汤不与精神科药物互相替代。</p>
-<p><strong>参考文献</strong>：
-1. A meta-analysis of the efficacy and safety of traditional Chinese medicine formula Ganmai Dazao decoction for depression. 2014. (PMID: 24632021)
-2. Gan-Mai-Da-Zao decoction ameliorates depressive-like behaviors in CUMS mice. 2025. (PMID: 40580692)</p>
-<blockquote>
-<p><strong>熊博士按</strong>：这条的故事密度全指南第一：一张经方，君药是小麦；两千年后，小麦胚芽里的亚精胺成了自噬研究的明星分子。我不说"古人早知道"——我说的是：<strong>好食材经受得住两种完全不同的知识体系反复检验。</strong></p>
-</blockquote></div></div></section>
-<section data-t='腰果 015 · 写代码与心流' class='page' id='p19'><div class='pagebody'><div class='card'><h2>腰果 015 · 写代码与心流 ｜ 🟡 ｜ 中断、切换成本</h2><p><img alt="写代码与心流" src="images/heads/head_015.png" /></p>
-<p><strong>做法</strong>：两条工程习惯保护心流：①免打扰时段（日历占位+状态标记）；②<strong>恢复注释</strong>——被打断前，用一行注释写下"接下来要做什么"，给未来的自己留断点。</p>
-<p><strong>机制</strong>：程序员是最容易进入心流的职业之一，但中断的代价沉重：对 85 名程序员上万次编程会话的分析（Parnin &amp; Rugaber 2011）显示，开发者以 15-30 分钟短会话为主，且<strong>每次恢复被中断的任务，都要花可观时间重建工作上下文</strong>。恢复注释本质是"断点续传"——把上下文外化，降低重建成本。</p>
-<p><strong>证据等级</strong>：🟡 软件工程实证（CS 文献库）+ 认知科学的微休息证据</p>
-<p><strong>程序员场景</strong>：产品经理走过来之前，Cmd+S 代码，再写下那行注释。心流被打断的切换成本是真实的（与 009 番茄钟的分工：平庸任务用节律，深度任务护心流）。</p>
-<p><strong>边界</strong>：心流不是所有任务的最优态（代码评审、debug 需要发散）；别把"护心流"变成"谁都不能找我"。</p>
-<p><strong>参考文献</strong>：
-1. Parnin C, Rugaber S. Resumption strategies for interrupted programming tasks. <em>Software Quality Journal</em>. 2011;19(1):5-34. (DOI: 10.1007/s11219-010-9104-9)
-2. Ariga A, Lleras A. Brief and rare mental "breaks" keep you focused. <em>Cognition</em>. 2011;118(3):439-43. (PMID: 21211793)</p>
-<blockquote>
-<p><strong>熊博士按</strong>：中断后"我在干嘛来着"的那十秒钟茫然，就是上下文重建的成本在计费。恢复注释是全指南最便宜的工程习惯——一行注释，买回一次快速续传。</p>
-</blockquote></div></div></section>
-<section data-t='腰果 016 · 脑内内存管理' class='page' id='p20'><div class='pagebody'><div class='card'><h2>腰果 016 · 脑内内存管理 ｜ 🟡 ｜ 认知超载</h2><p><img alt="脑内内存管理" src="images/heads/head_016.png" /></p>
-<p><strong>做法</strong>：把"在脑内持有"改为"在外部持有"：伪代码先行、任务清单、恢复注释（015）、一张草稿纸。写下来不是偷懒，是<strong>扩容</strong>。</p>
-<p><strong>机制</strong>：认知科学称之"认知卸载"（cognitive offloading）：把信息外化到工具，释放工作记忆——该领域已有系统综述（意图卸载，Psychon Bull Rev 2023）。反面证据同样重要：<strong>"练脑"软件基本无效</strong>——工作记忆训练的 meta 分析显示训练收益不迁移到一般认知能力（Perspect Psychol Sci 2016）。</p>
-<p><strong>证据等级</strong>：🟡 卸载有综述支持；训练迁移被 meta 否定</p>
-<p><strong>程序员场景</strong>：你早就在这么干了——注释、TODO、白板。本条只是告诉你：这个直觉有认知科学背书，而且比买脑训练 App 靠谱。</p>
-<p><strong>边界</strong>：卸载≠不动脑——深度理解仍需要工作记忆参与；外化的是"持有"，不是"思考"。</p>
-<p><strong>参考文献</strong>：
-1. Boldt A, Gilbert SJ. Outsourcing memory to external tools: A review of 'intention offloading'. <em>Psychon Bull Rev</em>. 2023;30(3):920-937. (PMID: 35789477)
-2. Melby-Lervåg M, Hulme C. There is no convincing evidence that working memory training is effective. <em>Perspect Psychol Sci</em>. 2016;11(2):270-277. (PMID: 27474138)</p>
-<blockquote>
-<p><strong>熊博士按</strong>："写下来就是扩容"——工程师对外置存储的理解，比谁都深。倒是那些卖脑训练 App 的，该读读那篇 meta：训练收益不迁移。省下订阅费，买张好草稿纸。</p>
-</blockquote></div></div></section>
-<section data-t='腰果 017 · 情绪与基因组稳定' class='page' id='p21'><div class='pagebody'><div class='card'><h2>腰果 017 · 情绪与基因组稳定 ｜ 🟢 ｜ 慢性压力的分子账单</h2><p><img alt="情绪与基因组稳定" src="images/heads/head_017.png" /></p>
-<p><strong>做法</strong>：把慢性压力当作有分子后果的事来管理：冥想（012）、Zone 2（006）、睡眠（007）、可倾诉的关系。重大压力事件后，给身体安排恢复期。</p>
-<p><strong>机制</strong>：2004 年 PNAS 里程碑（Epel/Blackburn）：<strong>生活压力越大，端粒越短、端粒酶越低</strong>——照护慢性病孩子的高压人群，细胞层面"更老"。后续：抑郁与端粒缩短有 meta 级关联；2025 年 <em>Nat Aging</em>：慢性社会压力驱动 p16 介导的衰老细胞积累（小鼠）。</p>
-<p><strong>证据等级</strong>：🟢 端粒关联（多项 meta，人群证据）｜因果方向与干预逆转证据仍在积累</p>
-<p><strong>程序员场景</strong>：连续高压冲刺不是"扛过去就没事"——它在你染色体末端记账。</p>
-<p><strong>边界</strong>：关联≠因果；抑郁症是疾病，治疗优先，端粒不是 KPI。</p>
-<p><strong>参考文献</strong>：
-1. Epel ES, et al. Accelerated telomere shortening in response to life stress. <em>PNAS</em>. 2004;101(49):17312-5. (PMID: 15574496)
-2. Schutte NS, et al. Depression and telomere length: a meta-analysis. <em>J Affect Disord</em>. 2016;191:247-52. (PMID: 26688493)
-3. Chronic social stress induces p16-mediated senescent cell accumulation in mice. <em>Nat Aging</em>. 2025. (PMID: 39528642)</p>
-<blockquote>
-<p><strong>熊博士按</strong>：情绪是有分子后果的——这不是鸡汤，是 Epel 2004 以后端粒研究的主流结论之一。管理情绪不是矫情，是基因组维护工作的一部分。</p>
-</blockquote></div></div></section>
-<section data-t='腰果 018 · 记忆与基因组的断裂重连' class='page' id='p22'><div class='pagebody'><div class='card'><h2>腰果 018 · 记忆与基因组的断裂重连 ｜ 🟡 ｜ 学新东西时大脑在干嘛</h2><p><img alt="记忆与基因组的断裂重连" src="images/heads/head_018.png" /></p>
-<p><strong>做法</strong>：学新框架/新语言的那几天，保证睡眠（修复机制多在睡眠中运转）与恢复期；把学习强度控制在"有点难但不至于宕机"。</p>
-<p><strong>机制</strong>：顶刊证据链——<em>Cell</em> 2015：神经元激活时拓扑异构酶 IIβ 主动剪断 DNA 启动即刻早基因表达；<em>Nature</em> 2023：NPAS4-NuA4 复合体把突触活动与 DNA 修复耦合；<em>Nature</em> 2024：记忆组装经 DNA 感知 TLR9 通路；2024：<strong>阿尔茨海默脑中这种"适应性断裂"丢失</strong>——折断后接不回，才是病。</p>
-<p><strong>证据等级</strong>：🟡 机制+动物，顶刊级；人体直接证据在积累</p>
-<p><strong>程序员场景</strong>：啃新东西时大脑在物理层面"重构代码"——给它留出编译时间。</p>
-<p><strong>边界</strong>：适应性断裂≠"多学多断多好"；机制理解中，勿过度演绎。</p>
-<p><strong>参考文献</strong>：
-1. Madabhushi R, et al. Activity-induced DNA breaks govern the expression of neuronal early-response genes. <em>Cell</em>. 2015;161(7):1592-605. (PMID: 26052046)
-2. Kim J, et al. A NPAS4-NuA4 complex couples synaptic activity to DNA repair. <em>Nature</em>. 2023;614(7949):754-762. (PMID: 36792830)
-3. Pollina EA, et al. Formation of memory assemblies through the DNA-sensing TLR9 pathway. <em>Nature</em>. 2024. (PMID: 38538785)</p>
-<blockquote>
-<p><strong>熊博士按</strong>：大脑为写一条新记忆，主动折断自己的 DNA 再接回去——而阿尔茨海默的悲剧是接不回去。这是全指南我最想把动画做出来的一条。</p>
-</blockquote></div></div></section>
-<section data-t='腰果 019 · 40Hz 声光节拍' class='page' id='p23'><div class='pagebody'><div class='card'><h2>腰果 019 · 40Hz 声光节拍 ｜ 🟡 ｜ 健脑外推</h2><p><img alt="40Hz 声光节拍" src="images/heads/head_019.png" /></p>
-<p><strong>做法</strong>：本条暂不推荐任何设备——<strong>先让子弹飞</strong>。了解这条线即可；伽马节律的日常自然来源（运动、社交、新异刺激）比设备便宜。</p>
-<p><strong>机制</strong>：MIT 团队的 gamma 感觉刺激（40Hz 光+声）：<em>Cell</em> 2019 多感官 gamma 刺激改善 AD 模型小鼠病理与认知；轻症 AD 患者的人体试验（2022）与开放标签延伸（2025）显示可行性与部分信号；2024 年 <em>J Intern Med</em> 综述梳理了"从神经退行到健康大脑"的外推路径。</p>
-<p><strong>证据等级</strong>：🟡 AD 人群早期证据；健康年轻人"健脑"属外推，无 RCT</p>
-<p><strong>程序员场景</strong>：对"40Hz 助眠灯/专注音"类产品保持清醒——卖得最热的场景恰恰证据最薄。</p>
-<p><strong>边界</strong>：勿为健康健脑购买高价设备；癫痫/光敏者禁忌闪烁光刺激。</p>
-<p><strong>参考文献</strong>：
-1. Adaikkan C, et al. Multi-sensory gamma stimulation ameliorates Alzheimer's-associated pathology and improves cognition. <em>Cell</em>. 2019;177(2):256-271. (PMID: 30879788)
-2. Chan D, et al. Gamma frequency sensory stimulation in mild probable Alzheimer's dementia patients. <em>PLoS One</em>. 2022;17(1):e0261279. (PMID: 36454969)
-3. Audiovisual gamma stimulation for the treatment of neurodegeneration. <em>J Intern Med</em>. 2024. (PMID: 38115692)</p>
-<blockquote>
-<p><strong>熊博士按</strong>：40Hz 是"未来感最强"的一条——出自 MIT，故事性感。但健康人健脑目前是外推，等人体证据，别为预告片买票。</p>
-</blockquote></div></div></section>
-<section data-t='腰果 020 · 麦角硫因与蘑菇' class='page' id='p24'><div class='pagebody'><div class='card'><h2>腰果 020 · 麦角硫因与蘑菇 ｜ 🟡 ｜ 长寿维生素</h2><p><img alt="麦角硫因与蘑菇" src="images/heads/head_020.png" /></p>
-<p><strong>做法</strong>：蘑菇入菜——香菇、平菇、杏鲍菇、口蘑，每周 2-3 次，换着来。食补优先，暂不推荐补剂。</p>
-<p><strong>机制</strong>：麦角硫因被称"长寿维生素"：人体有专属转运体（说明它在被认真对待），蘑菇是头号膳食来源。人群证据：日本队列——血清麦角硫因越高，痴呆风险越低（2025）；低血浆麦角硫因预测老年人认知与功能下降（2022）；新加坡队列——蘑菇摄入与轻度认知障碍风险降低相关（2019）。</p>
-<p><strong>证据等级</strong>：🟡 观察性队列（相关性），食补风险为零——性价比叙事成立</p>
-<p><strong>程序员场景</strong>：外卖点蘑菇类的菜，是最不费劲的"长寿投资"。</p>
-<p><strong>边界</strong>：观察性证据≠因果；勿囤高价麦角硫因补剂（人体干预证据未定）。</p>
-<p><strong>参考文献</strong>：
-1. Serum ergothioneine and risk of dementia in a general older Japanese population. 2025. (PMID: 40908798)
-2. Low plasma ergothioneine predicts cognitive and functional decline in an elderly cohort. 2022. (PMID: 36139790)
-3. The association between mushroom consumption and mild cognitive impairment. 2019. (PMID: 30775990)</p>
-<blockquote>
-<p><strong>熊博士按</strong>：相关性不是因果——但当暴露物是"炒个蘑菇"这种零风险行为时，观察性证据也够下单了。这叫贝叶斯式点菜。</p>
-</blockquote></div></div></section>
-<section data-t='腰果 021 · Omega-3 与干眼' class='page' id='p25'><div class='pagebody'><div class='card'><h2>腰果 021 · Omega-3 与干眼 ｜ 🟡 ｜ 护眼补剂</h2><p><img alt="Omega-3 与干眼" src="images/heads/head_021.png" /></p>
-<p><strong>做法</strong>：干眼困扰者：深海鱼每周 2 次（食补优先）；补剂可试 3 个月，无效就停——别加码。</p>
-<p><strong>机制</strong>：Omega-3（EPA/DHA）抗炎通路对干眼病理合理；meta 存在（2023, J Clin Med）但<strong>结论分裂</strong>——阳性小 RCT 与大 RCT 阴性并存；针对计算机视觉综合征的干预综述（<em>Ophthalmology</em> 2022）证据同样有限。先做零成本项（003 眨眼+20-20-20），再谈鱼油。</p>
-<p><strong>证据等级</strong>：🟡 证据分裂，如实标注——"可试，别期待奇迹"</p>
-<p><strong>程序员场景</strong>：眼药水→鱼油→眨眼提醒，顺序应该反过来。</p>
-<p><strong>边界</strong>：高剂量鱼油与抗凝药相互作用；手术前告知医生。</p>
-<p><strong>参考文献</strong>：
-1. Efficacy of omega-3 intake in managing dry eye disease: a systematic review and meta-analysis. <em>J Clin Med</em>. 2023. (PMID: 38002640)
-2. Interventions for the management of computer vision syndrome: a systematic review. <em>Ophthalmology</em>. 2022. (PMID: 35597519)</p>
-<blockquote>
-<p><strong>熊博士按</strong>：这是全指南"证据最分裂"的一条，我故意留着它——分裂的证据怎么诚实地呈现，本身就是这套分级体系的卖点。</p>
-</blockquote></div></div></section>
-<section data-t='腰果 022 · 坚果一把' class='page' id='p26'><div class='pagebody'><div class='card'><h2>腰果 022 · 坚果一把 ｜ 🟢 ｜ 每日零食</h2><p><img alt="坚果一把" src="images/heads/head_022.png" /></p>
-<p><strong>做法</strong>：每天一小把（约 28g），混合坚果，<strong>无糖无盐</strong>非油炸。腰果在列。</p>
-<p><strong>机制</strong>：坚果摄入频率与全因死亡率负相关：前瞻队列+meta（<em>Food Funct</em> 2017）——坚果摄入者的心血管与全因死亡风险更低。机制拼图：不饱和脂肪酸、膳食纤维、麦角硫因（核桃/某些菌坚果）多通路。</p>
-<p><strong>证据等级</strong>：🟢 队列+meta（观察性，但方向一致性与剂量反应关系扎实）</p>
-<p><strong>程序员场景</strong>：把工位抽屉里的辣条换成混合坚果——同名 IP 的自我救赎。</p>
-<p><strong>边界</strong>：坚果热量高，一把为准；过敏者严格回避。</p>
-<p><strong>参考文献</strong>：
-1. Nut consumption in relation to all-cause and cause-specific mortality: a meta-analysis of prospective studies. <em>Food Funct</em>. 2017;8(11):3893-3905. (PMID: 28875220)</p>
-<blockquote>
-<p><strong>熊博士按</strong>：指南的条目编号叫了这么久"腰果"，今天腰果终于凭本事入列——每天一把，混着吃，无盐。IP 的自我救赎，证据等级 🟢。</p>
-</blockquote></div></div></section>
-<section data-t='腰果 023 · APOE4 与长链脂肪酸' class='page' id='p27'><div class='pagebody'><div class='card'><h2>腰果 023 · APOE4 与长链脂肪酸 ｜ 🟡 ｜ 基因×营养</h2><p><img alt="APOE4 与长链脂肪酸" src="images/heads/head_023.png" /></p>
-<p><strong>做法</strong>：无需基因检测焦虑——APOE4 携带者（约 15-25% 人群）更该认真执行本指南的 H7 条目（Zone 2、睡眠），膳食 DHA（深海鱼）规律摄入；检测与解读请找专业机构。</p>
-<p><strong>机制</strong>：APOE4 是阿尔茨海默最常见的遗传风险因子（<em>Science</em> 1993 经典）；它同时拖累长链脂肪酸：<strong>PET 研究直接显示 APOE4 携带者脑 DHA 摄取更低</strong>（2017）；2026 年高剂量 DHA 补充的脑靶点研究在推进。同一个"鱼油护脑"，基因型不同，效率不同——精准营养的预告片。</p>
-<p><strong>证据等级</strong>：🟡 机制清晰（PET 直接证据）+人群关联；干预获益的基因分层证据在积累</p>
-<p><strong>程序员场景</strong>：不用急着测基因——把"鱼油是否有用因人而异"这个概念装进脑子，就已经跑赢补剂营销话术。</p>
-<p><strong>边界</strong>：基因≠命运（外显率不高、可干预因素多）；APOE 检测有心理与保险 implications，咨询后再做。</p>
-<p><strong>参考文献</strong>：
-1. Corder EH, et al. Gene dose of apolipoprotein E type 4 allele and the risk of Alzheimer's disease in late onset families. <em>Science</em>. 1993;261(5123):921-3. (PMID: 8346443)
-2. Yassine HN, et al. DHA brain uptake and APOE4 status: a PET study with [1-(11)C]-DHA. <em>Alzheimers Res Ther</em>. 2017;9(1):51. (PMID: 28335828)
-3. CNS target engagement of high-dose DHA supplementation in older adults at risk for dementia. <em>EBioMedicine</em>. 2026. (PMID: 42315445)</p>
-<blockquote>
-<p><strong>熊博士按</strong>：营养补剂的下一代叙事不是"吃不吃"，是"谁吃有用"。APOE4×DHA 是这条赛道最早成形的例子——记下这个框架，能免疫大部分补剂广告。</p>
-</blockquote></div></div></section>
-<section data-t='腰果 024 · 亚精胺与小麦胚芽' class='page' id='p28'><div class='pagebody'><div class='card'><h2>腰果 024 · 亚精胺与小麦胚芽 ｜ 🟡 ｜ 自噬激活</h2><p><img alt="亚精胺与小麦胚芽" src="images/heads/head_024.png" /></p>
-<p><strong>做法</strong>：食补优先：小麦胚芽（胚芽麦片/粉）、纳豆、陈年奶酪、蘑菇。补剂证据起步中，不神化。</p>
-<p><strong>机制</strong>：亚精胺是自噬（十二柱 H5）的天然激活剂；动物延寿证据充分（酵母-果蝇-小鼠）。人体：小麦胚芽提取物的认知 RCT（2022）有信号；<strong>2024 年 40mg/天补充的 RCT 显示循环多胺变化最小</strong>——阴性/弱结果如实收编。</p>
-<p><strong>证据等级</strong>：🟡 机制+动物强，人体认知 RCT 起步、结果混合</p>
-<p><strong>程序员场景</strong>：早餐加两勺小麦胚芽粉——与 014 甘麦大枣汤同源，一颗麦粒两种叙事。</p>
-<p><strong>边界</strong>：补剂剂量与长期安全性未定；孕哺期咨询医生。</p>
-<p><strong>参考文献</strong>：
-1. Wirth J, et al. Effects of spermidine supplementation on cognition and biomarkers in older adults at risk for dementia. <em>J Cogn Enhanc</em>. 2022. (PMID: 35616942)
-2. Supplementation of spermidine at 40 mg/day has minimal effects on circulating polyamines. 2024. (PMID: 39405978)</p>
-<blockquote>
-<p><strong>熊博士按</strong>："延寿胺"的人体证据还在爬坡——阳性的认知信号与阴性的血指标并存。食补路径（胚芽/纳豆）零风险先走，补剂等更大的 RCT。</p>
-</blockquote></div></div></section>
-<section data-t='腰果 025 · PQQ' class='page' id='p29'><div class='pagebody'><div class='card'><h2>腰果 025 · PQQ ｜ 🟡 ｜ 线粒体新生</h2><p><img alt="PQQ" src="images/heads/head_025.png" /></p>
-<p><strong>做法</strong>：本条重点是"知道"而非"服用"：PQQ 广泛存在于食物（纳豆、绿茶、青椒，含量微）。补剂证据小样本，观察即可。</p>
-<p><strong>机制</strong>：吡咯喹啉醌（PQQ）在线粒体新生（biogenesis，H7）方向有动物与细胞证据；人体小 RCT：健康成人认知（2022）、年轻与老年脑功能（2023）、6 周补充的线粒体功能指标（2024）——样本都小。</p>
-<p><strong>证据等级</strong>：🟡 小样本人体 RCT 群；效应量与长期安全性待验证</p>
-<p><strong>程序员场景</strong>：看到"PQQ 太岁精华"类产品——太岁无 PubMed 文献，PQQ 证据小样本，两者都不足以下单。</p>
-<p><strong>边界</strong>：孕妇儿童数据缺乏；别与"太岁"传说捆绑消费。</p>
-<p><strong>参考文献</strong>：
-1. Effect of dietary pyrroloquinoline quinone disodium salt on cognitive function in healthy adults. 2022. (PMID: 34415830)
-2. Pyrroloquinoline quinone disodium salt improves brain function in both younger and older adults. 2023. (PMID: 36807425)
-3. Six-week PQQ supplementation and mitochondrial function. 2024. (PMID: 38908296)</p>
-<blockquote>
-<p><strong>熊博士按</strong>：PQQ 的故事性感（线粒体新生），人体数据还在幼儿园阶段。民间的"太岁"传说连文献都没有——传说归传说，钱包归钱包。</p>
-</blockquote></div></div></section>
-<section data-t='腰果 026 · GlyNAC' class='page' id='p30'><div class='pagebody'><div class='card'><h2>腰果 026 · GlyNAC ｜ 🟡 ｜ 老年补剂组合</h2><p><img alt="GlyNAC" src="images/heads/head_026.png" /></p>
-<p><strong>做法</strong>：这条主要写给<strong>你的父母</strong>：老年人群的甘氨酸+NAC 组合有系列 RCT 支持方向；年轻人不急。</p>
-<p><strong>机制</strong>：GlyNAC（甘氨酸+N-乙酰半胱氨酸）为细胞补充谷胱甘肽前体：Baylor 团队系列 RCT（2020-2022）在老年人中改善谷胱甘肽、氧化应激、线粒体功能、身体功能与认知多个指标；2026 年新团队跟进研究出现。</p>
-<p><strong>证据等级</strong>：🟡 单中心系列 RCT（Baylor），样本小、需独立复制</p>
-<p><strong>程序员场景</strong>：给爸妈的补剂清单里，GlyNAC 的证据等级排在大多数"抗衰网红"前面——但记得先问医生。</p>
-<p><strong>边界</strong>：老年人群证据；与药物相互作用（NAC 影响某些药物）需药师审核。</p>
-<p><strong>参考文献</strong>：
-1. Sekhar RV, et al. GlyNAC supplementation in older adults. 2020-2022 系列. (PMID: 33007928 / 33783984 / 35975308)</p>
-<blockquote>
-<p><strong>熊博士按</strong>：老龄化叙事里最踏实的一条——不为码农自己，为爸妈。Baylor 的系列 RCT 方向一致，等独立复制，但"先问医生再试"的门槛不高。</p>
-</blockquote></div></div></section>
-<section data-t='腰果 027 · 甲基化时钟' class='page' id='p31'><div class='pagebody'><div class='card'><h2>腰果 027 · 甲基化时钟 ｜ 🟢 ｜ 生物年龄</h2><p><img alt="甲基化时钟" src="images/heads/head_027.png" /></p>
-<p><strong>做法</strong>：本条是概念科普：了解"表观遗传时钟"是什么、能回答什么、不能回答什么。检测属商业行为，本文不构成推荐。</p>
-<p><strong>机制</strong>：DNA 甲基化模式随年龄系统性漂移——Horvath 2013（<em>Genome Biol</em>）用全基因组甲基化构建"时钟"，误差显著小于历法年龄；此后时钟家族迭代（不同组织、不同速度）。它是 H3（表观遗传改变）柱的核心测量工具，也是"器官年龄不同步"研究的底座。</p>
-<p><strong>证据等级</strong>：🟢 时钟的测量学证据（数千篇文献）；"干预逆转时钟=逆转衰老"仍是开放问题——如实区分</p>
-<p><strong>程序员场景</strong>：看到"测出生物年龄比实际小 8 岁"的营销——先问：哪个时钟？训练人群还是泛人群？干预前后变化还是单点读数？</p>
-<p><strong>边界</strong>：时钟≠命运；不同时钟给出的读数可能不一致；单次检测的决策价值有限。</p>
-<p><strong>参考文献</strong>：
-1. Horvath S. DNA methylation age of human tissues and cell types. <em>Genome Biol</em>. 2013;14(10):R115. (PMID: 24138928)
-2. López-Otín C, et al. Hallmarks of aging: an expanding universe. <em>Cell</em>. 2023. (PMID: 36599349)</p>
-<blockquote>
-<p><strong>熊博士按</strong>：与 032（面相时钟）对照读——一个从唾液读，一个从照片读，都指向同一件事：年龄不是一个数。至于哪个更能指导干预，是整个行业正在解的题。</p>
-</blockquote></div></div></section>
-<section data-t='腰果 028 · 醋与乙酸' class='page' id='p32'><div class='pagebody'><div class='card'><h2>腰果 028 · 醋与乙酸 ｜ 🟢 ｜ 餐后血糖×菌群</h2><p><img alt="醋与乙酸" src="images/heads/head_028.png" /></p>
-<p><strong>做法</strong>：凉拌、蘸食加醋（1-2 汤匙）；同时把益生元（燕麦、豆类、蔬果）吃够——养好产短链脂肪酸的菌群。两条路径分开理解。</p>
-<p><strong>机制</strong>：<strong>外源路径</strong>：随餐醋酸延缓胃排空、改善餐后血糖与胰岛素反应——系统综述与多个小 RCT（2017 综述：醋可削弱餐后血糖/胰岛素峰）。<strong>内源路径</strong>：膳食纤维经肠道菌群发酵生成短链脂肪酸（含乙酸）——SCFA 是 H12 菌群轴的健康介质（<em>Cell Host Microbe</em> 2016 经典综述）。同一分子（乙酸），两条路径，<strong>别混为一谈</strong>：喝醋的受益证据在血糖曲线，不在"补 SCFA"。</p>
-<p><strong>证据等级</strong>：🟢 餐后血糖端（SR+RCT 群）/菌群端机制充分</p>
-<p><strong>程序员场景</strong>：外卖重碳水的那餐，加碟醋——成本最低的餐后血糖管理。</p>
-<p><strong>边界</strong>：胃食管反流/溃疡者慎；醋不是"排毒神药"，它只对餐后曲线做了点实事。</p>
-<p><strong>参考文献</strong>：
-1. Petersson J, et al. Vinegar consumption can attenuate postprandial glucose and insulin responses; a systematic review and meta-analysis. 2017. (PMID: 28292654)
-2. Koh A, et al. From dietary fiber to host physiology: short-chain fatty acids as key bacterial metabolites. <em>Cell Host Microbe</em>. 2016;20(6):765-74. (PMID: 27259147)</p>
-<blockquote>
-<p><strong>熊博士按</strong>：这条示范了"扯得妙"与"扯得错"的分界：益生元发酵的乙酸与食醋的醋酸是同一分子——但两条证据链各自独立，交汇处留给读者自己惊叹。</p>
-</blockquote></div></div></section>
-<section data-t='腰果 029 · 八段锦与筋' class='page' id='p33'><div class='pagebody'><div class='card'><h2>腰果 029 · 八段锦与筋 ｜ 🟢🟡🔴 ｜ 拉伸×蛋白稳态</h2><p><img alt="八段锦与筋" src="images/heads/head_029.png" /></p>
-<p><strong>做法</strong>：跟练视频每天 15-20 分钟（B 站官方跟练即可）。核心要义：<strong>拉、伸、旋拧</strong>——练的是筋与筋膜链。</p>
-<p><strong>机制</strong>：四层递进（证据强度递减，示范本指南方法论）：①<strong>动作层 🟢</strong>：八段锦 RCT 296 篇命中——2025 年 24 周 RCT 改善老年人肌少症；②<strong>组织层 🟡</strong>：2025 年筋膜重定义综述——力学传导枢纽+干细胞储备；③<strong>分子层 🟡</strong>：筋的细胞外基质是全身最大胶原蛋白库之一，蛋白稳态（H4）是 2023 十二柱之一——<strong>这是"筋=蛋白结构"的科学锚点</strong>；④<strong>概念层 🔴</strong>："肝主筋"在英文文献库检索零命中——概念映射是空白区，如实留白。</p>
-<p><strong>证据等级</strong>：分层标注如上——每一层证据走到哪，说到哪</p>
-<p><strong>程序员场景</strong>：工位久坐的逆向操作；睡前 15 分钟替代刷手机。</p>
-<p><strong>边界</strong>：慢病者循序渐进；膝关节不适者调整幅度。</p>
-<p><strong>参考文献</strong>：
-1. Efficacy of Baduanjin exercise for sarcopenia in older adults: a 24-week randomized controlled trial. 2025. (PMID: 41371252)
-2. Redefining fascia: a mechanobiological hub and stem cell reservoir in regeneration. 2025. (PMID: 41155456)
-3. López-Otín C, et al. Hallmarks of aging: an expanding universe. <em>Cell</em>. 2023. (PMID: 36599349)</p>
-<blockquote>
-<p><strong>熊博士按</strong>：这条是全指南方法论的自证：四层证据，逐层递减，最后一层诚实留白。传统功法值不值得练？动作层 🟢 已经足够回答"值得"。</p>
-</blockquote></div></div></section>
-<section data-t='腰果 030 · NAC 与化痰' class='page' id='p34'><div class='pagebody'><div class='card'><h2>腰果 030 · NAC 与化痰 ｜ 🟢 ｜ 药典老药</h2><p><img alt="NAC 与化痰" src="images/heads/head_030.png" /></p>
-<p><strong>做法</strong>：这是<strong>药品</strong>条目：痰液黏稠难咯时，N-乙酰半胱氨酸（NAC）是药典收录的黏液溶解剂——<strong>按说明书/遵医嘱使用</strong>，不做日常保健品。</p>
-<p><strong>机制</strong>：NAC 的二硫键断裂作用直接降低痰液黏度——Cochrane 系统综述（2019，慢阻肺急性加重预防）与 2000 年经典 meta 支持其黏液溶解与急性加重减少作用。它同时也是谷胱甘肽前体（与 026 GlyNAC 共享半个分子）。</p>
-<p><strong>证据等级</strong>：🟢 化痰/慢阻肺急性加重（Cochrane+meta）｜抗衰外延（GlyNAC）另条目</p>
-<p><strong>程序员场景</strong>：秋冬感冒后痰黏难咯的夜里，药盒里值得有的老药（遵医嘱）。</p>
-<p><strong>边界</strong>：药品属性：哮喘者慎用（可能诱发支气管痉挛）；不作为日常补充剂长期自行服用。</p>
-<p><strong>参考文献</strong>：
-1. Poole P, et al. Continuous or intermittent NAC for COPD. <em>Cochrane</em>. 2019. (PMID: 31107966)
-2. Stey C, et al. NAC in chronic bronchitis: a quantitative systematic review. 2000. (PMID: 10968500)</p>
-<blockquote>
-<p><strong>熊博士按</strong>：老药、便宜、证据清楚——NAC 是"传统×科学"栏目里最不玄的一条。化痰是它的本职，抗衰是它的兼职（见 GlyNAC），别搞反了。</p>
-</blockquote></div></div></section>
-<section data-t='腰果 031 · 颂钵' class='page' id='p35'><div class='pagebody'><div class='card'><h2>腰果 031 · 颂钵 ｜ 🟡偏🔴 ｜ 声音松弛</h2><p><img alt="颂钵" src="images/heads/head_031.png" /></p>
-<p><strong>做法</strong>：作为睡前仪式的<strong>声音放松</strong>（颂钵音疗/白噪音/低频音乐），不作为治疗手段。</p>
-<p><strong>机制</strong>：系统综述（2020, <em>Complement Ther Med</em>；2025 更新）显示颂钵相关干预与急性放松反应、紧张感下降相关；RCT（2023）证实藏钵声音诱导急性放松。<strong>但</strong>：研究样本小、对照组弱、适应证多为"主观感受"层面——疗效宣称从严。</p>
-<p><strong>证据等级</strong>：🟡偏🔴 松弛反应有初步证据；"疗愈"宣称不成立</p>
-<p><strong>程序员场景</strong>：屏幕宵禁（010）后的 15 分钟声音仪式——它能帮你从信息流切换到睡前态，仅此而已，已足够。</p>
-<p><strong>边界</strong>：不替代失眠规范治疗；声音敏感/耳鸣者自选音量。</p>
-<p><strong>参考文献</strong>：
-1. The human health effects of singing bowls: a systematic review. <em>Complement Ther Med</em>. 2020. (PMID: 32507429)
-2. Acute relaxation response induced by Tibetan singing bowl sounds: a randomized controlled trial. 2023. (PMID: 36826208)</p>
-<blockquote>
-<p><strong>熊博士按</strong>：松弛反应是真的，神话不是。把颂钵当"声音形态的屏幕宵禁"用，物尽其用；当"频率疗愈"买，智商税。</p>
-</blockquote></div></div></section>
-<section data-t='腰果 032 · 面相与生物年龄' class='page' id='p36'><div class='pagebody'><div class='card'><h2>腰果 032 · 面相与生物年龄 ｜ 🟡 ｜ 表型时钟</h2><p><img alt="面相与生物年龄" src="images/heads/head_032.png" /></p>
-<p><strong>做法</strong>：概念科普+晨间照镜子的仪式感。商业"AI 面相测衰老"产品谨慎看待（模型不透明、误差未知）。</p>
-<p><strong>机制</strong>：中国团队把"看面相"做成了定量科学：北大 ThermoFace（<em>Cell Metab</em> 2024）——2811 名 20-90 岁汉族人面部红外热像训练"热年龄"模型（误差约 5 年）并预测代谢疾病；韩敬东组 AURORA（<em>Cell Metab</em> 2026）——面部图像或常规体检数据跨模态生成多组学，建模衰老与代谢健康。</p>
-<p><strong>证据等级</strong>：🟡 大样本模型证据（群体层面成立）；个体误差约 5 年、非因果</p>
-<p><strong>程序员场景</strong>：每天早上镜子里的气色，是免费的多模态传感器的低配版——认真看一眼。</p>
-<p><strong>边界</strong>：误差显著；相学话术（"夫妻宫""财帛宫"）与这些研究无关，勿混用。</p>
-<p><strong>参考文献</strong>：
-1. Yu Z, et al. Thermal facial image analyses reveal quantitative hallmarks of aging and metabolic diseases. <em>Cell Metab</em>. 2024;36(7):1482-1493. (PMID: 38959862)
-2. Chen J, et al. A generative AI framework unifies human multi-omics to model aging. <em>Cell Metab</em>. 2026;38(6):1229-1244. (PMID: 42019500)</p>
-<blockquote>
-<p><strong>熊博士按</strong>：奶奶说的"印堂发黑要休息"，机器学习版是"面部热分布偏移提示代谢年龄偏高"。隔着一百年的两套语言，说的是同一张脸。</p>
-</blockquote></div></div></section>
-<section data-t='腰果 033 · 阳气与线粒体' class='page' id='p37'><div class='pagebody'><div class='card'><h2>腰果 033 · 阳气与线粒体 ｜ 🔴🟡 ｜ 概念映射</h2><p><img alt="阳气与线粒体" src="images/heads/head_033.png" /></p>
-<p><strong>做法</strong>：怕冷、乏力、精力下降的"阳虚感"人群：可执行的落点是本指南已有条目——Zone 2（006，线粒体训练）、睡眠（007/010）、冬季温热食养（姜、羊肉，传统经验）。中医辨证请就医。</p>
-<p><strong>机制</strong>：这是全指南最"深水"的一条，严格标注：<strong>概念映射，不是证明</strong>。支持材料：中文团队学术假说《线粒体作为人体阳气之本》（2022）——直接提出线粒体能量代谢是"阳"的现代对应物；2024 年《从古代智慧到现代科学：肠道菌群照亮药性理论》——温热药性×能量代谢×菌群的研究方向。⚠️ 这些是假说探索文献，不是验证结论。</p>
-<p><strong>证据等级</strong>：🔴 概念映射（假说级）｜🟡 温阳方向的代谢研究在积累</p>
-<p><strong>程序员场景</strong>：把"补阳气"翻译成"练线粒体"（Zone 2）+规律睡眠——传统直觉的现代执行路径。</p>
-<p><strong>边界</strong>：阳虚是中医辨证概念，需要专业判断；本条不构成任何"温阳药食"自用建议。</p>
-<p><strong>参考文献</strong>：
-1. Mitochondria as the essence of Yang Qi in the human body. 2022. (PMID: 36939762)
-2. From ancient wisdom to modern science: gut microbiota sheds light on property theory of Chinese medicine. 2024. (PMID: 38937158)</p>
-<blockquote>
-<p><strong>熊博士按</strong>：收官条目留给最深的水区：阳气与线粒体——映射得再美，也只是假说。这条的等级标志 🔴🟡 摆在那里，就是整个指南的态度：<strong>证据走到哪一步，我们就说到哪一步。</strong></p>
-</blockquote></div></div></section>
-<section data-t='展开：熊博士是谁（姓名 · 机构 · 论文——按需查看）' class='page' id='p38'><div class='pagebody'><div class='card'><h2>展开：熊博士是谁（姓名 · 机构 · 论文——按需查看）</h2><p><strong>熊博士</strong>（熊江辉），<a href="https://deepome.com">DeepoMe 深度甲基</a>创始人，长寿医学智能方向研究者。做这个指南只有一个规矩：<strong>证据走到哪一步，就说到哪一步</strong>——这条规矩同样约束我们自己。</p>
+<h2>利益冲突声明</h2>
+<p>本指南由熊博士维护。他是 <a href="https://deepome.com">DeepoMe 深度甲基</a> 的创始人，公司业务包括 DNA 甲基化检测和 <a href="https://deepkang.com">DeepKang</a> 健康平台。与公司业务直接相关的条目（「甲基化时钟」「一张脸能读出你的生物年龄」两节，以及附录「续命工具箱」）都已标注；这些条目一律只做概念科普，不推荐任何检测产品，包括我们自己的。</p>
+<p>“证据走到哪一步，就说到哪一步”，这条规矩同样约束我们自己。</p>
+<h2>连载说明</h2>
 <ul>
-<li>✍️ <a href="https://xiongjianghui.com">熊博士博客 · xiongjianghui.com</a>——个人官网，方法论与行业观察长文</li>
-<li>🌐 <a href="https://deepome.com">DeepoMe 深度甲基</a>——把长寿科学工程化为可交付体系</li>
-<li>🧬 <a href="https://deepkang.com">DeepKang 健康平台</a> / <a href="https://a.deepkang.com/explore">症状探索器</a></li>
-<li>💻 <a href="https://github.com/DeepoMe">GitHub · DeepoMe</a>——论文配套代码与数据工具</li>
-<li>📄 代表论文：RootMap（<a href="https://doi.org/10.32388/A1NTLL">DOI: 10.32388/A1NTLL</a>）</li>
-<li>📢 公众号科普：<a href="https://mp.weixin.qq.com/s/yG0bg0ht0oOEBFSQOtPGWA">衰老检测不该只是一个值——从行动仪表盘到个人长寿操作系统</a>（更多文章陆续收录）</li>
+<li><strong>连载</strong>：先上别处读不到的独家内容，再上基础习惯，最后用十二柱全景收官。还没上线的章，目录里标着“连载中”。</li>
+<li><strong>持续更新</strong>：新小节写完就进目录，按主题归入已有的章，或者新开一章。</li>
+<li><strong>科学骨架</strong>：所有小节按 2023 年 <em>Cell</em> 提出的十二大衰老标志组织（见「续命十二柱」）。</li>
+<li><strong>公开征题</strong>：想看哪条？开 Issue 点菜。补剂、传统经验、都市传说都收，但等级从严标注。</li>
 </ul></div></div></section>
-<section data-t='附录' class='page' id='p39'><div class='pagebody'><h2>续命工具箱</h2>
+<section data-t='📖 完整目录 · 十一章（点击展开；正文按章连载中，从下方第一章开始）' class='page' id='p4'><div class='pagebody'><div class='card'><h2>📖 完整目录 · 十一章（点击展开；正文按章连载中，从下方第一章开始）</h2><h2>目录</h2>
+<p>连载中，按章陆续上线。小节不编号，可以从任何一节开始读。</p>
+<h1></h1></div></div></section>
+<section data-t='🔬 深一层：老化的排水管和一氧化氮' class='page' id='p5'><div class='pagebody'><div class='card'><h2>🔬 深一层：老化的排水管和一氧化氮</h2><p>脑内的代谢废物（包括β-淀粉样蛋白）经类淋巴系统进入脑脊液，主要在睡眠时清除得最快（Xie 2013）。脑脊液经脑膜淋巴管出颅后，一部分经鼻咽、上颚等颅外淋巴管汇入颈部浅表淋巴管，再到下颌下淋巴结。老年小鼠鼻黏膜和上颚的淋巴管变少；颈部浅表淋巴管的 eNOS 蛋白减少，一氧化氮信号受损。外部机械刺激是通过<strong>压迫</strong>浅表淋巴管来增加外排，基本不干扰淋巴管本身的自发收缩（Jin 2025）。</p></div></div></section>
+<section data-t='📚 参考文献（5 篇，已核对 PubMed）' class='page' id='p6'><div class='pagebody'><div class='card'><h2>📚 参考文献（5 篇，已核对 PubMed）</h2><ol>
+<li>Jin H, et al. Increased CSF drainage by non-invasive manipulation of cervical lymphatics. <em>Nature</em>. 2025;643(8072):755-767. (PMID: 40468071)</li>
+<li>Louveau A, et al. Structural and functional features of central nervous system lymphatic vessels. <em>Nature</em>. 2015;523(7560):337-41. (PMID: 26030524)</li>
+<li>Aspelund A, et al. A dural lymphatic vascular system that drains brain interstitial fluid and macromolecules. <em>J Exp Med</em>. 2015;212(7):991-9. (PMID: 26077718)</li>
+<li>Da Mesquita S, et al. Functional aspects of meningeal lymphatics in ageing and Alzheimer's disease. <em>Nature</em>. 2018;560(7717):185-191. (PMID: 30046111)</li>
+<li>Xie L, et al. Sleep drives metabolite clearance from the adult brain. <em>Science</em>. 2013;342(6156):373-7. (PMID: 24136970)</li>
+</ol></div></div></section>
+<section data-t='📚 参考文献（3 篇，已核对 PubMed）' class='page' id='p7'><div class='pagebody'><div class='card'><h2>📚 参考文献（3 篇，已核对 PubMed）</h2><ol>
+<li>Madabhushi R, et al. Activity-Induced DNA Breaks Govern the Expression of Neuronal Early-Response Genes. <em>Cell</em>. 2015;161(7):1592-605. (PMID: 26052046)</li>
+<li>Pollina EA, et al. A NPAS4-NuA4 complex couples synaptic activity to DNA repair. <em>Nature</em>. 2023;614(7949):732-741. (PMID: 36792830)</li>
+<li>Jovasevic V, et al. Formation of memory assemblies through the DNA-sensing TLR9 pathway. <em>Nature</em>. 2024;628(8006):145-153. (PMID: 38538785)</li>
+</ol></div></div></section>
+<section data-t='📚 参考文献（1 篇，已核对 PubMed）' class='page' id='p8'><div class='pagebody'><div class='card'><h2>📚 参考文献（1 篇，已核对 PubMed）</h2><ol>
+<li>Mizrachi N, et al. Voluntary attention regulates acute immune responses in humans. <em>Nat Hum Behav</em>. 2026. (PMID: 42608466)</li>
+</ol></div></div></section>
+<section data-t='📚 参考文献（6 篇，已核对 PubMed）' class='page' id='p9'><div class='pagebody'><div class='card'><h2>📚 参考文献（6 篇，已核对 PubMed）</h2><ol>
+<li>Martorell AJ, et al. Multi-sensory Gamma Stimulation Ameliorates Alzheimer's-Associated Pathology and Improves Cognition. <em>Cell</em>. 2019;177(2):256-271.e22. (PMID: 30879788)</li>
+<li>Murdock MH, et al. Multisensory gamma stimulation promotes glymphatic clearance of amyloid. <em>Nature</em>. 2024;627(8002):149-156. (PMID: 38418876)</li>
+<li>Chan D, et al. Gamma frequency sensory stimulation in mild probable Alzheimer's dementia patients: Results of feasibility and pilot studies. <em>PLoS One</em>. 2022;17(12):e0278412. (PMID: 36454969)</li>
+<li>Chan D, et al. Gamma sensory stimulation in mild Alzheimer's dementia: An open-label extension study. <em>Alzheimers Dement</em>. 2025;21(10):e70792. (PMID: 41137616)</li>
+<li>Blanco-Duque C, et al. Audiovisual gamma stimulation for the treatment of neurodegeneration. <em>J Intern Med</em>. 2024;295(2):146-170. (PMID: 38115692)</li>
+<li>Soula M, et al. Forty-hertz light stimulation does not entrain native gamma oscillations in Alzheimer's disease model mice. <em>Nat Neurosci</em>. 2023;26(4):570-578. (PMID: 36879142)</li>
+</ol></div></div></section>
+<section data-t='📚 参考文献（11 篇，已核对 PubMed）' class='page' id='p10'><div class='pagebody'><div class='card'><h2>📚 参考文献（11 篇，已核对 PubMed）</h2><ol>
+<li>Luo B, et al. Mitochondria as the Essence of Yang Qi in the Human Body. <em>Phenomics</em>. 2022. (PMID: 36939762)</li>
+<li>Yang J, et al. From ancient wisdom to modern science: Gut microbiota sheds light on property theory of traditional Chinese medicine. <em>J Integr Med</em>. 2024. (PMID: 38937158)</li>
+<li>Mansour MS, et al. Ginger consumption enhances the thermic effect of food and promotes feelings of satiety without affecting metabolic and hormonal parameters in overweight men: a pilot study. <em>Metabolism</em>. 2012;61(10):1347-52. (PMID: 22538118)</li>
+<li>Saito M, et al. Brown Adipose Tissue, Diet-Induced Thermogenesis, and Thermogenic Food Ingredients: From Mice to Men. <em>Front Endocrinol (Lausanne)</em>. 2020;11:222. (PMID: 32373072)</li>
+<li>Jiang J, et al. Cinnamaldehyde induces fat cell-autonomous thermogenesis and metabolic reprogramming. <em>Metabolism</em>. 2017;77:58-64. (PMID: 29046261)</li>
+<li>Koeth RA, et al. Intestinal microbiota metabolism of L-carnitine, a nutrient in red meat, promotes atherosclerosis. <em>Nat Med</em>. 2013;19(5):576-85. (PMID: 23563705)</li>
+<li>Ryu D, et al. Urolithin A induces mitophagy and prolongs lifespan in C. elegans and increases muscle function in rodents. <em>Nat Med</em>. 2016;22(8):879-88. (PMID: 27400265)</li>
+<li>Andreux PA, et al. The mitophagy activator urolithin A is safe and induces a molecular signature of improved mitochondrial and cellular health in humans. <em>Nat Metab</em>. 2019;1(6):595-603. (PMID: 32694802)</li>
+<li>Singh A, et al. Urolithin A improves muscle strength, exercise performance, and biomarkers of mitochondrial health in a randomized trial in middle-aged adults. <em>Cell Rep Med</em>. 2022;3(5):100633. (PMID: 35584623)</li>
+<li>Liu S, et al. Effect of Urolithin A Supplementation on Muscle Endurance and Mitochondrial Health in Older Adults: A Randomized Clinical Trial. <em>JAMA Netw Open</em>. 2022;5(1):e2144279. (PMID: 35050355)</li>
+<li>Larsen FJ, et al. Dietary inorganic nitrate improves mitochondrial efficiency in humans. <em>Cell Metab</em>. 2011;13(2):149-59. (PMID: 21284982)</li>
+</ol></div></div></section>
+<section data-t='📚 参考文献（2 篇，已核对 PubMed）' class='page' id='p11'><div class='pagebody'><div class='card'><h2>📚 参考文献（2 篇，已核对 PubMed）</h2><ol>
+<li>Holloszy JO. Biochemical adaptations in muscle. Effects of exercise on mitochondrial oxygen uptake and respiratory enzyme activity in skeletal muscle. <em>J Biol Chem</em>. 1967;242(9):2278-82. (PMID: 4290225)</li>
+<li>Arem H, et al. Leisure time physical activity and mortality: a detailed pooled analysis of the dose-response relationship. <em>JAMA Intern Med</em>. 2015;175(6):959-67. (PMID: 25844730)</li>
+</ol></div></div></section>
+<section data-t='📚 参考文献（3 篇，已核对 PubMed）' class='page' id='p12'><div class='pagebody'><div class='card'><h2>📚 参考文献（3 篇，已核对 PubMed）</h2><ol>
+<li>Shiojima Y, et al. Effect of Dietary Pyrroloquinoline Quinone Disodium Salt on Cognitive Function in Healthy Volunteers: A Randomized, Double-Blind, Placebo-Controlled, Parallel-Group Study. <em>J Am Nutr Assoc</em>. 2022;41(8):796-809. (PMID: 34415830)</li>
+<li>Tamakoshi M, et al. Pyrroloquinoline quinone disodium salt improves brain function in both younger and older adults. <em>Food Funct</em>. 2023;14(5):2496-2501. (PMID: 36807425)</li>
+<li>Baltic S, et al. The impact of six-week dihydrogen-pyrroloquinoline quinone supplementation on mitochondrial biomarkers, brain metabolism, and cognition in elderly individuals with mild cognitive impairment: a randomized controlled trial. <em>J Nutr Health Aging</em>. 2024;28(8):100287. (PMID: 38908296)</li>
+</ol></div></div></section>
+<section data-t='📚 参考文献（3 篇，已核对 PubMed）' class='page' id='p13'><div class='pagebody'><div class='card'><h2>📚 参考文献（3 篇，已核对 PubMed）</h2><ol>
+<li>Meng X, et al. Serum ergothioneine and risk of dementia in a general older Japanese population: the Hisayama Study. <em>Psychiatry Clin Neurosci</em>. 2025;79(12):808-816. (PMID: 40908798)</li>
+<li>Wu LY, et al. Low Plasma Ergothioneine Predicts Cognitive and Functional Decline in an Elderly Cohort Attending Memory Clinics. <em>Antioxidants (Basel)</em>. 2022;11(9). (PMID: 36139790)</li>
+<li>Feng L, et al. The Association between Mushroom Consumption and Mild Cognitive Impairment: A Community-Based Cross-Sectional Study in Singapore. <em>J Alzheimers Dis</em>. 2019;68(1):197-203. (PMID: 30775990)</li>
+</ol></div></div></section>
+<section data-t='📚 参考文献（2 篇，已核对 PubMed）' class='page' id='p14'><div class='pagebody'><div class='card'><h2>📚 参考文献（2 篇，已核对 PubMed）</h2><ol>
+<li>Yu Z, et al. Thermal facial image analyses reveal quantitative hallmarks of aging and metabolic diseases. <em>Cell Metab</em>. 2024;36(7):1482-1493. (PMID: 38959862)</li>
+<li>Chen J, et al. A generative AI framework unifies human multi-omics to model aging. <em>Cell Metab</em>. 2026;38(6):1229-1244. (PMID: 42019500)</li>
+</ol></div></div></section>
+<section data-t='🔬 深一层：时钟读的到底是什么' class='page' id='p15'><div class='pagebody'><div class='card'><h2>🔬 深一层：时钟读的到底是什么</h2><p>甲基化指 DNA 的胞嘧啶（C）上加了一个甲基（–CH₃），多发生在 CpG 位点。它不改变 DNA 序列，却会影响基因能不能被读出来，属于“表观遗传”。2023 年版的衰老十二种标志里，表观遗传改变是其中一柱（见「续命十二柱」）。时钟本身是统计模型：它发现这些位点的变化和年龄高度相关，但这不等于这些位点就是衰老的原因。</p></div></div></section>
+<section data-t='📚 参考文献（4 篇，已核对 PubMed）' class='page' id='p16'><div class='pagebody'><div class='card'><h2>📚 参考文献（4 篇，已核对 PubMed）</h2><ol>
+<li>Horvath S. DNA methylation age of human tissues and cell types. <em>Genome Biol</em>. 2013;14(10):R115. (PMID: 24138928)</li>
+<li>Lu AT, et al. DNA methylation GrimAge strongly predicts lifespan and healthspan. <em>Aging (Albany NY)</em>. 2019;11(2):303-327. (PMID: 30669119)</li>
+<li>Higgins-Chen AT, et al. A computational solution for bolstering reliability of epigenetic clocks: Implications for clinical trials and longitudinal tracking. <em>Nat Aging</em>. 2022;2(7):644-661. (PMID: 36277076)</li>
+<li>López-Otín C, et al. Hallmarks of aging: An expanding universe. <em>Cell</em>. 2023;186(2):243-278. (PMID: 36599349)</li>
+</ol></div></div></section>
+<section data-t='🔬 深一层：压力怎么“磨”端粒' class='page' id='p17'><div class='pagebody'><div class='card'><h2>🔬 深一层：压力怎么“磨”端粒</h2><p>目前的主流解释有几条：压力激素皮质醇长期偏高、氧化应激增加、慢性低度炎症。端粒富含 G 碱基，对氧化损伤格外敏感；端粒酶活性被压低后，磨损又补不回来。小鼠研究提示，慢性压力还会通过 p16 这条通路让衰老细胞积累。这些机制在人体里还没有完全坐实。</p></div></div></section>
+<section data-t='📚 参考文献（4 篇，已核对 PubMed）' class='page' id='p18'><div class='pagebody'><div class='card'><h2>📚 参考文献（4 篇，已核对 PubMed）</h2><ol>
+<li>Epel ES, et al. Accelerated telomere shortening in response to life stress. <em>Proc Natl Acad Sci U S A</em>. 2004;101(49):17312-5. (PMID: 15574496)</li>
+<li>Mathur MB, et al. Perceived stress and telomere length: A systematic review, meta-analysis, and methodologic considerations for advancing the field. <em>Brain Behav Immun</em>. 2016;54:158-169. (PMID: 26853993)</li>
+<li>Ridout KK, et al. Depression and telomere length: A meta-analysis. <em>J Affect Disord</em>. 2016;191:237-47. (PMID: 26688493)</li>
+<li>Lyons CE, et al. Chronic social stress induces p16-mediated senescent cell accumulation in mice. <em>Nat Aging</em>. 2025;5(1):48-64. (PMID: 39528642)</li>
+</ol></div></div></section>
+<section data-t='🔬 深一层：为什么不能说“古人早就知道自噬”' class='page' id='p19'><div class='pagebody'><div class='card'><h2>🔬 深一层：为什么不能说“古人早就知道自噬”</h2><p>经方里的“小麦”是整粒小麦（多用浮小麦或淮小麦），不是提纯的胚芽；它的作用机制目前只有动物研究，跟亚精胺有没有关系，还没有人验证过。两条线各自成立，交汇只是一个有意思的巧合，不能互相当证据。</p></div></div></section>
+<section data-t='📚 参考文献（2 篇，已核对 PubMed）' class='page' id='p20'><div class='pagebody'><div class='card'><h2>📚 参考文献（2 篇，已核对 PubMed）</h2><ol>
+<li>Yeung WF, et al. A meta-analysis of the efficacy and safety of traditional Chinese medicine formula Ganmai Dazao decoction for depression. <em>J Ethnopharmacol</em>. 2014;153(2):309-17. (PMID: 24632021)</li>
+<li>Zhang B, et al. Gan-Mai-Da-Zao decoction ameliorates depressive-like behaviors in CUMS mice via the microbiota-metabolism-inflammation axis. <em>Phytomedicine</em>. 2025;145:157018. (PMID: 40580692)</li>
+</ol></div></div></section>
+<section data-t='🔬 深一层：为什么慢动作也算力量刺激' class='page' id='p21'><div class='pagebody'><div class='card'><h2>🔬 深一层：为什么慢动作也算力量刺激</h2><p>八段锦的很多动作是持续的等长收缩和多关节牵拉，比如马步、旋转、上举。对平时不运动的人和老年人来说，这已经足够构成肌肉的力学刺激，所以上面那项试验里它能跑赢抗阻训练并不离奇。不过那是一项单中心试验，受试者九成是女性、都已经有肌少症；对年轻人来说，想长肌肉，「每周两次力量训练」里那种渐进加重的抗阻训练仍是主力，最好两样都做。</p></div></div></section>
+<section data-t='📚 参考文献（3 篇，已核对 PubMed）' class='page' id='p22'><div class='pagebody'><div class='card'><h2>📚 参考文献（3 篇，已核对 PubMed）</h2><ol>
+<li>Wu K, et al. Efficacy of Baduanjin Exercise for Sarcopenia in Older Adults: A 24-Week Randomized Controlled Trial. <em>J Cachexia Sarcopenia Muscle</em>. 2025;16(6):e70163. (PMID: 41371252)</li>
+<li>Pirri C, et al. Redefining Fascia: A Mechanobiological Hub and Stem Cell Reservoir in Regeneration-A Systematic Review. <em>Int J Mol Sci</em>. 2025;26(20). (PMID: 41155456)</li>
+<li>López-Otín C, et al. Hallmarks of aging: An expanding universe. <em>Cell</em>. 2023;186(2):243-278. (PMID: 36599349)</li>
+</ol></div></div></section>
+<section data-t='🔬 深一层：为什么不能说“喝醋 = 补短链脂肪酸”' class='page' id='p23'><div class='pagebody'><div class='card'><h2>🔬 深一层：为什么不能说“喝醋 = 补短链脂肪酸”</h2><p>吃进去的乙酸大部分在小肠上段就被吸收了，到不了大肠；菌群产的乙酸在大肠就地生成、就地起作用。分子相同，作用的地点和证据链完全不同。喝醋的证据在餐后血糖曲线上，菌群的好处要靠膳食纤维去换。</p></div></div></section>
+<section data-t='📚 参考文献（2 篇，已核对 PubMed）' class='page' id='p24'><div class='pagebody'><div class='card'><h2>📚 参考文献（2 篇，已核对 PubMed）</h2><ol>
+<li>Shishehbor F, et al. Vinegar consumption can attenuate postprandial glucose and insulin responses; a systematic review and meta-analysis of clinical trials. <em>Diabetes Res Clin Pract</em>. 2017;127:1-9. (PMID: 28292654)</li>
+<li>Koh A, et al. From Dietary Fiber to Host Physiology: Short-Chain Fatty Acids as Key Bacterial Metabolites. <em>Cell</em>. 2016;165(6):1332-1345. (PMID: 27259147)</li>
+</ol></div></div></section>
+<section data-t='🔬 深一层：NAC 的“兼职”' class='page' id='p25'><div class='pagebody'><div class='card'><h2>🔬 深一层：NAC 的“兼职”</h2><p>NAC 进入身体后能变成半胱氨酸，这是合成谷胱甘肽的原料之一。谷胱甘肽是细胞里最重要的抗氧化分子。这就是 NAC 在抗衰老领域出名的原因：甘氨酸 + NAC 的组合，见「GlyNAC」。但这是它的兼职，证据和适用人群都不一样。</p></div></div></section>
+<section data-t='📚 参考文献（2 篇，已核对 PubMed）' class='page' id='p26'><div class='pagebody'><div class='card'><h2>📚 参考文献（2 篇，已核对 PubMed）</h2><ol>
+<li>Poole P, et al. Mucolytic agents versus placebo for chronic bronchitis or chronic obstructive pulmonary disease. <em>Cochrane Database Syst Rev</em>. 2019;5(5):CD001287. (PMID: 31107966)</li>
+<li>Stey C, et al. The effect of oral N-acetylcysteine in chronic bronchitis: a quantitative systematic review. <em>Eur Respir J</em>. 2000;16(2):253-62. (PMID: 10968500)</li>
+</ol></div></div></section>
+<section data-t='🔬 深一层：为什么证据只有 D' class='page' id='p27'><div class='pagebody'><div class='card'><h2>🔬 深一层：为什么证据只有 D</h2><p>这些研究样本小、对照组设计弱（很难做“假颂钵”安慰剂），测的多是主观感受，而且多数只看当场效果。所谓“特定频率修复细胞”“调节脉轮”，没有任何可靠证据。</p></div></div></section>
+<section data-t='📚 参考文献（2 篇，已核对 PubMed）' class='page' id='p28'><div class='pagebody'><div class='card'><h2>📚 参考文献（2 篇，已核对 PubMed）</h2><ol>
+<li>Stanhope J, et al. The human health effects of singing bowls: A systematic review. <em>Complement Ther Med</em>. 2020;51:102412. (PMID: 32507429)</li>
+<li>Rio-Alamos C, et al. Acute Relaxation Response Induced by Tibetan Singing Bowl Sounds: A Randomized Controlled Trial. <em>Eur J Investig Health Psychol Educ</em>. 2023;13(2):317-330. (PMID: 36826208)</li>
+</ol></div></div></section>
+<section data-t='📚 参考文献' class='page' id='p29'><div class='pagebody'><div class='card'><h2>📚 参考文献</h2><ol>
+<li>Jha P, et al. 21st-century hazards of smoking and benefits of cessation in the United States. <em>N Engl J Med</em>. 2013;368(4):341-50. (PMID: 23343063)</li>
+</ol></div></div></section>
+<section data-t='📚 参考文献' class='page' id='p30'><div class='pagebody'><div class='card'><h2>📚 参考文献</h2><ol>
+<li>Paluch AE, et al. Daily steps and all-cause mortality: a meta-analysis of 15 international cohorts. <em>Lancet Public Health</em>. 2022;7(3):e219-e228. (PMID: 35247352)</li>
+<li>Mandsager K, et al. Association of Cardiorespiratory Fitness With Long-term Mortality Among Adults Undergoing Exercise Treadmill Testing. <em>JAMA Netw Open</em>. 2018;1(6):e183605. (PMID: 30646252)</li>
+</ol></div></div></section>
+<section data-t='📚 参考文献' class='page' id='p31'><div class='pagebody'><div class='card'><h2>📚 参考文献</h2><ol>
+<li>Momma H, et al. Muscle-strengthening activities are associated with lower risk and mortality in major non-communicable diseases: a systematic review and meta-analysis of cohort studies. <em>Br J Sports Med</em>. 2022;56(13):755-763. (PMID: 35228201)</li>
+</ol></div></div></section>
+<section data-t='📚 参考文献' class='page' id='p32'><div class='pagebody'><div class='card'><h2>📚 参考文献</h2><ol>
+<li>Cappuccio FP, et al. Sleep duration and all-cause mortality: a systematic review and meta-analysis of prospective studies. <em>Sleep</em>. 2010;33(5):585-92. (PMID: 20469800)</li>
+</ol></div></div></section>
+<section data-t='📚 参考文献' class='page' id='p33'><div class='pagebody'><div class='card'><h2>📚 参考文献</h2><ol>
+<li>Wood AM, et al. Risk thresholds for alcohol consumption: combined analysis of individual-participant data for 599 912 current drinkers in 83 prospective studies. <em>Lancet</em>. 2018;391(10129):1513-1523. (PMID: 29676281)</li>
+</ol></div></div></section>
+<section data-t='📚 参考文献' class='page' id='p34'><div class='pagebody'><div class='card'><h2>📚 参考文献</h2><ol>
+<li>SPRINT Research Group. A Randomized Trial of Intensive versus Standard Blood-Pressure Control. <em>N Engl J Med</em>. 2015;373(22):2103-16. (PMID: 26551272)</li>
+</ol></div></div></section>
+<section data-t='📚 参考文献' class='page' id='p35'><div class='pagebody'><div class='card'><h2>📚 参考文献</h2><ol>
+<li>Cholesterol Treatment Trialists' (CTT) Collaboration. Efficacy and safety of more intensive lowering of LDL cholesterol: a meta-analysis of data from 170,000 participants in 26 randomised trials. <em>Lancet</em>. 2010;376(9753):1670-81. (PMID: 21067804)</li>
+</ol></div></div></section>
+<section data-t='📚 参考文献' class='page' id='p36'><div class='pagebody'><div class='card'><h2>📚 参考文献</h2><ol>
+<li>Estruch R, et al. Primary Prevention of Cardiovascular Disease with a Mediterranean Diet Supplemented with Extra-Virgin Olive Oil or Nuts. <em>N Engl J Med</em>. 2018;378(25):e34. (PMID: 29897866)</li>
+</ol></div></div></section>
+<section data-t='📚 参考文献' class='page' id='p37'><div class='pagebody'><div class='card'><h2>📚 参考文献</h2><ol>
+<li>Global BMI Mortality Collaboration. Body-mass index and all-cause mortality: individual-participant-data meta-analysis of 239 prospective studies in four continents. <em>Lancet</em>. 2016;388(10046):776-86. (PMID: 27423262)</li>
+</ol></div></div></section>
+<section data-t='📚 参考文献' class='page' id='p38'><div class='pagebody'><div class='card'><h2>📚 参考文献</h2><ol>
+<li>Holt-Lunstad J, et al. Social relationships and mortality risk: a meta-analytic review. <em>PLoS Med</em>. 2010;7(7):e1000316. (PMID: 20668659)</li>
+</ol></div></div></section>
+<section data-t='🔬 深一层：眼睛里的“测光表”' class='page' id='p39'><div class='pagebody'><div class='card'><h2>🔬 深一层：眼睛里的“测光表”</h2><p>视网膜里除了负责看东西的视锥细胞和视杆细胞，还有一类<strong>内在光敏神经节细胞（ipRGC）</strong>。它们不负责成像，专门测亮度，对蓝光最敏感，并且直接连到生物钟主钟（视交叉上核）。早晨的强光通过这条线路抑制褪黑素，并锚定主钟的相位：白天更清醒，晚上褪黑素按时升起。</p></div></div></section>
+<section data-t='📚 参考文献（2 篇，已核对 PubMed）' class='page' id='p40'><div class='pagebody'><div class='card'><h2>📚 参考文献（2 篇，已核对 PubMed）</h2><ol>
+<li>Wright KP Jr, et al. Entrainment of the human circadian clock to the natural light-dark cycle. <em>Curr Biol</em>. 2013;23(16):1554-8. (PMID: 23910656)</li>
+<li>Zeitzer JM, et al. Sensitivity of the human circadian pacemaker to nocturnal light: melatonin phase resetting and suppression. <em>J Physiol</em>. 2000;526 Pt 3:695-702. (PMID: 10922269)</li>
+</ol></div></div></section>
+<section data-t='🔬 深一层：肌肉为什么会“待机”' class='page' id='p41'><div class='pagebody'><div class='card'><h2>🔬 深一层：肌肉为什么会“待机”</h2><p>动物研究发现，长时间不动时，骨骼肌里负责分解血脂的脂蛋白脂肪酶（LPL）活性明显下降；人体实验也发现，用每 20–30 分钟一次的短时活动打断久坐，能降低餐后的血糖和胰岛素反应。肌肉收缩本身就能把葡萄糖拉进细胞，不完全依赖胰岛素。</p></div></div></section>
+<section data-t='📚 参考文献（2 篇，已核对 PubMed）' class='page' id='p42'><div class='pagebody'><div class='card'><h2>📚 参考文献（2 篇，已核对 PubMed）</h2><ol>
+<li>Ekelund U, et al. Does physical activity attenuate, or even eliminate, the detrimental association of sitting time with mortality? A harmonised meta-analysis of data from more than 1 million men and women. <em>Lancet</em>. 2016;388(10051):1302-10. (PMID: 27475271)</li>
+<li>Diaz KM, et al. Patterns of Sedentary Behavior and Mortality in U.S. Middle-Aged and Older Adults: A National Cohort Study. <em>Ann Intern Med</em>. 2017;167(7):465-475. (PMID: 28892811)</li>
+</ol></div></div></section>
+<section data-t='🔬 深一层：为什么“眨不完整”比“眨得少”更麻烦' class='page' id='p43'><div class='pagebody'><div class='card'><h2>🔬 深一层：为什么“眨不完整”比“眨得少”更麻烦</h2><p>不完整眨眼时，上眼睑没有落到底，眼球下半部分的泪膜得不到更新，睑板腺分泌的油脂也没被挤出来。这层油脂负责防止泪液蒸发。长期如此，可能发展为睑板腺功能障碍，这是干眼最常见的原因之一。</p></div></div></section>
+<section data-t='📚 参考文献（2 篇）' class='page' id='p44'><div class='pagebody'><div class='card'><h2>📚 参考文献（2 篇）</h2><ol>
+<li>Wolffsohn JS, et al. TFOS Lifestyle: Impact of the digital environment on the ocular surface. <em>Ocul Surf</em>. 2023;28:213-252. (PMID: 37062428)</li>
+<li>American Academy of Ophthalmology. Computers, Digital Devices and Eye Strain. <a href="https://www.aao.org/eye-health/tips-prevention/computer-usage">AAO 官方建议</a>（机构建议，持续更新）</li>
+</ol></div></div></section>
+<section data-t='🔬 深一层：为什么“我喝了照样睡”不可信' class='page' id='p45'><div class='pagebody'><div class='card'><h2>🔬 深一层：为什么“我喝了照样睡”不可信</h2><p>咖啡因不一定让你睡不着，但会改变睡眠的结构：入睡变慢、浅睡增多、夜里醒来的次数变多。这些变化本人往往察觉不到。代谢咖啡因的主要是肝脏里的 CYP1A2 酶，它的活性受基因、吸烟、口服避孕药、孕期等影响，所以有人喝了没感觉，有人一杯就失眠。</p></div></div></section>
+<section data-t='📚 参考文献（2 篇，已核对 PubMed）' class='page' id='p46'><div class='pagebody'><div class='card'><h2>📚 参考文献（2 篇，已核对 PubMed）</h2><ol>
+<li>Drake C, et al. Caffeine effects on sleep taken 0, 3, or 6 hours before going to bed. <em>J Clin Sleep Med</em>. 2013;9(11):1195-200. (PMID: 24235903)</li>
+<li>Fredholm BB, et al. Actions of caffeine in the brain with special reference to factors that contribute to its widespread use. <em>Pharmacol Rev</em>. 1999;51(1):83-133. (PMID: 10049999)</li>
+</ol></div></div></section>
+<section data-t='🔬 深一层：为什么“感觉还行”靠不住' class='page' id='p47'><div class='pagebody'><div class='card'><h2>🔬 深一层：为什么“感觉还行”靠不住</h2><p>困倦感和真实表现是两条不同的曲线。睡眠限制的头几天，困倦感上升明显，之后逐渐变平；而用“精神运动警觉测试”（看到信号就按键）测出的反应失误，会随欠债天数持续累积。大脑会适应“困”的感觉，却不会适应“缺觉”本身。所以判断自己睡够没有，不能问感觉，要看作息记录。</p></div></div></section>
+<section data-t='📚 参考文献（2 篇，已核对 PubMed）' class='page' id='p48'><div class='pagebody'><div class='card'><h2>📚 参考文献（2 篇，已核对 PubMed）</h2><ol>
+<li>Van Dongen HP, et al. The cumulative cost of additional wakefulness: dose-response effects on neurobehavioral functions and sleep physiology from chronic sleep restriction and total sleep deprivation. <em>Sleep</em>. 2003;26(2):117-26. (PMID: 12683469)</li>
+<li>Belenky G, et al. Patterns of performance degradation and restoration during sleep restriction and subsequent recovery: a sleep dose-response study. <em>J Sleep Res</em>. 2003;12(1):1-12. (PMID: 12603781)</li>
+</ol></div></div></section>
+<section data-t='🔬 深一层：为什么光会“推迟”时钟' class='page' id='p49'><div class='pagebody'><div class='card'><h2>🔬 深一层：为什么光会“推迟”时钟</h2><p>眼睛里有一类专门测亮度的细胞（ipRGC，见「晨光 10 分钟」），它们对蓝光最敏感，直接连到生物钟主钟。同一束光，早上照会把时钟往前拨，晚上照会往后拨。所以早上要多照光，晚上要少照光，这是同一个机制的两面。</p></div></div></section>
+<section data-t='📚 参考文献（2 篇，已核对 PubMed）' class='page' id='p50'><div class='pagebody'><div class='card'><h2>📚 参考文献（2 篇，已核对 PubMed）</h2><ol>
+<li>Chang AM, et al. Evening use of light-emitting eReaders negatively affects sleep, circadian timing, and next-morning alertness. <em>Proc Natl Acad Sci U S A</em>. 2015;112(4):1232-7. (PMID: 25535358)</li>
+<li>Hysing M, et al. Sleep and use of electronic devices in adolescence: results from a large population-based study. <em>BMJ Open</em>. 2015;5(1):e006748. (PMID: 25643702)</li>
+</ol></div></div></section>
+<section data-t='🔬 深一层：为什么剂量不是越大越好' class='page' id='p51'><div class='pagebody'><div class='card'><h2>🔬 深一层：为什么剂量不是越大越好</h2><p>人体吸收维生素 C 靠肠道里的转运蛋白，它们会饱和：每天几百毫克时，血液浓度基本到顶；剂量再高，吸收比例下降，多余的从尿里排掉。所以“一次吃 1 克、2 克”并不能让血里的维生素 C 成倍增加，反而更容易拉肚子。</p></div></div></section>
+<section data-t='📚 参考文献（3 篇，已核对 PubMed）' class='page' id='p52'><div class='pagebody'><div class='card'><h2>📚 参考文献（3 篇，已核对 PubMed）</h2><ol>
+<li>Olayaki LA, et al. Vitamin C Prevents Sleep Deprivation-induced Elevation in Cortisol and Lipid Peroxidation in the Rat Plasma. <em>Niger J Physiol Sci</em>. 2015;30(1-2):5-9. (PMID: 27507778)</li>
+<li>Mhaidat NM, et al. Exploring the effect of vitamin C on sleep deprivation induced memory impairment. <em>Brain Res Bull</em>. 2015;113:41-7. (PMID: 25724146)</li>
+<li>Otocka-Kmiecik A, et al. The Role of Vitamin C in Two Distinct Physiological States: Physical Activity and Sleep. <em>Nutrients</em>. 2020;12(12). (PMID: 33371359)</li>
+</ol></div></div></section>
+<section data-t='🔬 深一层：笔记本为什么天生不符合人体工学' class='page' id='p53'><div class='pagebody'><div class='card'><h2>🔬 深一层：笔记本为什么天生不符合人体工学</h2><p>笔记本的屏幕和键盘连在一起：屏幕放到眼睛高度，键盘就高得没法打字；键盘放到合适高度，屏幕就低得必须低头。两者只能顾一头，所以长期办公要把它们拆开：支架抬屏幕，外接键盘放低。</p></div></div></section>
+<section data-t='📚 参考文献（2 篇，已核对 PubMed）' class='page' id='p54'><div class='pagebody'><div class='card'><h2>📚 参考文献（2 篇，已核对 PubMed）</h2><ol>
+<li>Nachemson AL. Disc pressure measurements. <em>Spine (Phila Pa 1976)</em>. 1981;6(1):93-7. (PMID: 7209680)</li>
+<li>Hansraj KK. Assessment of stresses in the cervical spine caused by posture and position of the head. <em>Surg Technol Int</em>. 2014;25:277-9. (PMID: 25393825)</li>
+</ol></div></div></section>
+<section data-t='🔬 深一层：大脑在“重建上下文”时做什么' class='page' id='p55'><div class='pagebody'><div class='card'><h2>🔬 深一层：大脑在“重建上下文”时做什么</h2><p>认知科学把这叫“目标的停用与重新激活”。任务被打断时，大脑会把当前目标暂时搁置；回来时要重新找回目标、回忆进度、重新加载相关细节。有意思的是，<strong>自己主动安排的短暂切换</strong>反而有好处：一项实验发现，在长时间单调任务中偶尔短暂切换一下目标，可以防止注意力随时间下滑（Ariga 2011）。区别在于：主动切换你知道自己停在哪；被动打断你不知道。恢复注释把被动打断变成了“主动存档”。</p></div></div></section>
+<section data-t='📚 参考文献（2 篇）' class='page' id='p56'><div class='pagebody'><div class='card'><h2>📚 参考文献（2 篇）</h2><ol>
+<li>Parnin C, Rugaber S. Resumption strategies for interrupted programming tasks. <em>Software Quality Journal</em>. 2011;19(1):5-34. (DOI: 10.1007/s11219-010-9104-9)</li>
+<li>Ariga A, et al. Brief and rare mental "breaks" keep you focused: deactivation and reactivation of task goals preempt vigilance decrements. <em>Cognition</em>. 2011;118(3):439-43. (PMID: 21211793)</li>
+</ol></div></div></section>
+<section data-t='🔬 深一层：卸载会不会让人变“笨”' class='page' id='p57'><div class='pagebody'><div class='card'><h2>🔬 深一层：卸载会不会让人变“笨”</h2><p>有研究担心，什么都交给工具，记忆力会退化。目前的证据更像是“分工”：交给工具的信息，自己记得少一些；但腾出来的资源可以用在别的事上，整体表现往往更好。前提是工具可靠，关键时刻能找回来。</p></div></div></section>
+<section data-t='📚 参考文献（2 篇，已核对 PubMed）' class='page' id='p58'><div class='pagebody'><div class='card'><h2>📚 参考文献（2 篇，已核对 PubMed）</h2><ol>
+<li>Gilbert SJ, et al. Outsourcing Memory to External Tools: A Review of 'Intention Offloading'. <em>Psychon Bull Rev</em>. 2023;30(1):60-76. (PMID: 35789477)</li>
+<li>Melby-Lervåg M, et al. Working Memory Training Does Not Improve Performance on Measures of Intelligence or Other Measures of "Far Transfer": Evidence From a Meta-Analytic Review. <em>Perspect Psychol Sci</em>. 2016;11(4):512-34. (PMID: 27474138)</li>
+</ol></div></div></section>
+<section data-t='🔬 深一层：90 分钟的“超日节律”是真的吗' class='page' id='p59'><div class='pagebody'><div class='card'><h2>🔬 深一层：90 分钟的“超日节律”是真的吗</h2><p>睡眠中大约每 90 分钟经历一个周期，这一点证据充分。有学者提出，清醒时注意力也有类似的 90 分钟起伏（“基本休息—活动周期”假说），但白天的证据弱得多，个体差异也大。所以与其迷信某个数字，不如观察自己：什么时候开始反复读同一行，就是该休息的信号。</p></div></div></section>
+<section data-t='📚 参考文献（2 篇）' class='page' id='p60'><div class='pagebody'><div class='card'><h2>📚 参考文献（2 篇）</h2><ol>
+<li>Cirillo F. The Pomodoro Technique.（方法源头，非科学文献）</li>
+<li>Ariga A, et al. Brief and rare mental "breaks" keep you focused: deactivation and reactivation of task goals preempt vigilance decrements. <em>Cognition</em>. 2011;118(3):439-43. (PMID: 21211793)</li>
+</ol></div></div></section>
+<section data-t='🔬 深一层：从“压力”到“染色体”' class='page' id='p61'><div class='pagebody'><div class='card'><h2>🔬 深一层：从“压力”到“染色体”</h2><p>长期压力会让压力激素持续偏高，炎症信号增加，这和端粒变短有关（见「情绪与基因组稳定」）。冥想降低压力反应，理论上可以减轻这条链上的负担。不过，端粒酶的证据来自几项小试验的汇总，更像“方向一致的信号”，不能当成“冥想能延长端粒”的结论。</p></div></div></section>
+<section data-t='📚 参考文献（3 篇，已核对 PubMed）' class='page' id='p62'><div class='pagebody'><div class='card'><h2>📚 参考文献（3 篇，已核对 PubMed）</h2><ol>
+<li>Goyal M, et al. Meditation programs for psychological stress and well-being: a systematic review and meta-analysis. <em>JAMA Intern Med</em>. 2014;174(3):357-68. (PMID: 24395196)</li>
+<li>Bartlett L, et al. A systematic review and meta-analysis of workplace mindfulness training randomized controlled trials. <em>J Occup Health Psychol</em>. 2019;24(1):108-126. (PMID: 30714811)</li>
+<li>Schutte NS, et al. A meta-analytic review of the effects of mindfulness meditation on telomerase activity. <em>Psychoneuroendocrinology</em>. 2014;42:45-8. (PMID: 24636500)</li>
+</ol></div></div></section>
+<section data-t='🔬 深一层：为什么是“一把”，不是“一罐”' class='page' id='p63'><div class='pagebody'><div class='card'><h2>🔬 深一层：为什么是“一把”，不是“一罐”</h2><p>坚果的热量很高，28 克大约 160–200 千卡。研究里的“最高摄入组”大多也就是每天一小把左右。超过这个量，额外的好处不明显，体重却可能上去。所以证据里的剂量，就是“一小把”。</p></div></div></section>
+<section data-t='📚 参考文献（1 篇，已核对 PubMed）' class='page' id='p64'><div class='pagebody'><div class='card'><h2>📚 参考文献（1 篇，已核对 PubMed）</h2><ol>
+<li>Chen GC, et al. Nut consumption in relation to all-cause and cause-specific mortality: a meta-analysis 18 prospective studies. <em>Food Funct</em>. 2017;8(11):3893-3905. (PMID: 28875220)</li>
+</ol></div></div></section>
+<section data-t='🔬 深一层：为什么小试验容易“有效”' class='page' id='p65'><div class='pagebody'><div class='card'><h2>🔬 深一层：为什么小试验容易“有效”</h2><p>干眼的主要结局是症状评分，很主观，安慰剂效应很强（DREAM 里两组都改善了不少）。小试验人数少，偶然性大，阳性结果又更容易发表，汇总起来就容易偏向“有效”。DREAM 用了足够大的样本和可信的安慰剂，这些偏差就被压下去了。</p></div></div></section>
+<section data-t='📚 参考文献（3 篇，已核对 PubMed）' class='page' id='p66'><div class='pagebody'><div class='card'><h2>📚 参考文献（3 篇，已核对 PubMed）</h2><ol>
+<li>Wang WX, et al. Efficacy of Omega-3 Intake in Managing Dry Eye Disease: A Systematic Review and Meta-Analysis of Randomized Controlled Trials. <em>J Clin Med</em>. 2023;12(22). (PMID: 38002640)</li>
+<li>Singh S, et al. Interventions for the Management of Computer Vision Syndrome: A Systematic Review and Meta-analysis. <em>Ophthalmology</em>. 2022;129(10):1192-1215. (PMID: 35597519)</li>
+<li>Dry Eye Assessment and Management Study Research Group, et al. n-3 Fatty Acid Supplementation for the Treatment of Dry Eye Disease. <em>N Engl J Med</em>. 2018;378(18):1681-1690. (PMID: 29652551)</li>
+</ol></div></div></section>
+<section data-t='🔬 深一层：“补进去了”不等于“有用了”' class='page' id='p67'><div class='pagebody'><div class='card'><h2>🔬 深一层：“补进去了”不等于“有用了”</h2><p>这项试验是营养研究的一个好教材。它先证明了“靶点达到”：补充的 DHA 真的进了中枢神经系统。但下一步“临床获益”没有出现。很多补剂广告停在第一步：“XX 能进入大脑”“XX 能提高血液浓度”，然后直接跳到“所以能护脑”。中间这一跳，恰恰是最需要证据的地方。</p></div></div></section>
+<section data-t='📚 参考文献（3 篇，已核对 PubMed）' class='page' id='p68'><div class='pagebody'><div class='card'><h2>📚 参考文献（3 篇，已核对 PubMed）</h2><ol>
+<li>Corder EH, et al. Gene dose of apolipoprotein E type 4 allele and the risk of Alzheimer's disease in late onset families. <em>Science</em>. 1993;261(5123):921-3. (PMID: 8346443)</li>
+<li>Yassine HN, et al. DHA brain uptake and APOE4 status: a PET study with [1-(11)C]-DHA. <em>Alzheimers Res Ther</em>. 2017;9(1):23. (PMID: 28335828)</li>
+<li>Yassine HN, et al. CNS target engagement of high-dose DHA supplementation in older adults at risk for dementia: a randomised, double-blind, placebo-controlled trial. <em>EBioMedicine</em>. 2026;129:106316. (PMID: 42315445)</li>
+</ol></div></div></section>
+<section data-t='🔬 深一层：为什么动物有效，人身上不明显' class='page' id='p69'><div class='pagebody'><div class='card'><h2>🔬 深一层：为什么动物有效，人身上不明显</h2><p>可能的原因有几个：动物实验的剂量按体重算远高于人能吃到的量；人体肠道菌群本身也会合成多胺，额外补的那点占比不大；而且人的衰老结局要很多年才能看出来，一两年的试验很难捕捉。这些都说明，现在下结论“人吃了能延寿”还太早。</p></div></div></section>
+<section data-t='📚 参考文献（2 篇，已核对 PubMed）' class='page' id='p70'><div class='pagebody'><div class='card'><h2>📚 参考文献（2 篇，已核对 PubMed）</h2><ol>
+<li>Schwarz C, et al. Effects of Spermidine Supplementation on Cognition and Biomarkers in Older Adults With Subjective Cognitive Decline: A Randomized Clinical Trial. <em>JAMA Netw Open</em>. 2022;5(5):e2213875. (PMID: 35616942)</li>
+<li>Keohane P, et al. Supplementation of spermidine at 40 mg/day has minimal effects on circulating polyamines: An exploratory double-blind randomized controlled trial in older men. <em>Nutr Res</em>. 2024;132:1-14. (PMID: 39405978)</li>
+</ol></div></div></section>
+<section data-t='🔬 深一层：为什么不直接吃谷胱甘肽' class='page' id='p71'><div class='pagebody'><div class='card'><h2>🔬 深一层：为什么不直接吃谷胱甘肽</h2><p>口服的谷胱甘肽大部分会在肠道里被拆开，很难原样进入细胞。细胞更习惯自己用原料现做。所以补原料（甘氨酸 + 半胱氨酸）比直接补成品更合理，这也是 GlyNAC 的思路。NAC 的另一个用途见「NAC 与化痰」。</p></div></div></section>
+<section data-t='📚 参考文献（3 篇，已核对 PubMed）' class='page' id='p72'><div class='pagebody'><div class='card'><h2>📚 参考文献（3 篇，已核对 PubMed）</h2><ol>
+<li>Kumar P, et al. Supplementing Glycine and N-acetylcysteine (GlyNAC) in Aging HIV Patients Improves Oxidative Stress, Mitochondrial Dysfunction, Inflammation, Endothelial Dysfunction, Insulin Resistance, Genotoxicity, Strength, and Cognition: Results of an Open-Label Clinical Trial. <em>Biomedicines</em>. 2020;8(10). (PMID: 33007928)（研究对象为老年 HIV 感染者）</li>
+<li>Kumar P, et al. Glycine and N-acetylcysteine (GlyNAC) supplementation in older adults improves glutathione deficiency, oxidative stress, mitochondrial dysfunction, inflammation, insulin resistance, endothelial dysfunction, genotoxicity, muscle strength, and cognition: Results of a pilot clinical trial. <em>Clin Transl Med</em>. 2021;11(3):e372. (PMID: 33783984)</li>
+<li>Kumar P, et al. Supplementing Glycine and N-Acetylcysteine (GlyNAC) in Older Adults Improves Glutathione Deficiency, Oxidative Stress, Mitochondrial Dysfunction, Inflammation, Physical Function, and Aging Hallmarks: A Randomized Clinical Trial. <em>J Gerontol A Biol Sci Med Sci</em>. 2023;78(1):75-89. (PMID: 35975308)</li>
+</ol></div></div></section>
+<section data-t='📚 参考文献（6 篇，已核对 PubMed）' class='page' id='p73'><div class='pagebody'><div class='card'><h2>📚 参考文献（6 篇，已核对 PubMed）</h2><ol>
+<li>Martens CR, et al. Chronic nicotinamide riboside supplementation is well-tolerated and elevates NAD(+) in healthy middle-aged and older adults. <em>Nat Commun</em>. 2018;9(1):1286. (PMID: 29599478)</li>
+<li>Yoshino M, et al. Nicotinamide mononucleotide increases muscle insulin sensitivity in prediabetic women. <em>Science</em>. 2021;372(6547):1224-1229. (PMID: 33888596)</li>
+<li>Alpha-Tocopherol, Beta Carotene Cancer Prevention Study Group. The effect of vitamin E and beta carotene on the incidence of lung cancer and other cancers in male smokers. <em>N Engl J Med</em>. 1994;330(15):1029-35. (PMID: 8127329)</li>
+<li>Bjelakovic G, et al. Antioxidant supplements for prevention of mortality in healthy participants and patients with various diseases. <em>Cochrane Database Syst Rev</em>. 2012;2012(3):CD007176. (PMID: 22419320)</li>
+<li>Hemilä H, et al. Vitamin C for preventing and treating the common cold. <em>Cochrane Database Syst Rev</em>. 2013;2013(1):CD000980. (PMID: 23440782)</li>
+<li>Singh S, et al. Blue-light filtering spectacle lenses for visual performance, sleep, and macular health in adults. <em>Cochrane Database Syst Rev</em>. 2023;8(8):CD013244. (PMID: 37593770)</li>
+</ol></div></div></section>
+<section data-t='熊博士是谁（姓名 · 机构 · 论文）' class='page' id='p74'><div class='pagebody'><div class='card'><h2>熊博士是谁（姓名 · 机构 · 论文）</h2><p><strong>熊博士</strong>（熊江辉），<a href="https://deepome.com">DeepoMe 深度甲基</a>创始人，长寿医学智能方向研究者。做这个指南只有一个规矩：<strong>证据走到哪一步，就说到哪一步</strong>，这条规矩同样约束我们自己。</p>
 <ul>
-<li><strong>30 秒症状自测</strong>：<a href="https://a.deepkang.com/explore">DeepKang 症状探索器</a>——免费、匿名、无需注册。输入一个症状（如"眼干""腰酸""睡不好"），30 秒看它的共现网络与常见原因方向，生成可以带给医生看的梳理小结。DeepoMe 出品。</li>
-</ul>
-<blockquote>
-<p>看完指南想知道"我现在的状态算哪一档"？从探索器开始，比从搜索引擎开始靠谱。</p>
+<li>✍️ <a href="https://xiongjianghui.com">熊博士博客 · xiongjianghui.com</a>：个人官网，方法论与行业观察长文</li>
+<li>🌐 <a href="https://deepome.com">DeepoMe 深度甲基</a>：把长寿科学工程化为可交付的体系</li>
+<li>🧬 <a href="https://deepkang.com">DeepKang 健康平台</a> / <a href="https://a.deepkang.com/explore">症状探索器</a></li>
+<li>💻 <a href="https://github.com/DeepoMe">GitHub · DeepoMe</a>：论文配套代码与数据工具</li>
+<li>📄 代表论文：RootMap（<a href="https://doi.org/10.32388/A1NTLL">DOI: 10.32388/A1NTLL</a>）</li>
+<li>📢 公众号科普：<a href="https://mp.weixin.qq.com/s/yG0bg0ht0oOEBFSQOtPGWA">衰老检测不该只是一个值：从行动仪表盘到个人长寿操作系统</a></li>
+</ul></div></div></section>
+<section data-t='附录' class='page' id='p75'><div class='pagebody'><h2>续命工具箱</h2>
+<ul>
+<li><strong>30 秒症状自测</strong>：<a href="https://a.deepkang.com/explore">DeepKang 症状探索器</a>。免费、匿名、无需注册。输入一个症状（如“眼干”“腰酸”“睡不好”），30 秒看到它常和哪些症状一起出现、常见原因方向，并生成一份可以带给医生看的梳理小结。<blockquote>
+<p>⚠️ 利益相关：DeepKang 是维护方 DeepoMe 的产品。</p>
 </blockquote>
+</li>
+</ul>
 <h2>关注与更新</h2>
-<p><strong>GitHub 是本指南的家</strong>——star/watch 获取每次更新，Issue 征题与纠错。</p>
-<p>📕 <strong>完整电子书</strong>：本仓库根目录 <code>ebook_v1.pdf</code>（36 页 A4 紧凑版，33 条全图文）——watch 本仓库即可下载。</p>
-<p><strong>每周三</strong>，新条目在公众号首发、GitHub 同步归档——扫码上车：</p>
+<p><strong>GitHub 是本指南的家</strong>：star/watch 获取每次更新，Issue 征题与纠错。</p>
+<p>新条目在公众号首发，GitHub 同步归档。扫码关注：</p>
 <p><img alt="公众号二维码" src="images/qrcode_gzh.png" /></p>
 <h2>贡献指南</h2>
 <p>欢迎 PR 投稿新条目，格式要求：
-1. 按模板：做法 / 机制 / 证据等级 / 参考文献（真实 PMID 或 DOI）/ 边界
-2. <strong>文献必须可查证</strong>——伪造引用将被直接关闭
-3. 证据等级从严标注：说不清就标低
-4. 欢迎对现有条目提出等级异议——证据更新时我们会修订
-5. <strong>行文建议</strong>：从表观感受与个人经验入手，再逐步引入机制与文献——控制阅读负担，别让读者第一屏就撞上术语墙
-6. <strong>延伸阅读</strong>：参考资料可酌情引用<a href="https://mp.weixin.qq.com/s/yG0bg0ht0oOEBFSQOtPGWA">深度甲基公众号</a>科普文章与<a href="https://xiongjianghui.com">熊博士博客</a>长文（仅作为延伸阅读，不替代一手文献；须为已发布文章的真实链接）
-7. <strong>配图</strong>：欢迎一图一机制——每张图讲清一个可验证的科学点；<strong>图内文字尽量少</strong>（关键词级，不放成句解释、不放参考文献），出处写在正文参考文献里；优先脚本可复现的图表而非装饰插画</p>
+1. <strong>一节一事，不编号</strong>：每个小节是独立模块，引用其他小节写「小节名」。
+2. <strong>按模板 v2</strong>：一句话 / 你可能也这样 / 做法 / 为什么（先比喻，再机制）/ 深一层（折叠）/ 证据有多硬 / 程序员场景 / 边界 / 参考文献（折叠）。范例见「晨光 10 分钟」。
+3. <strong>文献必须可查证</strong>：只收真实的 PMID 或 DOI，CI 会自动核对，伪造引用直接关闭。
+4. <strong>双尺子从严标注</strong>：证据强度 A–D + 行动建议 ✅🧪📖💸；说不清就往低标。
+5. 欢迎对现有条目提出等级异议，证据更新时我们会修订。
+6. <strong>行文</strong>：从感受和场景入手，再逐步引入机制；第一屏不出现专业术语，术语链接到术语表。
+7. <strong>延伸阅读</strong>：可以引用<a href="https://mp.weixin.qq.com/s/yG0bg0ht0oOEBFSQOtPGWA">深度甲基公众号</a>科普文章和<a href="https://xiongjianghui.com">熊博士博客</a>长文，仅作延伸阅读，不替代一手文献，必须是已发布文章的真实链接。
+8. <strong>配图</strong>：遵循<a href="#配图规范">配图规范</a>：场景图、机制图可以用 AI 辅助，但图内只放必要的英文关键词、机制图必须过科学审核；数据类的证据图一律用脚本生成，保证可复现。</p>
 <h2>关于熊博士</h2>
-<details>
-<summary><b>展开：熊博士是谁</b>（姓名 · 机构 · 论文——按需查看）</summary>
+<details><summary>熊博士是谁（姓名 · 机构 · 论文）</summary>
 
-**熊博士**（熊江辉），[DeepoMe 深度甲基](https://deepome.com)创始人，长寿医学智能方向研究者。做这个指南只有一个规矩：**证据走到哪一步，就说到哪一步**——这条规矩同样约束我们自己。
+**熊博士**（熊江辉），[DeepoMe 深度甲基](https://deepome.com)创始人，长寿医学智能方向研究者。做这个指南只有一个规矩：**证据走到哪一步，就说到哪一步**，这条规矩同样约束我们自己。
 
-- ✍️ [熊博士博客 · xiongjianghui.com](https://xiongjianghui.com)——个人官网，方法论与行业观察长文
-- 🌐 [DeepoMe 深度甲基](https://deepome.com)——把长寿科学工程化为可交付体系
+- ✍️ [熊博士博客 · xiongjianghui.com](https://xiongjianghui.com)：个人官网，方法论与行业观察长文
+- 🌐 [DeepoMe 深度甲基](https://deepome.com)：把长寿科学工程化为可交付的体系
 - 🧬 [DeepKang 健康平台](https://deepkang.com) / [症状探索器](https://a.deepkang.com/explore)
-- 💻 [GitHub · DeepoMe](https://github.com/DeepoMe)——论文配套代码与数据工具
+- 💻 [GitHub · DeepoMe](https://github.com/DeepoMe)：论文配套代码与数据工具
 - 📄 代表论文：RootMap（[DOI: 10.32388/A1NTLL](https://doi.org/10.32388/A1NTLL)）
-- 📢 公众号科普：[衰老检测不该只是一个值——从行动仪表盘到个人长寿操作系统](https://mp.weixin.qq.com/s/yG0bg0ht0oOEBFSQOtPGWA)（更多文章陆续收录）
+- 📢 公众号科普：[衰老检测不该只是一个值：从行动仪表盘到个人长寿操作系统](https://mp.weixin.qq.com/s/yG0bg0ht0oOEBFSQOtPGWA)
 
 </details>
 
 <h2>声明</h2>
-<p>本指南是健康教育内容，不构成医疗建议；有疾病请就医。维护方 <a href="https://deepome.com">DeepoMe 深度甲基</a>——与长寿医学实践者同行，把科学工程化为实践者可用的智能（<a href="https://deepkang.com">DeepKang</a>）。</p>
+<p>本指南是健康教育内容，不构成医疗建议；有疾病请就医。维护方为 <a href="https://deepome.com">DeepoMe 深度甲基</a>，利益关系见<a href="#利益冲突声明">利益冲突声明</a>。</p>
 <h2>License</h2>
-<p>CC BY-NC-SA 4.0（署名-非商业-相同方式共享）</p></div></section>
+<p>文字与配图：<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>（署名-非商业-禁止演绎），全文见 <a href="LICENSE">LICENSE</a>。配图为 AI 辅助生成 + 人工审核，许可同上（待确认生成工具条款，见配图规范第 5 条）。</p>
+<hr /></div></section>
 <div id="navL" class="" onclick="flip(-1)"></div><div id="navM" onclick="toc()"></div><div id="navR" onclick="flip(1)"></div>
 <div id="mask" onclick="toc()"></div>
-<div id="toc"><h2>目录</h2><div class='tocitem' onclick='go(0)'>1. 封面</div><div class='tocitem' onclick='go(1)'>2. 前言</div><div class='tocitem' onclick='go(2)'>3. 证据分级</div><div class='tocitem' onclick='go(3)'>4. 目录</div><div class='tocitem' onclick='go(4)'>5. 十二柱</div><div class='tocitem' onclick='go(5)'>6. 腰果 005 · 晨光 10 分钟</div><div class='tocitem' onclick='go(6)'>7. 腰果 002 · 30 分钟起身闹钟</div><div class='tocitem' onclick='go(7)'>8. 腰果 003 · 20-20-20 用眼法则</div><div class='tocitem' onclick='go(8)'>9. 腰果 004 · 咖啡因下午 2 点红线</div><div class='tocitem' onclick='go(9)'>10. 腰果 011 · 熬夜与维生素 C（止损垫，不是免死金牌）</div><div class='tocitem' onclick='go(10)'>11. 腰果 007 · 睡眠债偿还表</div><div class='tocitem' onclick='go(11)'>12. 腰果 010 · 睡前 1 小时屏幕宵禁</div><div class='tocitem' onclick='go(12)'>13. 腰果 006 · Zone 2 快走</div><div class='tocitem' onclick='go(13)'>14. 腰果 008 · 工位人体工学三件套</div><div class='tocitem' onclick='go(14)'>15. 腰果 001 · 下颌淋巴轻按摩（Brain Drain）</div><div class='tocitem' onclick='go(15)'>16. 腰果 009 · 番茄钟的生理学</div><div class='tocitem' onclick='go(16)'>17. 腰果 012 · 冥想十分钟</div><div class='tocitem' onclick='go(17)'>18. 腰果 013 · 意想与免疫：注意力投向患处</div><div class='tocitem' onclick='go(18)'>19. 腰果 014 · 甘麦大枣汤与小麦胚芽</div><div class='tocitem' onclick='go(19)'>20. 腰果 015 · 写代码与心流</div><div class='tocitem' onclick='go(20)'>21. 腰果 016 · 脑内内存管理</div><div class='tocitem' onclick='go(21)'>22. 腰果 017 · 情绪与基因组稳定</div><div class='tocitem' onclick='go(22)'>23. 腰果 018 · 记忆与基因组的断裂重连</div><div class='tocitem' onclick='go(23)'>24. 腰果 019 · 40Hz 声光节拍</div><div class='tocitem' onclick='go(24)'>25. 腰果 020 · 麦角硫因与蘑菇</div><div class='tocitem' onclick='go(25)'>26. 腰果 021 · Omega-3 与干眼</div><div class='tocitem' onclick='go(26)'>27. 腰果 022 · 坚果一把</div><div class='tocitem' onclick='go(27)'>28. 腰果 023 · APOE4 与长链脂肪酸</div><div class='tocitem' onclick='go(28)'>29. 腰果 024 · 亚精胺与小麦胚芽</div><div class='tocitem' onclick='go(29)'>30. 腰果 025 · PQQ</div><div class='tocitem' onclick='go(30)'>31. 腰果 026 · GlyNAC</div><div class='tocitem' onclick='go(31)'>32. 腰果 027 · 甲基化时钟</div><div class='tocitem' onclick='go(32)'>33. 腰果 028 · 醋与乙酸</div><div class='tocitem' onclick='go(33)'>34. 腰果 029 · 八段锦与筋</div><div class='tocitem' onclick='go(34)'>35. 腰果 030 · NAC 与化痰</div><div class='tocitem' onclick='go(35)'>36. 腰果 031 · 颂钵</div><div class='tocitem' onclick='go(36)'>37. 腰果 032 · 面相与生物年龄</div><div class='tocitem' onclick='go(37)'>38. 腰果 033 · 阳气与线粒体</div><div class='tocitem' onclick='go(38)'>39. 展开：熊博士是谁（姓名 · 机构 · 论文——按需查看）</div><div class='tocitem' onclick='go(39)'>40. 附录</div></div>
+<div id="toc"><h2>目录</h2><div class='tocitem' onclick='go(0)'>1. 封面</div><div class='tocitem' onclick='go(1)'>2. 前言</div><div class='tocitem' onclick='go(2)'>3. 证据分级</div><div class='tocitem' onclick='go(3)'>4. 📋 阅读指南 · 本指南独有 · 利益冲突 · 连载说明（点击展开）</div><div class='tocitem' onclick='go(4)'>5. 📖 完整目录 · 十一章（点击展开；正文按章连载中，从下方第一章开始）</div><div class='tocitem' onclick='go(5)'>6. 🔬 深一层：老化的排水管和一氧化氮</div><div class='tocitem' onclick='go(6)'>7. 📚 参考文献（5 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(7)'>8. 📚 参考文献（3 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(8)'>9. 📚 参考文献（1 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(9)'>10. 📚 参考文献（6 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(10)'>11. 📚 参考文献（11 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(11)'>12. 📚 参考文献（2 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(12)'>13. 📚 参考文献（3 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(13)'>14. 📚 参考文献（3 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(14)'>15. 📚 参考文献（2 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(15)'>16. 🔬 深一层：时钟读的到底是什么</div><div class='tocitem' onclick='go(16)'>17. 📚 参考文献（4 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(17)'>18. 🔬 深一层：压力怎么“磨”端粒</div><div class='tocitem' onclick='go(18)'>19. 📚 参考文献（4 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(19)'>20. 🔬 深一层：为什么不能说“古人早就知道自噬”</div><div class='tocitem' onclick='go(20)'>21. 📚 参考文献（2 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(21)'>22. 🔬 深一层：为什么慢动作也算力量刺激</div><div class='tocitem' onclick='go(22)'>23. 📚 参考文献（3 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(23)'>24. 🔬 深一层：为什么不能说“喝醋 = 补短链脂肪酸”</div><div class='tocitem' onclick='go(24)'>25. 📚 参考文献（2 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(25)'>26. 🔬 深一层：NAC 的“兼职”</div><div class='tocitem' onclick='go(26)'>27. 📚 参考文献（2 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(27)'>28. 🔬 深一层：为什么证据只有 D</div><div class='tocitem' onclick='go(28)'>29. 📚 参考文献（2 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(29)'>30. 📚 参考文献</div><div class='tocitem' onclick='go(30)'>31. 📚 参考文献</div><div class='tocitem' onclick='go(31)'>32. 📚 参考文献</div><div class='tocitem' onclick='go(32)'>33. 📚 参考文献</div><div class='tocitem' onclick='go(33)'>34. 📚 参考文献</div><div class='tocitem' onclick='go(34)'>35. 📚 参考文献</div><div class='tocitem' onclick='go(35)'>36. 📚 参考文献</div><div class='tocitem' onclick='go(36)'>37. 📚 参考文献</div><div class='tocitem' onclick='go(37)'>38. 📚 参考文献</div><div class='tocitem' onclick='go(38)'>39. 📚 参考文献</div><div class='tocitem' onclick='go(39)'>40. 🔬 深一层：眼睛里的“测光表”</div><div class='tocitem' onclick='go(40)'>41. 📚 参考文献（2 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(41)'>42. 🔬 深一层：肌肉为什么会“待机”</div><div class='tocitem' onclick='go(42)'>43. 📚 参考文献（2 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(43)'>44. 🔬 深一层：为什么“眨不完整”比“眨得少”更麻烦</div><div class='tocitem' onclick='go(44)'>45. 📚 参考文献（2 篇）</div><div class='tocitem' onclick='go(45)'>46. 🔬 深一层：为什么“我喝了照样睡”不可信</div><div class='tocitem' onclick='go(46)'>47. 📚 参考文献（2 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(47)'>48. 🔬 深一层：为什么“感觉还行”靠不住</div><div class='tocitem' onclick='go(48)'>49. 📚 参考文献（2 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(49)'>50. 🔬 深一层：为什么光会“推迟”时钟</div><div class='tocitem' onclick='go(50)'>51. 📚 参考文献（2 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(51)'>52. 🔬 深一层：为什么剂量不是越大越好</div><div class='tocitem' onclick='go(52)'>53. 📚 参考文献（3 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(53)'>54. 🔬 深一层：笔记本为什么天生不符合人体工学</div><div class='tocitem' onclick='go(54)'>55. 📚 参考文献（2 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(55)'>56. 🔬 深一层：大脑在“重建上下文”时做什么</div><div class='tocitem' onclick='go(56)'>57. 📚 参考文献（2 篇）</div><div class='tocitem' onclick='go(57)'>58. 🔬 深一层：卸载会不会让人变“笨”</div><div class='tocitem' onclick='go(58)'>59. 📚 参考文献（2 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(59)'>60. 🔬 深一层：90 分钟的“超日节律”是真的吗</div><div class='tocitem' onclick='go(60)'>61. 📚 参考文献（2 篇）</div><div class='tocitem' onclick='go(61)'>62. 🔬 深一层：从“压力”到“染色体”</div><div class='tocitem' onclick='go(62)'>63. 📚 参考文献（3 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(63)'>64. 🔬 深一层：为什么是“一把”，不是“一罐”</div><div class='tocitem' onclick='go(64)'>65. 📚 参考文献（1 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(65)'>66. 🔬 深一层：为什么小试验容易“有效”</div><div class='tocitem' onclick='go(66)'>67. 📚 参考文献（3 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(67)'>68. 🔬 深一层：“补进去了”不等于“有用了”</div><div class='tocitem' onclick='go(68)'>69. 📚 参考文献（3 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(69)'>70. 🔬 深一层：为什么动物有效，人身上不明显</div><div class='tocitem' onclick='go(70)'>71. 📚 参考文献（2 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(71)'>72. 🔬 深一层：为什么不直接吃谷胱甘肽</div><div class='tocitem' onclick='go(72)'>73. 📚 参考文献（3 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(73)'>74. 📚 参考文献（6 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(74)'>75. 熊博士是谁（姓名 · 机构 · 论文）</div><div class='tocitem' onclick='go(75)'>76. 附录</div></div>
 </div>
 <footer><span onclick="flip(-1)">‹ 上一页</span><b id="pg">1 / N</b><span onclick="flip(1)">下一页 ›</span></footer>
 </div>
 <script>
-let cur=0,N=40;
+let cur=0,N=76;
 function show(){document.querySelectorAll('.page').forEach((p,i)=>p.classList.toggle('on',i===cur));
 document.getElementById('pg').textContent=(cur+1)+' / '+N;
 document.getElementById('ht').textContent=document.querySelectorAll('.page')[cur].dataset.t||'程序员续命与长寿指南';}
 function flip(d){cur=Math.max(0,Math.min(N-1,cur+d));show();}
 function go(i){cur=i;show();toc();}
 function toc(){document.getElementById('toc').classList.toggle('on');document.getElementById('mask').classList.toggle('on');}
-function fs(d){let v=parseInt(localStorage.xm_fs||17)+d*2;v=Math.max(13,Math.min(26,v));
-localStorage.xm_fs=v;document.documentElement.style.setProperty('--fs',v+'px');}
-if(localStorage.xm_fs)document.documentElement.style.setProperty('--fs',localStorage.xm_fs+'px');
+function fs(d){let v=parseInt(localStorage.xm_fs3||17)+d*2;v=Math.max(13,Math.min(26,v));
+localStorage.xm_fs3=v;document.documentElement.style.setProperty('--fs',v+'px');}
+if(localStorage.xm_fs3)document.documentElement.style.setProperty('--fs',localStorage.xm_fs3+'px');
 if(localStorage.xm_night==='1')document.body.classList.add('night');
 function night(){document.body.classList.toggle('night');
 localStorage.xm_night=document.body.classList.contains('night')?'1':'0';}
