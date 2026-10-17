@@ -346,7 +346,6 @@ The value of this table isn't proving Chinese medicine right. It's that it **gen
 | **Beetroot, spinach, arugula** (dietary nitrate) | Driving: in humans, dietary nitrate made mitochondrial energy production more "fuel-efficient" (Larsen 2011) | B |
 | **Mushrooms** (ergothioneine) | Guarding: mitochondrial antioxidant; see *Ergothioneine and Mushrooms* | C |
 | **Wheat germ, natto** (spermidine) | Guarding: autophagy; see *Spermidine and Wheat Germ* | C |
-| **Natto, green pepper** (PQQ) | Scaling out: mitochondrial biogenesis; see *PQQ* | C |
 
 **Testable predictions** (researchers welcome):
 1. If the mapping holds, people who feel "Yang-deficient" should have lower brown-fat activity, lower resting metabolic rate, or poorer muscle mitochondrial function.
@@ -425,48 +424,6 @@ This is the "train your mitochondria" from *Yang Qi and Mitochondria*: if you wa
 
 </details>
 
-### PQQ
-
-> **Evidence C (small human trials, mostly company-product studies) ｜ 📖 Good to know** ｜ Pain point: "new mitochondria" ｜ Pillar: H7 Mitochondrial dysfunction
-
-**In one line**: PQQ is marketed as a way to "scale out" your mitochondria, but the human evidence is a few trials with a few dozen people each. Worth knowing, not worth ordering.
-
-**Sound familiar?** An online store lists "PQQ for mitochondrial biogenesis", with a picture of glowing cells and a not-so-small price tag.
-
-**Why**:
-
-If Zone 2 adds load to your power supply so it scales out, PQQ is sold as a "scale-out patch".
-
-**Pyrroloquinoline quinone (PQQ)** is a small molecule found naturally in food, including natto, green tea and green peppers, though only in tiny amounts. In cells and animals, it promotes mitochondrial biogenesis (making new mitochondria).
-
-The problem is the human evidence:
-- A Japanese trial in 64 healthy adults aged 40 to under 80, taking 21.5 mg a day for 12 weeks, reported improvement in some cognitive measures (2022).
-- Another small trial on brain function in younger and older adults also reported some improvement (2023).
-- A 6-week trial in 34 older adults with mild cognitive impairment used a **hydrogen + PQQ combination product**, with serum BDNF as the primary endpoint (2024).
-
-All of these are small, most used specific commercial products, and none looked at long-term health outcomes.
-
-![PQQ's evidence ladder: cells ✓, animals ✓, small human trials ✓, large human trials missing](figures/fig-pqq-evidence.png)
-
-<sub>▲ PQQ's evidence ladder: cells ✓, animals ✓, small human trials ✓, large human trials missing</sub>
-
-**How**: knowing what PQQ is is enough. To scale out your mitochondria, do *Zone 2 Walking*. If you want a little from food, natto, green tea and green peppers all contain some.
-
-**How solid is the evidence? (C)**: small RCTs; effect size and long-term safety are unverified. Some trials used combination products, so it's hard to attribute effects to PQQ alone.
-
-**For programmers**: a product that wraps PQQ in folk legends (in China, a fungus-like "Taisui") is two weak claims in one bottle: the legend has no studies on PubMed, and PQQ's evidence is small-sample. Neither justifies buying.
-
-**Limits**: no data for pregnant women or children. Don't buy it bundled with folk legends.
-
-> **Author's note**: PQQ's story is attractive (new mitochondria!), but its human data are still in kindergarten. The folk legends don't even have papers. Legends are legends; your wallet is your wallet.
-
-<details><summary>📚 References (3, verified on PubMed)</summary>
-
-1. Shiojima Y, et al. Effect of Dietary Pyrroloquinoline Quinone Disodium Salt on Cognitive Function in Healthy Volunteers: A Randomized, Double-Blind, Placebo-Controlled, Parallel-Group Study. *J Am Nutr Assoc*. 2022;41(8):796-809. (PMID: 34415830)
-2. Tamakoshi M, et al. Pyrroloquinoline quinone disodium salt improves brain function in both younger and older adults. *Food Funct*. 2023;14(5):2496-2501. (PMID: 36807425)
-3. Baltic S, et al. The impact of six-week dihydrogen-pyrroloquinoline quinone supplementation on mitochondrial biomarkers, brain metabolism, and cognition in elderly individuals with mild cognitive impairment: a randomized controlled trial. *J Nutr Health Aging*. 2024;28(8):100287. (PMID: 38908296)
-
-</details>
 
 ### Ergothioneine and Mushrooms
 
