@@ -3,7 +3,7 @@
 > **从续命到长寿：聚合优质科研进展，每一条都有证据分级和真实文献。**
 > A curated, evidence-graded collection of longevity science for programmers. Extend your runtime.
 >
-> **[English](README_EN.md)** ｜ 简体中文
+> **[English](README.md)** ｜ 简体中文
 
 程序员常说“咖啡续命”“周末补觉续命”。这份指南把这句自嘲当真，再往前走一步：**不只续命，还要科学地长寿。** 每一条建议都标了证据强度、写了能不能做，参考文献都可以在 PubMed 上查到。
 
@@ -2213,5 +2213,3 @@ DHA 是大脑里含量最高的 Omega-3 脂肪酸。一项 PET 研究（一种�
 ## License
 
 文字与配图：[CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)（署名-非商业-禁止演绎），全文见 [LICENSE](LICENSE)。配图为 AI 辅助生成 + 人工审核，许可同上（待确认生成工具条款，见 [CONTRIBUTING.md](CONTRIBUTING.md) 配图规范第 5 条）。
-
-文字：CC BY-NC-SA 4.0（署名-非商业-相同方式共享）。配图：AI 辅助生成 + 人工审核，许可同上（待确认生成工具条款，见配图规范第 5 条）。
