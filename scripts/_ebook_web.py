@@ -121,6 +121,13 @@ footer b{color:var(--amber)}
   .tocitem{font-size:1em;padding:13px 12px}
   img{border-radius:8px}
 }
+
+.page{word-break:break-word;overflow-wrap:break-word}
+.page table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+footer button{padding:10px 16px}
+.clickzone{position:absolute;top:56px;bottom:44px;width:30%;z-index:5}
+.cz-l{left:0}.cz-r{right:0}
+@media (max-width: 768px){.clickzone{top:48px;bottom:52px}}
 </style></head><body>
 <div id="book">
 <header><span class="t" id="ht">程序员续命与长寿指南</span>
@@ -132,7 +139,7 @@ __SECTIONS__
 <div id="mask" onclick="toc()"></div>
 <div id="toc"><h2>目录</h2>__TOC__</div>
 </div>
-<footer><span onclick="flip(-1)">‹ 上一页</span><b id="pg">1 / N</b><span onclick="flip(1)">下一页 ›</span></footer>
+<footer><span onclick="flip(-1)">‹ 上一页</span><b id="pg">1 / N</b><span onclick="flip(1)">下一页 ›</span><div class="clickzone cz-l" onclick="flip(-1)"></div><div class="clickzone cz-r" onclick="flip(1)"></div></footer>
 </div>
 <script>
 let cur=0,N=__N__;
@@ -148,9 +155,15 @@ if(localStorage.xm_fs3)document.documentElement.style.setProperty('--fs',localSt
 if(localStorage.xm_night==='1')document.body.classList.add('night');
 function night(){document.body.classList.toggle('night');
 localStorage.xm_night=document.body.classList.contains('night')?'1':'0';}
-let sx=0;document.addEventListener('touchstart',e=>sx=e.touches[0].clientX);
+let sx=0,moved=0;
+document.addEventListener('touchstart',e=>{sx=e.touches[0].clientX;moved=0;});
+document.addEventListener('touchmove',e=>{if(Math.abs(e.touches[0].clientX-sx)>12)moved=1;});
 document.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-sx;
 if(Math.abs(dx)>60)flip(dx<0?1:-1);});
+document.addEventListener('click',e=>{
+if(moved)return; if(e.target.closest('button,a,summary,details,#toc,#toc *,header,footer'))return;
+const x=e.clientX,w=window.innerWidth;
+if(x<w*0.3)flip(-1); else if(x>w*0.7)flip(1);});
 document.addEventListener('keydown',e=>{if(e.key==='ArrowRight')flip(1);if(e.key==='ArrowLeft')flip(-1);});
 show();
 </script></body></html>"""

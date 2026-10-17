@@ -57,6 +57,13 @@ footer b{color:var(--amber)}
   .tocitem{font-size:1em;padding:13px 12px}
   img{border-radius:8px}
 }
+
+.page{word-break:break-word;overflow-wrap:break-word}
+.page table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+footer button{padding:10px 16px}
+.clickzone{position:absolute;top:56px;bottom:44px;width:30%;z-index:5}
+.cz-l{left:0}.cz-r{right:0}
+@media (max-width: 768px){.clickzone{top:48px;bottom:52px}}
 </style></head><body>
 <div id="book">
 <header><span class="t" id="ht">程序员续命与长寿指南</span>
@@ -568,7 +575,7 @@ footer b{color:var(--amber)}
 <div id="mask" onclick="toc()"></div>
 <div id="toc"><h2>目录</h2><div class='tocitem' onclick='go(0)'>1. 封面</div><div class='tocitem' onclick='go(1)'>2. 前言</div><div class='tocitem' onclick='go(2)'>3. 证据分级</div><div class='tocitem' onclick='go(3)'>4. 📋 阅读指南 · 本指南独有 · 利益冲突 · 连载说明（点击展开）</div><div class='tocitem' onclick='go(4)'>5. 📖 完整目录 · 十一章（点击展开；正文按章连载中，从下方第一章开始）</div><div class='tocitem' onclick='go(5)'>6. 🔬 深一层：老化的排水管和一氧化氮</div><div class='tocitem' onclick='go(6)'>7. 📚 参考文献（5 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(7)'>8. 📚 参考文献（3 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(8)'>9. 📚 参考文献（1 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(9)'>10. 📚 参考文献（6 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(10)'>11. 📚 参考文献（11 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(11)'>12. 📚 参考文献（2 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(12)'>13. 📚 参考文献（3 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(13)'>14. 📚 参考文献（3 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(14)'>15. 📚 参考文献（2 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(15)'>16. 🔬 深一层：时钟读的到底是什么</div><div class='tocitem' onclick='go(16)'>17. 📚 参考文献（4 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(17)'>18. 🔬 深一层：压力怎么“磨”端粒</div><div class='tocitem' onclick='go(18)'>19. 📚 参考文献（4 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(19)'>20. 🔬 深一层：为什么不能说“古人早就知道自噬”</div><div class='tocitem' onclick='go(20)'>21. 📚 参考文献（2 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(21)'>22. 🔬 深一层：为什么慢动作也算力量刺激</div><div class='tocitem' onclick='go(22)'>23. 📚 参考文献（3 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(23)'>24. 🔬 深一层：为什么不能说“喝醋 = 补短链脂肪酸”</div><div class='tocitem' onclick='go(24)'>25. 📚 参考文献（2 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(25)'>26. 🔬 深一层：NAC 的“兼职”</div><div class='tocitem' onclick='go(26)'>27. 📚 参考文献（2 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(27)'>28. 🔬 深一层：为什么证据只有 D</div><div class='tocitem' onclick='go(28)'>29. 📚 参考文献（2 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(29)'>30. 📚 参考文献</div><div class='tocitem' onclick='go(30)'>31. 📚 参考文献</div><div class='tocitem' onclick='go(31)'>32. 📚 参考文献</div><div class='tocitem' onclick='go(32)'>33. 📚 参考文献</div><div class='tocitem' onclick='go(33)'>34. 📚 参考文献</div><div class='tocitem' onclick='go(34)'>35. 📚 参考文献</div><div class='tocitem' onclick='go(35)'>36. 📚 参考文献</div><div class='tocitem' onclick='go(36)'>37. 📚 参考文献</div><div class='tocitem' onclick='go(37)'>38. 📚 参考文献</div><div class='tocitem' onclick='go(38)'>39. 📚 参考文献</div><div class='tocitem' onclick='go(39)'>40. 🔬 深一层：眼睛里的“测光表”</div><div class='tocitem' onclick='go(40)'>41. 📚 参考文献（2 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(41)'>42. 🔬 深一层：肌肉为什么会“待机”</div><div class='tocitem' onclick='go(42)'>43. 📚 参考文献（2 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(43)'>44. 🔬 深一层：为什么“眨不完整”比“眨得少”更麻烦</div><div class='tocitem' onclick='go(44)'>45. 📚 参考文献（2 篇）</div><div class='tocitem' onclick='go(45)'>46. 🔬 深一层：为什么“我喝了照样睡”不可信</div><div class='tocitem' onclick='go(46)'>47. 📚 参考文献（2 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(47)'>48. 🔬 深一层：为什么“感觉还行”靠不住</div><div class='tocitem' onclick='go(48)'>49. 📚 参考文献（2 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(49)'>50. 🔬 深一层：为什么光会“推迟”时钟</div><div class='tocitem' onclick='go(50)'>51. 📚 参考文献（2 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(51)'>52. 🔬 深一层：为什么剂量不是越大越好</div><div class='tocitem' onclick='go(52)'>53. 📚 参考文献（3 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(53)'>54. 🔬 深一层：笔记本为什么天生不符合人体工学</div><div class='tocitem' onclick='go(54)'>55. 📚 参考文献（2 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(55)'>56. 🔬 深一层：大脑在“重建上下文”时做什么</div><div class='tocitem' onclick='go(56)'>57. 📚 参考文献（2 篇）</div><div class='tocitem' onclick='go(57)'>58. 🔬 深一层：卸载会不会让人变“笨”</div><div class='tocitem' onclick='go(58)'>59. 📚 参考文献（2 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(59)'>60. 🔬 深一层：90 分钟的“超日节律”是真的吗</div><div class='tocitem' onclick='go(60)'>61. 📚 参考文献（2 篇）</div><div class='tocitem' onclick='go(61)'>62. 🔬 深一层：从“压力”到“染色体”</div><div class='tocitem' onclick='go(62)'>63. 📚 参考文献（3 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(63)'>64. 🔬 深一层：为什么是“一把”，不是“一罐”</div><div class='tocitem' onclick='go(64)'>65. 📚 参考文献（1 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(65)'>66. 🔬 深一层：为什么小试验容易“有效”</div><div class='tocitem' onclick='go(66)'>67. 📚 参考文献（3 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(67)'>68. 🔬 深一层：“补进去了”不等于“有用了”</div><div class='tocitem' onclick='go(68)'>69. 📚 参考文献（3 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(69)'>70. 🔬 深一层：为什么动物有效，人身上不明显</div><div class='tocitem' onclick='go(70)'>71. 📚 参考文献（2 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(71)'>72. 🔬 深一层：为什么不直接吃谷胱甘肽</div><div class='tocitem' onclick='go(72)'>73. 📚 参考文献（3 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(73)'>74. 📚 参考文献（6 篇，已核对 PubMed）</div><div class='tocitem' onclick='go(74)'>75. 熊博士是谁（姓名 · 机构 · 论文）</div><div class='tocitem' onclick='go(75)'>76. 附录</div></div>
 </div>
-<footer><span onclick="flip(-1)">‹ 上一页</span><b id="pg">1 / N</b><span onclick="flip(1)">下一页 ›</span></footer>
+<footer><span onclick="flip(-1)">‹ 上一页</span><b id="pg">1 / N</b><span onclick="flip(1)">下一页 ›</span><div class="clickzone cz-l" onclick="flip(-1)"></div><div class="clickzone cz-r" onclick="flip(1)"></div></footer>
 </div>
 <script>
 let cur=0,N=76;
@@ -584,9 +591,15 @@ if(localStorage.xm_fs3)document.documentElement.style.setProperty('--fs',localSt
 if(localStorage.xm_night==='1')document.body.classList.add('night');
 function night(){document.body.classList.toggle('night');
 localStorage.xm_night=document.body.classList.contains('night')?'1':'0';}
-let sx=0;document.addEventListener('touchstart',e=>sx=e.touches[0].clientX);
+let sx=0,moved=0;
+document.addEventListener('touchstart',e=>{sx=e.touches[0].clientX;moved=0;});
+document.addEventListener('touchmove',e=>{if(Math.abs(e.touches[0].clientX-sx)>12)moved=1;});
 document.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-sx;
 if(Math.abs(dx)>60)flip(dx<0?1:-1);});
+document.addEventListener('click',e=>{
+if(moved)return; if(e.target.closest('button,a,summary,details,#toc,#toc *,header,footer'))return;
+const x=e.clientX,w=window.innerWidth;
+if(x<w*0.3)flip(-1); else if(x>w*0.7)flip(1);});
 document.addEventListener('keydown',e=>{if(e.key==='ArrowRight')flip(1);if(e.key==='ArrowLeft')flip(-1);});
 show();
 </script></body></html>
