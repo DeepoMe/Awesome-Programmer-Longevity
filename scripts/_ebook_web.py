@@ -16,44 +16,49 @@ pages.append(("封面", """
 <div class="cover">
 <h1>程序员续命与长寿指南</h1>
 <p class="tag">命是可以科学地续的</p>
-<p>33 条 · 证据分级 · 真实文献</p>
-<p class="dim">熊博士 · DeepoMe 深度甲基 · 2026-10 · v1.0</p>
-<p class="tip">👉 点击屏幕右侧翻页｜中间呼出目录｜右上角调字号</p>
+<p>11 章 · 双尺子证据分级 · 105 篇验证文献</p>
+<p class="dim">熊博士 · DeepoMe 深度甲基 · 2026-10 · v2.0</p>
+<p class="tip">👉 点击屏幕左右侧翻页｜滑动也可以｜每节参考文献在节末折叠条里，点击展开</p>
 </div>"""))
 
-# 抽取主要区块
-def grab(start_pat, end_pat, title):
-    global md
-    m = re.search(start_pat, md, re.S)
-    if not m:
-        return
-    seg = md[m.start():]
-    m2 = re.search(end_pat, seg[len(m.group(0)):])
-    chunk = m.group(0) + (seg[len(m.group(0)):m2.start() + len(m.group(0))] if m2 else "")
-    pages.append((title, render(chunk)))
+APPENDIX = ('术语表', '编程比喻对照表', '配图规范', '续命工具箱', '关注与更新', '贡献指南', '关于熊博士', '声明', 'License', '利益冲突')
 
-# 前言
-m = re.search(r"## 前言[\s\S]*?(?=## 证据分级)", md)
-if m: pages.append(("前言", render(m.group(0))))
-# 分级
-m = re.search(r"## 证据分级[\s\S]*?(?=## 连载说明)", md)
-if m: pages.append(("证据分级", render(m.group(0))))
-# 目录（转为可点击目录，原表保留）
-m = re.search(r"## 目录[\s\S]*?(?=## 🌅 续命的一天 · 正文)", md)
-if m: pages.append(("目录", render(m.group(0))))
-# 十二柱
-m = re.search(r"### 🏛️[\s\S]*?(?=## 🌅 续命的一天 · 正文)", md)
-if m: pages.append(("十二柱", render(m.group(0))))
+# 全文按行首 ## 分段(统一处理 CRLF/连载态/手动编辑)
+# 目录折叠区(完整目录 details 块)内的段跳过
+toc_zone = (0, 0)
+mz = re.search(r'<summary><b>&#128214;?📖 完整目录[\s\S]*?</details>', md)
+if not mz:
+    mz = re.search(r'完整目录[\s\S]*?</details>', md)
+if mz:
+    toc_zone = (mz.start(), mz.end())
 
-# 33 条（details 卡逐条拆页）
-cards = re.findall(r"<details>\s*<summary>(.*?)</summary>(.*?)</details>", md, re.S)
-for summary, body in cards:
-    title = re.sub(r"<[^>]+>", "", summary).split("｜")[0].strip()
-    pages.append((title, f"<div class='card'><h2>{re.sub(chr(60)+'[^>]+'+chr(62),'',summary)}</h2>{render(body)}</div>"))
+parts = re.split(r'(?m)(?=^## )', md)
+pos = 0
+for piece in parts:
+    pstart = md.find(piece[:60], pos) if piece[:60] else -1
+    if pstart < 0:
+        pstart = pos
+    pos = pstart + len(piece)
+    piece = piece.strip()
+    if not piece.startswith('## '):
+        continue
+    if toc_zone[0] <= pstart < toc_zone[1]:
+        continue  # 目录区内的章标题段跳过
+    m2 = re.match(r'## (.+)', piece)
+    name = m2.group(1).strip()
+    # 目录页跳过(阅读器自带目录抽屉); 其余照单全收
+    if name == '目录':
+        continue
+    pages.append((name[:18], render(piece)))
 
-# 尾部
-m = re.search(r"## 续命工具箱[\s\S]*$", md)
-if m: pages.append(("附录", render(m.group(0))))
+# 相邻同名段合并(章头小节表 + 章正文)
+merged = []
+for title, html in pages:
+    if merged and merged[-1][0] == title:
+        merged[-1] = (title, merged[-1][1] + html)
+    else:
+        merged.append((title, html))
+pages = merged
 
 sections = []
 toc = "".join(
