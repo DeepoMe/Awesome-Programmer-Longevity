@@ -519,4 +519,4 @@ Population evidence is building:
 
 This guide is popular science, not medical advice. It does not diagnose or treat any condition. Talk to a doctor before changing medication, starting supplements, or if you have symptoms.
 
-**License**: text under CC BY-NC-SA 4.0. Figures are AI-assisted and human-reviewed, under the same license.
+**License**: text and figures under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/) (Attribution-NonCommercial-NoDerivatives), see [LICENSE](LICENSE). Figures are AI-assisted and human-reviewed, under the same license.
