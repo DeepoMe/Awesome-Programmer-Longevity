@@ -1,5 +1,7 @@
 # 程序员续命与长寿指南 · Awesome Programmer Longevity
 
+> **[English Edition](README_EN.md)** ｜ 简体中文版（完整 33 条）
+
 > **从续命到长寿：每一条建议，都有证据分级和真实文献。**
 > From Survival to Longevity: every tip comes with an evidence grade and real references.
 
@@ -959,6 +961,8 @@
 ## 关注与更新
 
 **GitHub 是本指南的家**——star/watch 获取每次更新，Issue 征题与纠错。
+
+📕 **完整电子书**：本仓库根目录 `ebook_v1.pdf`（135 页，33 条全图文版）——watch 本仓库即可下载。
 
 **每周三**，新条目在公众号首发、GitHub 同步归档——扫码上车：
 
