@@ -2312,7 +2312,7 @@ white background, no text, no labels, no letters
 
 ## License
 
-文字：CC BY-NC-SA 4.0（署名-非商业-相同方式共享）。配图：AI 辅助生成 + 人工审核，许可同上（待确认生成工具条款，见配图规范第 5 条）。
+文字与配图：[CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)（署名-非商业-禁止演绎），全文见 [LICENSE](LICENSE)。配图为 AI 辅助生成 + 人工审核，许可同上（待确认生成工具条款，见配图规范第 5 条）。
 
 
 
