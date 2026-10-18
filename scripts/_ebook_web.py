@@ -23,7 +23,7 @@ pages.append(("封面", """
 <p class="tag">命是可以科学地续的</p>
 <p>11 章 · 双尺子证据分级 · 105 篇验证文献</p>
 <p class="dim">熊博士 · DeepoMe 深度甲基 · 2026-10 · v2.0</p>
-<p class="tip">👉 点击左右侧翻页｜滑动也可以｜顶部 A/文 切换语言｜参考文献在节末折叠条</p>
+<p class="tip">👉 点击左右侧翻页｜滑动也可以｜链接可直接点击｜顶部 A/文 切换语言</p>
 </div>"""))
 
 APPENDIX = ('术语表', '编程比喻对照表', '配图规范', '续命工具箱', '关注与更新', '贡献指南', '关于熊博士', '声明', 'License', '利益冲突')
@@ -135,9 +135,14 @@ footer b{color:var(--amber)}
 .page{word-break:break-word;overflow-wrap:break-word}
 .page table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
 footer button{padding:10px 16px}
-.clickzone{position:absolute;top:56px;bottom:44px;width:30%;z-index:5}
-.cz-l{left:0}.cz-r{right:0}
-@media (max-width: 768px){.clickzone{top:48px;bottom:52px}}
+
+a{color:var(--teal);text-decoration:underline;text-underline-offset:2px}
+.card-links,.page a[href]{word-break:break-all}
+details{margin:8px 0}
+details summary{cursor:pointer;color:var(--teal);padding:6px 0;font-size:.95em}
+.page ul,.page ol{padding-left:1.4em;margin:6px 0}
+.page li{margin:6px 0;line-height:1.7}
+.about-body p{margin:8px 0}
 </style></head><body>
 <div id="book">
 <header><span class="t" id="ht">程序员长寿指南</span>
@@ -150,7 +155,7 @@ __SECTIONS__
 <div id="mask" onclick="toc()"></div>
 <div id="toc"><h2>目录</h2>__TOC__</div>
 </div>
-<footer><span onclick="flip(-1)">‹ 上一页</span><b id="pg">1 / N</b><span onclick="flip(1)">下一页 ›</span><div class="clickzone cz-l" onclick="flip(-1)"></div><div class="clickzone cz-r" onclick="flip(1)"></div></footer>
+<footer><span onclick="flip(-1)">‹ 上一页</span><b id="pg">1 / N</b><span onclick="flip(1)">下一页 ›</span></footer>
 </div>
 <script>
 let cur=0,N=__N__;

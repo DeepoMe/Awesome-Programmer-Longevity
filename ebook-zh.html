@@ -61,9 +61,14 @@ footer b{color:var(--amber)}
 .page{word-break:break-word;overflow-wrap:break-word}
 .page table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
 footer button{padding:10px 16px}
-.clickzone{position:absolute;top:56px;bottom:44px;width:30%;z-index:5}
-.cz-l{left:0}.cz-r{right:0}
-@media (max-width: 768px){.clickzone{top:48px;bottom:52px}}
+
+a{color:var(--teal);text-decoration:underline;text-underline-offset:2px}
+.card-links,.page a[href]{word-break:break-all}
+details{margin:8px 0}
+details summary{cursor:pointer;color:var(--teal);padding:6px 0;font-size:.95em}
+.page ul,.page ol{padding-left:1.4em;margin:6px 0}
+.page li{margin:6px 0;line-height:1.7}
+.about-body p{margin:8px 0}
 </style></head><body>
 <div id="book">
 <header><span class="t" id="ht">程序员长寿指南</span>
@@ -77,7 +82,7 @@ footer button{padding:10px 16px}
 <p class="tag">命是可以科学地续的</p>
 <p>11 章 · 双尺子证据分级 · 105 篇验证文献</p>
 <p class="dim">熊博士 · DeepoMe 深度甲基 · 2026-10 · v2.0</p>
-<p class="tip">👉 点击左右侧翻页｜滑动也可以｜顶部 A/文 切换语言｜参考文献在节末折叠条</p>
+<p class="tip">👉 点击左右侧翻页｜滑动也可以｜链接可直接点击｜顶部 A/文 切换语言</p>
 </div></div></section>
 <section data-t='前言 · 为什么写这份指南' class='page' id='p1'><div class='pagebody'><h2>前言 · 为什么写这份指南</h2>
 <p><strong>写这份指南，是因为一个认知差。</strong></p>
@@ -2350,7 +2355,7 @@ NAC 进入身体后能变成半胱氨酸，这是合成谷胱甘肽的原料之�
 <div id="mask" onclick="toc()"></div>
 <div id="toc"><h2>目录</h2><div class='tocitem' onclick='go(0)'>1. 封面</div><div class='tocitem' onclick='go(1)'>2. 前言 · 为什么写这份指南</div><div class='tocitem' onclick='go(2)'>3. 怎么读这份指南</div><div class='tocitem' onclick='go(3)'>4. 🔭 本指南独有：在别的长寿书里看不到</div><div class='tocitem' onclick='go(4)'>5. 证据分级说明（v2：两把尺子）</div><div class='tocitem' onclick='go(5)'>6. 利益冲突声明</div><div class='tocitem' onclick='go(6)'>7. 更新说明</div><div class='tocitem' onclick='go(7)'>8. 第一章 · 大脑的隐秘运维</div><div class='tocitem' onclick='go(8)'>9. 第二章 · 阳气与线粒体</div><div class='tocitem' onclick='go(9)'>10. 第三章 · 年龄不是一个数</div><div class='tocitem' onclick='go(10)'>11. 第四章 · 古方新解</div><div class='tocitem' onclick='go(11)'>12. 第五章 · 长寿十块大石头</div><div class='tocitem' onclick='go(12)'>13. 第六章 · 长寿的一天</div><div class='tocitem' onclick='go(13)'>14. 第七章 · 修复与维护</div><div class='tocitem' onclick='go(14)'>15. 第八章 · 专注力工程</div><div class='tocitem' onclick='go(15)'>16. 第九章 · 餐桌与补剂</div><div class='tocitem' onclick='go(16)'>17. 第十章 · 长寿十二柱</div><div class='tocitem' onclick='go(17)'>18. 术语表</div><div class='tocitem' onclick='go(18)'>19. 编程比喻对照表</div><div class='tocitem' onclick='go(19)'>20. 长寿工具箱</div><div class='tocitem' onclick='go(20)'>21. 关注与更新</div><div class='tocitem' onclick='go(21)'>22. 如何参与</div><div class='tocitem' onclick='go(22)'>23. 关于熊博士</div><div class='tocitem' onclick='go(23)'>24. 声明</div><div class='tocitem' onclick='go(24)'>25. License</div></div>
 </div>
-<footer><span onclick="flip(-1)">‹ 上一页</span><b id="pg">1 / N</b><span onclick="flip(1)">下一页 ›</span><div class="clickzone cz-l" onclick="flip(-1)"></div><div class="clickzone cz-r" onclick="flip(1)"></div></footer>
+<footer><span onclick="flip(-1)">‹ 上一页</span><b id="pg">1 / N</b><span onclick="flip(1)">下一页 ›</span></footer>
 </div>
 <script>
 let cur=0,N=25;

@@ -61,9 +61,14 @@ footer b{color:var(--amber)}
 .page{word-break:break-word;overflow-wrap:break-word}
 .page table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
 footer button{padding:10px 16px}
-.clickzone{position:absolute;top:56px;bottom:44px;width:30%;z-index:5}
-.cz-l{left:0}.cz-r{right:0}
-@media (max-width: 768px){.clickzone{top:48px;bottom:52px}}
+
+a{color:var(--teal);text-decoration:underline;text-underline-offset:2px}
+.card-links,.page a[href]{word-break:break-all}
+details{margin:8px 0}
+details summary{cursor:pointer;color:var(--teal);padding:6px 0;font-size:.95em}
+.page ul,.page ol{padding-left:1.4em;margin:6px 0}
+.page li{margin:6px 0;line-height:1.7}
+.about-body p{margin:8px 0}
 </style></head><body>
 <div id="book">
 <header><span class="t" id="ht">程序员长寿指南</span>
@@ -77,7 +82,7 @@ footer button{padding:10px 16px}
 <p class="tag">命是可以科学地续的</p>
 <p>11 章 · 双尺子证据分级 · 105 篇验证文献</p>
 <p class="dim">熊博士 · DeepoMe 深度甲基 · 2026-10 · v2.0</p>
-<p class="tip">👉 点击左右侧翻页｜滑动也可以｜顶部 A/文 切换语言｜参考文献在节末折叠条</p>
+<p class="tip">👉 点击左右侧翻页｜滑动也可以｜链接可直接点击｜顶部 A/文 切换语言</p>
 </div></div></section>
 <section data-t='Preface · Why this' class='page' id='p1'><div class='pagebody'><h2>Preface · Why this guide exists</h2>
 <p><strong>This guide exists because of a gap.</strong></p>
@@ -2055,7 +2060,7 @@ Most oral glutathione gets broken down in the gut and has a hard time entering c
 <div id="mask" onclick="toc()"></div>
 <div id="toc"><h2>目录</h2><div class='tocitem' onclick='go(0)'>1. 封面</div><div class='tocitem' onclick='go(1)'>2. Preface · Why this</div><div class='tocitem' onclick='go(2)'>3. How to read this g</div><div class='tocitem' onclick='go(3)'>4. 🔭 What makes this </div><div class='tocitem' onclick='go(4)'>5. How we grade evide</div><div class='tocitem' onclick='go(5)'>6. Conflict of intere</div><div class='tocitem' onclick='go(6)'>7. Chapter 1 · Your B</div><div class='tocitem' onclick='go(7)'>8. Chapter 2 · Yang Q</div><div class='tocitem' onclick='go(8)'>9. Chapter 3 · Age Is</div><div class='tocitem' onclick='go(9)'>10. Chapter 4 · Old Re</div><div class='tocitem' onclick='go(10)'>11. Chapter 5 · The Te</div><div class='tocitem' onclick='go(11)'>12. Chapter 6 · A Day </div><div class='tocitem' onclick='go(12)'>13. Chapter 7 · Repair</div><div class='tocitem' onclick='go(13)'>14. Chapter 8 · Focus </div><div class='tocitem' onclick='go(14)'>15. Chapter 9 · Food a</div><div class='tocitem' onclick='go(15)'>16. Chapter 10 · The T</div><div class='tocitem' onclick='go(16)'>17. Glossary</div><div class='tocitem' onclick='go(17)'>18. Programming metaph</div><div class='tocitem' onclick='go(18)'>19. Toolbox</div><div class='tocitem' onclick='go(19)'>20. Contributing</div><div class='tocitem' onclick='go(20)'>21. About Dr. Xiong</div><div class='tocitem' onclick='go(21)'>22. Disclaimer</div></div>
 </div>
-<footer><span onclick="flip(-1)">‹ 上一页</span><b id="pg">1 / N</b><span onclick="flip(1)">下一页 ›</span><div class="clickzone cz-l" onclick="flip(-1)"></div><div class="clickzone cz-r" onclick="flip(1)"></div></footer>
+<footer><span onclick="flip(-1)">‹ 上一页</span><b id="pg">1 / N</b><span onclick="flip(1)">下一页 ›</span></footer>
 </div>
 <script>
 let cur=0,N=22;
